@@ -1,0 +1,5 @@
+{
+  "packageName": "procore_sdk",
+  "invokerPackage": "Procore",
+  "allowUnicodeIdentifiers": true
+}
