@@ -1,5 +1,7 @@
 # Procore API Client for Elixir
 
+**This library is under heavy development is not yet functional or suitable for use.**
+
 Unofficial Procore API SDK for Elixir.
 
 ## Installation
