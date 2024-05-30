@@ -24,3 +24,5 @@
 
 README.md
 mix.exs
+
+lib/procore/connection.ex
