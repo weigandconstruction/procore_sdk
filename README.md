@@ -59,13 +59,8 @@ Fetch an access token:
 Make an API request:
 
 ```elixir
-{:ok, result} =
-  Procore.Connection.new(access_token: access_token)
-  |> Procore.Api.CorePortfolioProjects.rest_v11_projects_get(
-    connection,
-    procore_company_id,
-    company_id
-  )
+connection = Procore.Connection.new(access_token: access_token)
+{:ok, result} = Procore.Api.CorePortfolioProjects.rest_v11_projects_get(connection, procore_company_id, company_id)
 ```
 
 ## Development
