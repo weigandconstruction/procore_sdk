@@ -9,9 +9,7 @@ defmodule Procore.Mixfile do
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       package: package(),
-      description: """
-      Unofficial Procore API SDK for Elixir
-      """,
+      description: "Unofficial Procore API SDK for Elixir",
       deps: deps()
     ]
   end
@@ -45,6 +43,11 @@ defmodule Procore.Mixfile do
   defp package do
     [
       name: "procore_sdk",
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/weigandconstruction/procore_sdk"
+      },
+      maintainers: ["ntodd"],
       files: ~w(.formatter.exs config lib mix.exs README* LICENSE*)
     ]
   end
