@@ -90,7 +90,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogHeaders do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ProjectsProjectIdDailyLogHeadersGet200Response.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdDailyLogHeadersGet200Response.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_daily_log_headers_index_get(
         connection,

@@ -39,11 +39,11 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplates do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplatesGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplatesGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_templates_get(
         connection,

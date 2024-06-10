@@ -29,7 +29,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
   """
   @spec rest_v10_resources_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Resource2.t())}
+          | {:ok, [Procore.Model.Resource2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_resources_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -261,7 +261,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Resource.t())}
+          | {:ok, [Procore.Model.Resource.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_schedule_resources_get(
         connection,

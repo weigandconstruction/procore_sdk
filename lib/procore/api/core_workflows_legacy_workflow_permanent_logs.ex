@@ -37,12 +37,10 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowPermanentLogs do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet400Response.t()}
+          | {:ok,
+             [Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_workflow_permanent_logs_get(
         connection,
@@ -113,12 +111,10 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowPermanentLogs do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet400Response.t()}
+          | {:ok,
+             [Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_workflow_permanent_logs_get(
         connection,

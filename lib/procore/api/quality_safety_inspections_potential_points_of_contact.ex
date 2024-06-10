@@ -33,7 +33,7 @@ defmodule Procore.Api.QualitySafetyInspectionsPotentialPointsOfContact do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistPotentialPointOfContact.t())}
+          | {:ok, [Procore.Model.ChecklistPotentialPointOfContact.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_checklist_potential_points_of_contact_get(
         connection,

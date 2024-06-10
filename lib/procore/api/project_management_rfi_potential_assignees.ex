@@ -31,8 +31,8 @@ defmodule Procore.Api.ProjectManagementRFIPotentialAssignees do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_potential_assignees_get(
         connection,

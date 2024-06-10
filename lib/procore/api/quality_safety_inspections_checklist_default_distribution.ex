@@ -36,7 +36,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistDefaultDistribution do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t())}
+             [Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_checklist_default_distribution_get(
         connection,

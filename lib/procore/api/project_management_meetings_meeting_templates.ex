@@ -36,7 +36,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTemplates do
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10ProjectsProjectIdScheduleSettingsGet404Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10CompaniesCompanyIdMeetingTemplatesGet200ResponseInner.t())}
+             [Procore.Model.RestV10CompaniesCompanyIdMeetingTemplatesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_meeting_templates_get(
         connection,

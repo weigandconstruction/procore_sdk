@@ -34,8 +34,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentManagedEquipmentCompanyLe
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_bulk_destroy_delete(
         connection,
@@ -93,8 +92,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentManagedEquipmentCompanyLe
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_bulk_restore_patch(
         connection,
@@ -164,8 +162,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentManagedEquipmentCompanyLe
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_get(
         connection,
@@ -611,8 +608,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentManagedEquipmentCompanyLe
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdManagedEquipmentGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_query_post(
         connection,
@@ -733,7 +729,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentManagedEquipmentCompanyLe
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyManagedEquipmentUserPermission.t())}
+          | {:ok, [Procore.Model.CompanyManagedEquipmentUserPermission.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_user_permissions_get(
         connection,

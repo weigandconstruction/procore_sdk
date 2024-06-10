@@ -35,8 +35,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV11DrawingAreasDrawingAreaIdDrawingsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV11DrawingAreasDrawingAreaIdDrawingsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_drawing_areas_drawing_area_id_drawings_get(
         connection,
@@ -153,7 +152,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingRevisionTermSet.t())}
+          | {:ok, [Procore.Model.DrawingRevisionTermSet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_drawing_revision_terms_get(
         connection,
@@ -273,7 +272,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingRevision.t())}
+          | {:ok, [Procore.Model.DrawingRevision.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_drawing_revisions_get(
         connection,
@@ -452,7 +451,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingSet.t())}
+          | {:ok, [Procore.Model.DrawingSet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_drawing_sets_get(
         connection,
@@ -671,7 +670,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingUpload1.t())}
+          | {:ok, [Procore.Model.DrawingUpload1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_drawing_uploads_get(
         connection,
@@ -854,8 +853,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV11DrawingAreasDrawingAreaIdDrawingsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV11DrawingAreasDrawingAreaIdDrawingsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_drawing_areas_drawing_area_id_drawings_get(
         connection,
@@ -1030,7 +1028,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingRevisionTermSet.t())}
+          | {:ok, [Procore.Model.DrawingRevisionTermSet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_drawing_revision_terms_get(
         connection,
@@ -1087,7 +1085,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingUpload.t())}
+          | {:ok, [Procore.Model.DrawingUpload.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_drawing_uploads_get(
         connection,

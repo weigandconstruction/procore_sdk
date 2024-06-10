@@ -33,7 +33,7 @@ defmodule Procore.Api.CoreConfigurationsCustomFieldLovEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CustomFieldLovEntry.t())}
+          | {:ok, [Procore.Model.CustomFieldLovEntry.t()]}
           | {:ok, Procore.Model.ErrorsResponse.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_custom_field_definitions_custom_field_definition_id_custom_field_lov_entries_bulk_create_post(

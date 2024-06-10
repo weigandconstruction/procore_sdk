@@ -37,7 +37,7 @@ defmodule Procore.Api.CoreCompanyTrades do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Trade.t())}
+          | {:ok, [Procore.Model.Trade.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_trades_get(
         connection,

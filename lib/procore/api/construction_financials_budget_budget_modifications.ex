@@ -35,9 +35,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdBudgetModificationsGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdBudgetModificationsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_budget_modifications_get(
         connection,

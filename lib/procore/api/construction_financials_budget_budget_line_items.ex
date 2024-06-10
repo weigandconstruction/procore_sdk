@@ -185,9 +185,9 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
           Procore.Model.Body115.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, [Procore.Model.RestV11BudgetLineItemsPost201Response.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BudgetLineItemsPost422Response.t()}
-          | {:ok, list(Procore.Model.RestV11BudgetLineItemsPost201Response.t())}
           | {:error, Tesla.Env.t()}
   def rest_v10_budget_line_items_sync_post(connection, procore_company_id, body115, _opts \\ []) do
     request =

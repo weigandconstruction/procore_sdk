@@ -33,9 +33,9 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimesheetsScopedCostCodesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_cost_codes_copy_from_standard_list_post(
         connection,
@@ -140,9 +140,9 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   @spec rest_v10_cost_codes_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimesheetsScopedCostCodesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_cost_codes_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -390,7 +390,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   """
   @spec rest_v10_standard_cost_code_lists_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.StandardCostCodeList.t())}
+          | {:ok, [Procore.Model.StandardCostCodeList.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_standard_cost_code_lists_get(
         connection,
@@ -600,8 +600,8 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.StandardCostCode.t())}
+          {:ok, [Procore.Model.StandardCostCode.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_standard_cost_codes_get(
         connection,

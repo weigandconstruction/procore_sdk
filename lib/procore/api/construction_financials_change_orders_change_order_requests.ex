@@ -42,7 +42,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersChangeOrderRequests do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ChangeOrderRequestsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ChangeOrderRequestsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_change_order_requests_get(
         connection,

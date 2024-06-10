@@ -35,7 +35,7 @@ defmodule Procore.Api.CoreProjectProjectTools do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ProjectsProjectIdToolsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdToolsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_tools_get(
         connection,
@@ -89,7 +89,7 @@ defmodule Procore.Api.CoreProjectProjectTools do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ProjectsProjectIdToolsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdToolsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_tools_patch(
         connection,
@@ -138,7 +138,7 @@ defmodule Procore.Api.CoreProjectProjectTools do
   """
   @spec rest_v10_tools_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ToolsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ToolsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_tools_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

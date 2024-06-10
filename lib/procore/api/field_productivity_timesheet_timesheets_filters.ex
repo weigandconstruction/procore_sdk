@@ -33,9 +33,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersApprovalStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_approval_status_get(
         connection,
@@ -85,9 +85,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersBillableGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_billable_get(
         connection,
@@ -136,9 +136,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersCostCodesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_cost_codes_get(
         connection,
@@ -187,9 +187,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersCreatedByGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_created_by_get(
         connection,
@@ -238,9 +238,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersCrewsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_crews_get(
         connection,
@@ -289,9 +289,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersDepartmentsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_departments_get(
         connection,
@@ -341,9 +341,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersEmployeeIdsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_employee_ids_get(
         connection,
@@ -393,9 +393,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersEmployeesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_employees_get(
         connection,
@@ -444,9 +444,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersLocationsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_locations_get(
         connection,
@@ -493,11 +493,11 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersProjectsGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersProjectsGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_projects_get(
         connection,
@@ -546,9 +546,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersRegionsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_regions_get(
         connection,
@@ -597,9 +597,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersSubJobGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_sub_job_get(
         connection,
@@ -648,9 +648,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersTimeTypeGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_time_type_get(
         connection,
@@ -699,9 +699,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersWbsCodesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_wbs_codes_get(
         connection,
@@ -750,9 +750,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdTimesheetsFiltersWorkClassificationsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_filters_work_classifications_get(
         connection,

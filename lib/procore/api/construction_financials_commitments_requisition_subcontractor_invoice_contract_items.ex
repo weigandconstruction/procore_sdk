@@ -39,9 +39,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
           | {:ok,
              Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10RequisitionsRequisitionIdContractItemsGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10RequisitionsRequisitionIdContractItemsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_requisitions_requisition_id_contract_items_get(
         connection,

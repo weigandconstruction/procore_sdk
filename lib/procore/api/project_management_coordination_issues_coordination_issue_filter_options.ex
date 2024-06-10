@@ -32,11 +32,11 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10CoordinationIssuesFilterOptionsAssigneeCompanyIdGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10CoordinationIssuesFilterOptionsAssigneeCompanyIdGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_assignee_company_id_get(
         connection,
@@ -93,9 +93,9 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CoordinationIssuesFilterOptionsAssigneeIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_assignee_id_get(
         connection,
@@ -150,9 +150,9 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CoordinationIssuesFilterOptionsCoordinationIssueFileIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_coordination_issue_file_id_get(
         connection,
@@ -204,9 +204,9 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CoordinationIssuesFilterOptionsAssigneeIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_created_by_id_get(
         connection,
@@ -261,9 +261,9 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CoordinationIssuesFilterOptionsCreatedFromGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_created_from_get(
         connection,
@@ -312,8 +312,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10CoordinationIssuesFilterOptionsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CoordinationIssuesFilterOptionsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_get(
         connection,
@@ -364,9 +363,9 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CoordinationIssuesFilterOptionsLocationIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_location_id_get(
         connection,
@@ -422,9 +421,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10CoordinationIssuesFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10CoordinationIssuesFilterOptionsStatusGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_filter_options_status_get(
         connection,

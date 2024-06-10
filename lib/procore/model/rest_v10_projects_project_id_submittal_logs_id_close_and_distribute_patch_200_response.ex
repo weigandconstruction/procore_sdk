@@ -29,11 +29,11 @@ defmodule Procore.Model.RestV10ProjectsProjectIdSubmittalLogsIdCloseAndDistribut
           :submittal_description => String.t() | nil,
           :sent_at => DateTime.t() | nil,
           :distributed_by =>
-            Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner.t()
+            Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner.t()
             | nil,
           :distributed_to =>
             [
-              Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner.t()
+              Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner.t()
             ]
             | nil,
           :distributed_attachments =>
@@ -60,12 +60,12 @@ defmodule Procore.Model.RestV10ProjectsProjectIdSubmittalLogsIdCloseAndDistribut
     |> Deserializer.deserialize(
       :distributed_by,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner
+      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner
     )
     |> Deserializer.deserialize(
       :distributed_to,
       :list,
-      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner
+      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner
     )
     |> Deserializer.deserialize(
       :distributed_attachments,

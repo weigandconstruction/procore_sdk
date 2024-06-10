@@ -32,7 +32,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdSubmittalLogsIdCloseAndDistribut
           :submittal_approver_id => integer() | nil,
           :user_id => integer() | nil,
           :user =>
-            Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner.t()
+            Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner.t()
             | nil
         }
 
@@ -53,7 +53,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdSubmittalLogsIdCloseAndDistribut
     |> Deserializer.deserialize(
       :user,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner
+      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner
     )
   end
 end

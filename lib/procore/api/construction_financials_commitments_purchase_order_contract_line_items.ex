@@ -43,9 +43,9 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsPurchaseOrderContractLine
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdLineItemsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_purchase_order_contracts_purchase_order_contract_id_line_items_get(
         connection,

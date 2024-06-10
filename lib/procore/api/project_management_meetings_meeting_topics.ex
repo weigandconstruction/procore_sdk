@@ -82,7 +82,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10MeetingTopicsParentMinutesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10MeetingTopicsParentMinutesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_meeting_topics_parent_minutes_get(
         connection,
@@ -238,9 +238,9 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV11ProjectsProjectIdMeetingTopicsMeetingTopicIdParentMinutesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_meeting_topics_meeting_topic_id_parent_minutes_get(
         connection,

@@ -33,9 +33,9 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_filter_options_contributing_behaviors_get(
         connection,
@@ -84,9 +84,9 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_filter_options_contributing_conditions_get(
         connection,
@@ -135,9 +135,9 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_filter_options_hazards_get(
         connection,
@@ -186,9 +186,9 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_filter_options_locations_get(
         connection,
@@ -237,9 +237,9 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsInjuriesFilterOptionsAffectedBodyPartsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_filter_options_statuses_get(
         connection,

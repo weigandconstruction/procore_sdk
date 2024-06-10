@@ -31,11 +31,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_closed_by_contacts_get(
         connection,
@@ -84,11 +84,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_inspectors_get(
         connection,
@@ -135,11 +135,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_list_templates_get(
         connection,
@@ -186,11 +186,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_locations_get(
         connection,
@@ -237,11 +237,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_points_of_contact_get(
         connection,
@@ -288,11 +288,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_responsible_contractors_get(
         connection,
@@ -341,11 +341,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_spec_sections_get(
         connection,
@@ -392,11 +392,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_statuses_get(
         connection,
@@ -443,11 +443,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_trades_get(
         connection,
@@ -494,11 +494,11 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistListFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdChecklistListsFilterOptionsClosedByContactsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_filter_options_types_get(
         connection,

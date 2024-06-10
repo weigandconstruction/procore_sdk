@@ -148,7 +148,7 @@ defmodule Procore.Api.UtilitiesWebhooksTriggers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.WebhooksTrigger.t())}
+          | {:ok, [Procore.Model.WebhooksTrigger.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_webhooks_hooks_hook_id_triggers_get(
         connection,

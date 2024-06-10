@@ -34,7 +34,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Integer)}
+          | {:ok, [integer()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_project_memberships_bulk_add_post(
         connection,
@@ -86,7 +86,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectMembership.t())}
+          | {:ok, [Procore.Model.ProjectMembership.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_project_memberships_get(
         connection,
@@ -196,7 +196,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Float)}
+          | {:ok, [float()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_project_memberships_post(
         connection,

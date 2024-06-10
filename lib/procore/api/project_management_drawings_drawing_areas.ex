@@ -34,7 +34,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingArea1.t())}
+          | {:ok, [Procore.Model.DrawingArea1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_drawing_areas_get(
         connection,
@@ -145,7 +145,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.DrawingArea.t())}
+          | {:ok, [Procore.Model.DrawingArea.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_drawing_areas_get(
         connection,

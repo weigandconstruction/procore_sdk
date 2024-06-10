@@ -39,7 +39,7 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.InspectionUser.t())}
+          | {:ok, [Procore.Model.InspectionUser.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_checklist_users_get(
         connection,

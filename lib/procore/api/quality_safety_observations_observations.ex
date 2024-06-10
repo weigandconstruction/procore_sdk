@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationCategoryConfigurableFieldSets.t())}
+          | {:ok, [Procore.Model.ObservationCategoryConfigurableFieldSets.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_category_configurable_field_sets_get(
         connection,
@@ -91,7 +91,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItemDefaultDistribution.t())}
+          | {:ok, [Procore.Model.ObservationItemDefaultDistribution.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_default_distribution_get(
         connection,
@@ -156,7 +156,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
   """
   @spec rest_v10_observations_items_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItem.t())}
+          | {:ok, [Procore.Model.ObservationItem.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_items_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -436,7 +436,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItemResponseLog.t())}
+          | {:ok, [Procore.Model.ObservationItemResponseLog.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_items_item_id_response_logs_get(
         connection,
@@ -649,7 +649,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItem.t())}
+          | {:ok, [Procore.Model.ObservationItem.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_items_send_unsent_post(
         connection,
@@ -700,7 +700,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItemDefaultDistribution.t())}
+          | {:ok, [Procore.Model.ObservationItemDefaultDistribution.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_potential_distribution_members_get(
         connection,
@@ -758,8 +758,8 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationType.t())}
+          {:ok, [Procore.Model.ObservationType.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_observations_types_get(
         connection,
@@ -873,7 +873,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItemResponseLog.t())}
+          | {:ok, [Procore.Model.ObservationItemResponseLog.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_observations_response_logs_get(
         connection,
@@ -937,7 +937,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ObservationItem.t())}
+          | {:ok, [Procore.Model.ObservationItem.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_observations_items_get(
         connection,

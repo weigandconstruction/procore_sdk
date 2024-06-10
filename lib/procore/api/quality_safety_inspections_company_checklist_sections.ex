@@ -33,8 +33,8 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyChecklistSections do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.CompanyChecklistSection.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.CompanyChecklistSection.t()]}
           | {:ok, Procore.Model.RestV10ProjectsIdFiltersGetDefaultResponse.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_checklist_sections_get(

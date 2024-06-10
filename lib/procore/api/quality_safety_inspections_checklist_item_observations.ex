@@ -38,7 +38,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemObservations do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ChecklistInspectionItemObservation.t())}
+          {:ok, [Procore.Model.ChecklistInspectionItemObservation.t()]}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_list_item_observations_get(

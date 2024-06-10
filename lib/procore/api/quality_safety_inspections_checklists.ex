@@ -41,7 +41,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
   """
   @spec rest_v10_checklist_lists_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ChecklistListsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ChecklistListsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_checklist_lists_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -333,7 +333,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Checklist5.t())}
+          | {:ok, [Procore.Model.Checklist5.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_get(
         connection,
@@ -428,7 +428,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistListGroup.t())}
+          | {:ok, [Procore.Model.ChecklistListGroup.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_lists_grouped_index_get(
         connection,
@@ -805,7 +805,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Checklist5.t())}
+          | {:ok, [Procore.Model.Checklist5.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_checklist_lists_get(
         connection,
@@ -900,7 +900,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistListGroup.t())}
+          | {:ok, [Procore.Model.ChecklistListGroup.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_checklist_lists_grouped_index_get(
         connection,

@@ -31,8 +31,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(Procore.Model.RestV11ProjectsProjectIdScheduleLookaheadsGet200ResponseInner.t())}
+          {:ok, [Procore.Model.RestV11ProjectsProjectIdScheduleLookaheadsGet200ResponseInner.t()]}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_schedule_lookaheads_get(
@@ -230,8 +229,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(Procore.Model.RestV11ProjectsProjectIdScheduleLookaheadsGet200ResponseInner.t())}
+          {:ok, [Procore.Model.RestV11ProjectsProjectIdScheduleLookaheadsGet200ResponseInner.t()]}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_schedule_lookaheads_get(

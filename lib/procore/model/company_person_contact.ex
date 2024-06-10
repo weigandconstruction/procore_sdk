@@ -8,11 +8,13 @@ defmodule Procore.Model.CompanyPersonContact do
 
   @derive Jason.Encoder
   defstruct [
-    :is_active
+    :is_active,
+    :email
   ]
 
   @type t :: %__MODULE__{
-          :is_active => boolean() | nil
+          :is_active => boolean() | nil,
+          :email => String.t() | nil
         }
 
   def decode(value) do

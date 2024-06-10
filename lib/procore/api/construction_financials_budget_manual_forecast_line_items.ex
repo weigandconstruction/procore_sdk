@@ -33,9 +33,9 @@ defmodule Procore.Api.ConstructionFinancialsBudgetManualForecastLineItems do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdManualForecastLineItemsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_manual_forecast_line_items_get(
         connection,

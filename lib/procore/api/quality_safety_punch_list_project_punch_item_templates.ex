@@ -37,7 +37,7 @@ defmodule Procore.Api.QualitySafetyPunchListProjectPunchItemTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectPunchItemTemplates.t())}
+          | {:ok, [Procore.Model.ProjectPunchItemTemplates.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_punch_item_templates_get(
         connection,

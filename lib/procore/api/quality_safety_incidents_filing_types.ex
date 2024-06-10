@@ -37,7 +37,7 @@ defmodule Procore.Api.QualitySafetyIncidentsFilingTypes do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.IncidentFilingType.t())}
+          | {:ok, [Procore.Model.IncidentFilingType.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_injury_filing_types_get(
         connection,

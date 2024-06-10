@@ -38,9 +38,9 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelChangeHistory do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesIdChangeHistoryGet304Response.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_bim_models_id_change_history_get(
         connection,

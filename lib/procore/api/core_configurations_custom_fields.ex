@@ -34,7 +34,7 @@ defmodule Procore.Api.CoreConfigurationsCustomFields do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ConfigurableFieldSet2.t())}
+          | {:ok, [Procore.Model.ConfigurableFieldSet2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_custom_field_definitions_custom_field_definition_id_configurable_field_sets_get(
         connection,
@@ -345,7 +345,7 @@ defmodule Procore.Api.CoreConfigurationsCustomFields do
   """
   @spec rest_v10_custom_field_metadata_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CustomFieldMetadatum.t())}
+          | {:ok, [Procore.Model.CustomFieldMetadatum.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_custom_field_metadata_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{
@@ -454,7 +454,7 @@ defmodule Procore.Api.CoreConfigurationsCustomFields do
   """
   @spec rest_v10_custom_fields_sections_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CustomFieldsSection.t())}
+          | {:ok, [Procore.Model.CustomFieldsSection.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_custom_fields_sections_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{
@@ -562,7 +562,7 @@ defmodule Procore.Api.CoreConfigurationsCustomFields do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CustomFieldDefinition.t())}
+          | {:ok, [Procore.Model.CustomFieldDefinition.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_custom_field_definitions_get(
         connection,

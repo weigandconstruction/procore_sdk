@@ -92,9 +92,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdGenericToolsGenericToolIdStatusesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_generic_tools_generic_tool_id_statuses_get(
         connection,
@@ -264,8 +264,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10CompaniesCompanyIdGenericToolsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdGenericToolsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_generic_tools_get(
         connection,
@@ -392,7 +391,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.GenericToolItem1.t())}
+          | {:ok, [Procore.Model.GenericToolItem1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_correspondence_type_items_get(
         connection,
@@ -467,9 +466,11 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypeItemsPatch200ResponseInnerInner.t()
-             )}
+             [
+               [
+                 Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypeItemsPatch200ResponseInnerInner.t()
+               ]
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_correspondence_type_items_patch(
         connection,
@@ -530,11 +531,11 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesDefaultsGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesDefaultsGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_correspondence_types_defaults_get(
         connection,
@@ -588,9 +589,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesPermissionsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_correspondence_types_permissions_get(
         connection,
@@ -638,11 +639,11 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesUsersGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesUsersGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_correspondence_types_users_get(
         connection,
@@ -691,11 +692,11 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesUsersGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdCorrespondenceTypesUsersGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_custom_tools_users_get(
         connection,
@@ -755,9 +756,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisDefaultDistributionGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_available_read_users_get(
         connection,
@@ -818,9 +819,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdGenericToolsGenericToolIdGenericToolItemsAvailableStatusesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_available_statuses_get(
         connection,
@@ -879,9 +880,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesIdChangeHistoryGet304Response.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_change_histories_get(
         connection,
@@ -1008,8 +1009,8 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.GenericToolItemResponse.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.GenericToolItemResponse.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_generic_tool_item_responses_get(
         connection,
@@ -1341,9 +1342,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisDefaultDistributionGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_users_with_permission_get(
         connection,
@@ -1420,7 +1421,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.GenericToolItem1.t())}
+          | {:ok, [Procore.Model.GenericToolItem1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_get(
         connection,
@@ -1499,9 +1500,11 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdGenericToolsGenericToolIdGenericToolItemsPatch200ResponseInnerInner.t()
-             )}
+             [
+               [
+                 Procore.Model.RestV10ProjectsProjectIdGenericToolsGenericToolIdGenericToolItemsPatch200ResponseInnerInner.t()
+               ]
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_patch(
         connection,

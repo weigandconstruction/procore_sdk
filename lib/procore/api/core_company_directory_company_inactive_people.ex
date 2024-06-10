@@ -38,7 +38,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInactivePeople do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyPerson.t())}
+          | {:ok, [Procore.Model.CompanyPerson.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_people_inactive_get(
         connection,

@@ -39,7 +39,7 @@ defmodule Procore.Api.CoreCompanyDirectoryDistributionGroups do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInner.t())}
+             [Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_distribution_groups_get(
         connection,

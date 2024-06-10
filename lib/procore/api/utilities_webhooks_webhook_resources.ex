@@ -32,7 +32,7 @@ defmodule Procore.Api.UtilitiesWebhooksWebhookResources do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(String)}
+          | {:ok, [String.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_webhooks_resources_api_versions_get(
         connection,
@@ -74,7 +74,7 @@ defmodule Procore.Api.UtilitiesWebhooksWebhookResources do
   """
   @spec rest_v10_webhooks_resources_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.WebhooksResource.t())}
+          | {:ok, [Procore.Model.WebhooksResource.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_webhooks_resources_get(connection, procore_company_id, project_id, _opts \\ []) do
     request =

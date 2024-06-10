@@ -102,7 +102,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
   """
   @spec rest_v10_punch_items_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.PunchItem6.t())}
+          | {:ok, [Procore.Model.PunchItem6.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_punch_items_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -371,7 +371,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, AnyType}
+          | {:ok, any()}
           | {:error, Tesla.Env.t()}
   def rest_v10_punch_items_id_send_email_post(
         connection,
@@ -516,7 +516,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, AnyType}
+          | {:ok, any()}
           | {:error, Tesla.Env.t()}
   def rest_v10_punch_items_send_all_unsent_post(
         connection,
@@ -619,7 +619,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t())}
+             [Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_punch_list_default_distribution_get(
         connection,
@@ -743,7 +743,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
   """
   @spec rest_v11_punch_items_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.PunchItem.t())}
+          | {:ok, [Procore.Model.PunchItem.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_punch_items_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -956,7 +956,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, AnyType}
+          | {:ok, any()}
           | {:error, Tesla.Env.t()}
   def rest_v11_punch_items_id_send_email_post(
         connection,
@@ -1101,7 +1101,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, AnyType}
+          | {:ok, any()}
           | {:error, Tesla.Env.t()}
   def rest_v11_punch_items_send_all_unsent_post(
         connection,

@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyInspectionsResponses do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistResponse.t())}
+          | {:ok, [Procore.Model.ChecklistResponse.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_checklist_responses_get(
         connection,

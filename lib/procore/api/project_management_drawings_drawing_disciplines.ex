@@ -33,7 +33,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingDisciplines do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV11ProjectsProjectIdDrawingDisciplinesGet200ResponseInner.t())}
+             [Procore.Model.RestV11ProjectsProjectIdDrawingDisciplinesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_drawing_disciplines_get(
         connection,
@@ -199,7 +199,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingDisciplines do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV11ProjectsProjectIdDrawingDisciplinesGet200ResponseInner.t())}
+             [Procore.Model.RestV11ProjectsProjectIdDrawingDisciplinesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_drawing_disciplines_get(
         connection,

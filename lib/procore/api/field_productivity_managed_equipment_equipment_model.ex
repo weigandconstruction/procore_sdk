@@ -33,8 +33,8 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentModel do
           Procore.Model.RestV10CompaniesCompanyIdManagedEquipmentModelsBulkUpdatePatchRequest.t(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ManagedEquipmentModel.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ManagedEquipmentModel.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_models_bulk_update_patch(
         connection,
@@ -90,8 +90,8 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentModel do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ManagedEquipmentModel.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ManagedEquipmentModel.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_models_get(
         connection,

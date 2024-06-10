@@ -36,9 +36,11 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInnerInner.t()
-             )}
+             [
+               [
+                 Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInnerInner.t()
+               ]
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_action_plans_plan_template_references_bulk_create_post(
         connection,
@@ -110,9 +112,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateReferencesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_action_plans_plan_template_references_get(
         connection,
@@ -342,9 +344,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdRecycleBinActionPlansPlanTemplateReferencesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_recycle_bin_action_plans_plan_template_references_get(
         connection,

@@ -34,7 +34,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionPlans do
   """
   @spec rest_v10_bim_model_revision_plans_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10BimModelRevisionPlansGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10BimModelRevisionPlansGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_bim_model_revision_plans_get(
         connection,

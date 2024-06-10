@@ -27,8 +27,8 @@ defmodule Procore.Api.CoreCompanyCompanies do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_get(Tesla.Env.client(), keyword()) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Company.t())}
+          {:ok, [Procore.Model.Company.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_get(connection, opts \\ []) do
     optional_params = %{

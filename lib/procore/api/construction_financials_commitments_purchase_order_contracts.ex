@@ -35,8 +35,8 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsPurchaseOrderContracts do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_purchase_order_contracts_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.RestV10PurchaseOrderContractsGet200ResponseInner.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.RestV10PurchaseOrderContractsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_purchase_order_contracts_get(
         connection,

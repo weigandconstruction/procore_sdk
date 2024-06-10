@@ -94,9 +94,9 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdWorkBreakdownStructureWbsCodesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_work_breakdown_structure_wbs_codes_get(
         connection,

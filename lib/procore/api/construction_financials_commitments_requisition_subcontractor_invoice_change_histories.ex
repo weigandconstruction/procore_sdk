@@ -35,11 +35,11 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10RequisitionsRequisitionIdChangeHistoriesGet200ResponseInner.t()
-             )}
-          | {:ok,
              Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10RequisitionsRequisitionIdChangeHistoriesGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_requisitions_requisition_id_change_histories_get(
         connection,

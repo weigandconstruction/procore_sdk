@@ -36,9 +36,9 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateItemAssig
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemAssigneesBulkCreatePost200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_item_assignees_bulk_create_post(
         connection,
@@ -105,9 +105,9 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateItemAssig
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemAssigneesBulkUpdatePatch200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_item_assignees_bulk_update_patch(
         connection,
@@ -179,9 +179,9 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateItemAssig
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_item_assignees_get(
         connection,

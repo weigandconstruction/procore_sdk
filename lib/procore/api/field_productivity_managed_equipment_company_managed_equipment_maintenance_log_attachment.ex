@@ -146,7 +146,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ManagedEquipmentMaintenanceLogsAttachment.t())}
+          | {:ok, [Procore.Model.ManagedEquipmentMaintenanceLogsAttachment.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_maintenance_logs_id_attachments_bulk_destroy_delete(
         connection,
@@ -207,7 +207,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ManagedEquipmentMaintenanceLogsAttachment.t())}
+          | {:ok, [Procore.Model.ManagedEquipmentMaintenanceLogsAttachment.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_maintenance_logs_id_attachments_get(
         connection,

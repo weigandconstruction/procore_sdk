@@ -43,9 +43,9 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTestRecordsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_test_records_get(
         connection,
@@ -283,9 +283,9 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTestRecordsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_action_plans_plan_test_records_get(
         connection,

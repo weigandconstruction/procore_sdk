@@ -45,9 +45,7 @@ defmodule Procore.Api.QualitySafetyIncidentsNearMisses do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdIncidentsNearMissesGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdIncidentsNearMissesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_near_misses_get(
         connection,
@@ -359,9 +357,7 @@ defmodule Procore.Api.QualitySafetyIncidentsNearMisses do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdIncidentsNearMissesGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdIncidentsNearMissesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_incidents_near_misses_get(
         connection,

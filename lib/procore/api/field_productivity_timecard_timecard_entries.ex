@@ -45,7 +45,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimecardEntry3.t())}
+          | {:ok, [Procore.Model.TimecardEntry3.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_get(
         connection,
@@ -110,8 +110,8 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.TimecardEntryChangeHistory.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.TimecardEntryChangeHistory.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_id_change_history_get(
         connection,
@@ -375,7 +375,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimecardEntry8.t())}
+          | {:ok, [Procore.Model.TimecardEntry8.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_get(
         connection,
@@ -751,7 +751,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
   """
   @spec rest_v10_timecard_entries_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimecardEntry6.t())}
+          | {:ok, [Procore.Model.TimecardEntry6.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_timecard_entries_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

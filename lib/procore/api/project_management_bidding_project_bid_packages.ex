@@ -37,9 +37,9 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdBidPackagesBidPackageIdCorrespondencesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_bid_packages_bid_package_id_correspondences_get(
         connection,
@@ -319,7 +319,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV11ProjectsProjectIdBidPackagesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV11ProjectsProjectIdBidPackagesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_bid_packages_get(
         connection,

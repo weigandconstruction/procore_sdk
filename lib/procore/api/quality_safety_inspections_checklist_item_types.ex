@@ -36,7 +36,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemTypes do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistItemType.t())}
+          | {:ok, [Procore.Model.ChecklistItemType.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_checklist_item_types_get(
         connection,

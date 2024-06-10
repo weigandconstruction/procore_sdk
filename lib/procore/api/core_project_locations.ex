@@ -29,7 +29,7 @@ defmodule Procore.Api.CoreProjectLocations do
   """
   @spec rest_v10_locations_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Location1.t())}
+          | {:ok, [Procore.Model.Location1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_locations_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -321,7 +321,7 @@ defmodule Procore.Api.CoreProjectLocations do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Location1.t())}
+          | {:ok, [Procore.Model.Location1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_locations_get(
         connection,

@@ -38,7 +38,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBillingPeriods do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.BillingPeriod.t())}
+          | {:ok, [Procore.Model.BillingPeriod.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_billing_periods_get(
         connection,

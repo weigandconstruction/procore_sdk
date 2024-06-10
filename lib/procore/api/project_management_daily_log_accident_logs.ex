@@ -39,7 +39,7 @@ defmodule Procore.Api.ProjectManagementDailyLogAccidentLogs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ProjectsProjectIdAccidentLogsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdAccidentLogsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_accident_logs_get(
         connection,

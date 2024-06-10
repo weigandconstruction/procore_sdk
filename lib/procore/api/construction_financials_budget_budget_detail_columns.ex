@@ -33,11 +33,11 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetDetailColumns do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10BudgetViewsBudgetViewIdBudgetDetailColumnsGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10BudgetViewsBudgetViewIdBudgetDetailColumnsGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_budget_views_budget_view_id_budget_detail_columns_get(
         connection,

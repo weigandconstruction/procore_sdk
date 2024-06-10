@@ -32,7 +32,7 @@ defmodule Procore.Api.ProjectManagementTimecardTimecards do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimecardTimeType4.t())}
+          | {:ok, [Procore.Model.TimecardTimeType4.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_time_types_get(
         connection,

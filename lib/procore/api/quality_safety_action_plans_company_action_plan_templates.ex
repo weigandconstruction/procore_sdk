@@ -38,11 +38,11 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplates do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplatesGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplatesGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_action_plans_plan_templates_get(
         connection,
@@ -441,9 +441,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplates do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdRecycleBinActionPlansPlanTemplatesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_recycle_bin_action_plans_plan_templates_get(
         connection,
@@ -621,9 +621,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplates do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV11CompaniesCompanyIdActionPlansPlanTemplatesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_action_plans_plan_templates_get(
         connection,
@@ -1022,9 +1022,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplates do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV11CompaniesCompanyIdRecycleBinActionPlansPlanTemplatesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_recycle_bin_action_plans_plan_templates_get(
         connection,

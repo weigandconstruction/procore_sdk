@@ -145,8 +145,8 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistComments do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ChecklistComment.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ChecklistComment.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_list_item_comments_get(
         connection,
@@ -209,8 +209,8 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistComments do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ChecklistComment.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ChecklistComment.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_checklist_list_item_comments_get(
         connection,

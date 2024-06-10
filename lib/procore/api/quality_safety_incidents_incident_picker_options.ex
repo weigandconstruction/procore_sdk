@@ -32,7 +32,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.AffectedBodyPart.t())}
+          | {:ok, [Procore.Model.AffectedBodyPart.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_affected_body_parts_get(
         connection,
@@ -79,7 +79,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.FilingType.t())}
+          | {:ok, [Procore.Model.FilingType.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_filing_types_get(
         connection,
@@ -126,7 +126,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.IncidentStatus.t())}
+          | {:ok, [Procore.Model.IncidentStatus.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_statuses_get(
         connection,
@@ -173,7 +173,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.IncidentUnitOfMeasure.t())}
+          | {:ok, [Procore.Model.IncidentUnitOfMeasure.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_units_of_measure_get(
         connection,

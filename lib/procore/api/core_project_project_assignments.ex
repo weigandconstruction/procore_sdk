@@ -45,7 +45,7 @@ defmodule Procore.Api.CoreProjectProjectAssignments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectAssignmentNormalView.t())}
+          | {:ok, [Procore.Model.ProjectAssignmentNormalView.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_users_user_id_project_assignments_get(
         connection,

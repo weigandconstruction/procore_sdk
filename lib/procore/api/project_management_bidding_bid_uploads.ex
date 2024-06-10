@@ -35,7 +35,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidUploads do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10CompaniesCompanyIdBidsBidIdUploadsGet200ResponseInner.t())}
+             [Procore.Model.RestV10CompaniesCompanyIdBidsBidIdUploadsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_bids_bid_id_uploads_get(
         connection,

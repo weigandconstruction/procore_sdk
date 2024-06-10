@@ -46,9 +46,9 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetViewSnapshotSummaryRows 
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10BudgetViewSnapshotsBudgetViewSnapshotIdSummaryRowsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_budget_view_snapshots_budget_view_snapshot_id_summary_rows_get(
         connection,

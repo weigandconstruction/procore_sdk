@@ -37,8 +37,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdFormTemplatesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdFormTemplatesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_form_templates_get(
         connection,
@@ -314,8 +313,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdFormTemplatesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdFormTemplatesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_recycle_bin_form_templates_get(
         connection,
@@ -481,8 +479,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdFormTemplatesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdFormTemplatesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_form_templates_get(
         connection,

@@ -27,7 +27,7 @@ defmodule Procore.Api.CoreLocalFilesLocalFiles do
   """
   @spec rest_v10_local_files_uuid_get(Tesla.Env.client(), integer(), String.t(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, String}
+          | {:ok, String.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_local_files_uuid_get(connection, procore_company_id, uuid, _opts \\ []) do
     request =

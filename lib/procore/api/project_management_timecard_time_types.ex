@@ -29,7 +29,7 @@ defmodule Procore.Api.ProjectManagementTimecardTimeTypes do
   """
   @spec rest_v10_timecard_time_types_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimecardTimeType1.t())}
+          | {:ok, [Procore.Model.TimecardTimeType1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_timecard_time_types_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

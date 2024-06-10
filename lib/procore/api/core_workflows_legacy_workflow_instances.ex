@@ -31,7 +31,7 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowInstances do
   """
   @spec rest_v10_workflow_instances_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10WorkflowInstancesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10WorkflowInstancesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_workflow_instances_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{

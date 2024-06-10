@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemAttachments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistItemAttachment1.t())}
+          | {:ok, [Procore.Model.ChecklistItemAttachment1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_list_item_attachments_bulk_create_post(
         connection,
@@ -93,7 +93,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemAttachments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistItemAttachment1.t())}
+          | {:ok, [Procore.Model.ChecklistItemAttachment1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_list_item_attachments_get(
         connection,
@@ -210,7 +210,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemAttachments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistItemAttachment1.t())}
+          | {:ok, [Procore.Model.ChecklistItemAttachment1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_checklist_list_item_attachments_get(
         connection,

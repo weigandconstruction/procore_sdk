@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyIncidentsAfflictionTypes do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.AfflictionType1.t())}
+          | {:ok, [Procore.Model.AfflictionType1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_affliction_types_bulk_update_patch(
         connection,
@@ -96,7 +96,7 @@ defmodule Procore.Api.QualitySafetyIncidentsAfflictionTypes do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.AfflictionType1.t())}
+          | {:ok, [Procore.Model.AfflictionType1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_affliction_types_get(
         connection,

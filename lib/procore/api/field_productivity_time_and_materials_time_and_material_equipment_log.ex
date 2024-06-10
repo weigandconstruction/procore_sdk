@@ -35,9 +35,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEquipmentL
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEquipmentLogsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_equipment_logs_bulk_create_post(
         connection,
@@ -91,9 +91,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEquipmentL
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEquipmentLogsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_equipment_logs_bulk_destroy_delete(
         connection,
@@ -147,9 +147,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEquipmentL
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEquipmentLogsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_equipment_logs_bulk_update_patch(
         connection,
@@ -203,9 +203,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEquipmentL
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEquipmentLogsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_equipment_logs_get(
         connection,

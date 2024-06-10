@@ -36,7 +36,7 @@ defmodule Procore.Api.CoreAppInstallationsInstallationRequests do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10InstallationRequestsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10InstallationRequestsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_installation_requests_get(
         connection,

@@ -36,9 +36,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEntry do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entries_bulk_update_patch(
         connection,
@@ -96,7 +94,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEntry do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ConfigurableFieldSet.t())}
+          | {:ok, [Procore.Model.ConfigurableFieldSet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entries_configurable_field_sets_get(
         connection,
@@ -205,9 +203,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEntry do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entries_get(
         connection,
@@ -646,9 +642,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialEntry do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entries_search_post(
         connection,

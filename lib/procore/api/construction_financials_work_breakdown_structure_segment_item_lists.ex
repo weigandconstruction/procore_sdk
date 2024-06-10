@@ -35,11 +35,11 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegmentItemLis
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10CompaniesCompanyIdWorkBreakdownStructureSegmentsSegmentIdListsGet200ResponseInner.t()
-             )}
-          | {:ok,
              Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10CompaniesCompanyIdWorkBreakdownStructureSegmentsSegmentIdListsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_work_breakdown_structure_segments_segment_id_lists_get(
         connection,

@@ -37,7 +37,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdMonitoringResourcesGet200Respons
           :utilization => float() | nil,
           :budget_line_item_id => integer() | nil,
           :currency_configuration =>
-            Procore.Model.RestV10ProjectsProjectIdMonitoringResourcesGet200ResponseInnerCurrencyConfiguration.t()
+            Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration.t()
             | nil
         }
 
@@ -48,7 +48,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdMonitoringResourcesGet200Respons
     |> Deserializer.deserialize(
       :currency_configuration,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdMonitoringResourcesGet200ResponseInnerCurrencyConfiguration
+      Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration
     )
   end
 end

@@ -29,7 +29,7 @@ defmodule Procore.Api.CoreProjectLinksLinks do
   """
   @spec rest_v10_links_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10LinksGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10LinksGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_links_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -309,7 +309,7 @@ defmodule Procore.Api.CoreProjectLinksLinks do
   """
   @spec rest_v10_links_recycle_bin_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10LinksRecycleBinGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10LinksRecycleBinGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_links_recycle_bin_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

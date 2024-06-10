@@ -37,8 +37,8 @@ defmodule Procore.Api.QualitySafetyIncidentsEnvironmentalTypes do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.EnvironmentalType.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.EnvironmentalType.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_environmental_types_get(
         connection,

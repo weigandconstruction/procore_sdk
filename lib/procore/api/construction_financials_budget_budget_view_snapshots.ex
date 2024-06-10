@@ -28,8 +28,8 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetViewSnapshots do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_budget_view_snapshots_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.RestV10BudgetViewSnapshotsGet200ResponseInner.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.RestV10BudgetViewSnapshotsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_budget_view_snapshots_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

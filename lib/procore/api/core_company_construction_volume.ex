@@ -32,8 +32,8 @@ defmodule Procore.Api.CoreCompanyConstructionVolume do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_construction_volume_urgent_error_post(
         connection,

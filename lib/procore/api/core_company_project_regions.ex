@@ -34,7 +34,7 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectRegion2.t())}
+          | {:ok, [Procore.Model.ProjectRegion2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_project_regions_get(
         connection,
@@ -89,8 +89,8 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_project_regions_id_delete(
         connection,

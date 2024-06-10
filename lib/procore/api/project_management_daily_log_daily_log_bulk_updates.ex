@@ -35,9 +35,9 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogBulkUpdates do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdDailyLogsBulkUpdatesBulkUpdatePatch200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_daily_logs_bulk_updates_bulk_update_patch(
         connection,

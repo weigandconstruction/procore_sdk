@@ -33,11 +33,11 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateReceivers
           Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReceiversBulkCreatePostRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReceiversGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReceiversGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_receivers_bulk_create_post(
         connection,
@@ -158,11 +158,11 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateReceivers
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReceiversGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReceiversGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_receivers_get(
         connection,
@@ -392,9 +392,9 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateReceivers
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTemplateReceiversGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_action_plans_plan_template_receivers_get(
         connection,

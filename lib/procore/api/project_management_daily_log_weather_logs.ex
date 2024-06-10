@@ -83,7 +83,7 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherLogs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ProjectsProjectIdWeatherLogsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdWeatherLogsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_weather_logs_get(
         connection,
@@ -354,11 +354,9 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherLogs do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV11ProjectsProjectIdDailyLogsWeatherLogsGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV11ProjectsProjectIdDailyLogsWeatherLogsGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_daily_logs_weather_logs_get(
         connection,

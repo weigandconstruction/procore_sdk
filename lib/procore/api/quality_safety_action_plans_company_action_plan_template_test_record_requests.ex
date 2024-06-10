@@ -34,11 +34,11 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateTestRecor
           Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePostRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_action_plans_plan_template_test_record_requests_bulk_create_post(
         connection,
@@ -111,9 +111,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateTestRecor
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateTestRecordRequestsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_action_plans_plan_template_test_record_requests_get(
         connection,
@@ -353,9 +353,9 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateTestRecor
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdRecycleBinActionPlansPlanTemplateTestRecordRequestsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_recycle_bin_action_plans_plan_template_test_record_requests_get(
         connection,

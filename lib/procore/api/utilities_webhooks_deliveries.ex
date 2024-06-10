@@ -39,7 +39,7 @@ defmodule Procore.Api.UtilitiesWebhooksDeliveries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.WebhooksDelivery.t())}
+          | {:ok, [Procore.Model.WebhooksDelivery.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_webhooks_hooks_hook_id_deliveries_get(
         connection,

@@ -33,9 +33,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInnerApproversInnerResponse.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittal_responses_get(
         connection,
@@ -138,9 +138,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
   @spec rest_v10_submittal_responses_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInnerApproversInnerResponse.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_submittal_responses_get(connection, procore_company_id, project_id, _opts \\ []) do
     request =

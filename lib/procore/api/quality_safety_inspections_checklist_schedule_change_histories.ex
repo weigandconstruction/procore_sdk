@@ -36,7 +36,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleChangeHistories d
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistScheduleChangeHistory.t())}
+          | {:ok, [Procore.Model.ChecklistScheduleChangeHistory.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_schedules_schedule_id_change_history_get(
         connection,

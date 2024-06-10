@@ -48,7 +48,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueExport
         ) ::
           {:ok, nil}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, String}
+          | {:ok, String.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_export_get(
         connection,

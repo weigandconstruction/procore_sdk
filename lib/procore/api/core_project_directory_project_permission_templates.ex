@@ -34,9 +34,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectPermissionTemplates do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdPermissionTemplatesGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdPermissionTemplatesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_permission_templates_get(
         connection,

@@ -35,9 +35,8 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(Procore.Model.RestV10ProjectsProjectIdVendorsInactiveGet200ResponseInner.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdVendorsInactiveGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_vendors_inactive_get(
         connection,

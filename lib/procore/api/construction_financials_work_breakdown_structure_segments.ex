@@ -33,9 +33,9 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegments do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdWorkBreakdownStructureSegmentsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_work_breakdown_structure_segments_get(
         connection,
@@ -324,9 +324,9 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegments do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdWorkBreakdownStructureSegmentsIdGet200Response.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_work_breakdown_structure_segments_get(
         connection,

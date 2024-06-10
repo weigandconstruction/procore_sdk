@@ -33,7 +33,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
           integer(),
           integer(),
           keyword()
-        ) :: {:ok, list(Procore.Model.TimecardEntry8Crew.t())} | {:error, Tesla.Env.t()}
+        ) :: {:ok, [Procore.Model.TimecardEntry8Crew.t()]} | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_crews_get(
         connection,
         procore_company_id,
@@ -239,7 +239,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
           integer(),
           integer(),
           keyword()
-        ) :: {:ok, list(Integer)} | {:error, Tesla.Env.t()}
+        ) :: {:ok, [integer()]} | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_crews_ids_get(
         connection,
         procore_company_id,

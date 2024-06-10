@@ -33,9 +33,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_assigned_id_get(
         connection,
@@ -83,9 +83,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsBallInCourtIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_ball_in_court_id_get(
         connection,
@@ -134,9 +134,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_cost_code_id_get(
         connection,
@@ -231,9 +231,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_location_id_get(
         connection,
@@ -281,9 +281,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsPrefixStageIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_prefix_stage_id_get(
         connection,
@@ -330,11 +330,11 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsPriorityGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsPriorityGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_priority_get(
         connection,
@@ -382,9 +382,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_received_from_login_information_id_get(
         connection,
@@ -434,9 +434,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_responsible_contractor_id_get(
         connection,
@@ -484,9 +484,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsRfiManagerIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_rfi_manager_id_get(
         connection,
@@ -535,9 +535,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsStatusGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_status_get(
         connection,
@@ -585,9 +585,9 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisFilterOptionsSubJobIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_rfis_filter_options_sub_job_id_get(
         connection,

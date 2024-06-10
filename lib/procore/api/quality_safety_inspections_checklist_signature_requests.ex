@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSignatureRequests do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistSignatureRequest.t())}
+          | {:ok, [Procore.Model.ChecklistSignatureRequest.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_checklist_lists_list_id_signature_requests_get(
         connection,

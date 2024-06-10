@@ -38,8 +38,8 @@ defmodule Procore.Api.QualitySafetyIncidentsSeverityLevels do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.SeverityLevel.t())}
+          {:ok, [Procore.Model.SeverityLevel.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_severity_levels_get(
         connection,

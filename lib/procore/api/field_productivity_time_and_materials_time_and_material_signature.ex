@@ -35,9 +35,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesSignaturesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entries_signatures_bulk_destroy_delete(
         connection,
@@ -93,9 +93,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesSignaturesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entries_signatures_get(
         connection,

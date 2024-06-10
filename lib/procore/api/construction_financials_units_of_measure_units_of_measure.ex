@@ -33,8 +33,8 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.RestV10CompaniesCompanyIdUomsGet200ResponseInner.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdUomsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_uoms_get(
         connection,

@@ -34,7 +34,7 @@ defmodule Procore.Api.CoreCompanyProjectTypes do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectType2.t())}
+          | {:ok, [Procore.Model.ProjectType2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_project_types_get(
         connection,

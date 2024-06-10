@@ -37,9 +37,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationUploads do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdSpecificationUploadsGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdSpecificationUploadsGet200ResponseInner.t()]}
           | {:ok,
              Procore.Model.RestV10CompaniesCompanyIdProjectsProjectIdTaskItemCommentsPost403Response.t()}
           | {:error, Tesla.Env.t()}
@@ -99,11 +97,9 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationUploads do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdSpecificationUploadsGet200ResponseInner.t()
-             )}
           | {:ok, Procore.Model.RestV10TaxTypesPost400Response.t()}
+          | {:ok,
+             [Procore.Model.RestV10ProjectsProjectIdSpecificationUploadsGet200ResponseInner.t()]}
           | {:ok,
              Procore.Model.RestV10CompaniesCompanyIdProjectsProjectIdTaskItemCommentsPost403Response.t()}
           | {:ok,

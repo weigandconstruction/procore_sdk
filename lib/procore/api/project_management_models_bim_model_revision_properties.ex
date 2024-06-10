@@ -43,7 +43,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionProperties do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10BimPropertyFilesIdPropertiesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10BimPropertyFilesIdPropertiesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_bim_model_revisions_id_properties_get(
         connection,

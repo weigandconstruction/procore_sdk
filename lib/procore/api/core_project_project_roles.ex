@@ -30,7 +30,7 @@ defmodule Procore.Api.CoreProjectProjectRoles do
   """
   @spec rest_v10_project_roles_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectRole.t())}
+          | {:ok, [Procore.Model.ProjectRole.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_project_roles_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

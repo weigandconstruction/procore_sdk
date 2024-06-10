@@ -36,7 +36,7 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowActivityHistories do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10WorkflowActivityHistoriesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10WorkflowActivityHistoriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_workflow_activity_histories_get(
         connection,

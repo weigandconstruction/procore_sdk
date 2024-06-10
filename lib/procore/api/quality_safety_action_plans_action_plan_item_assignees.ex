@@ -36,9 +36,11 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanItemAssignees do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInnerInner.t()
-             )}
+             [
+               [
+                 Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInnerInner.t()
+               ]
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_item_assignees_bulk_create_post(
         connection,
@@ -103,9 +105,11 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanItemAssignees do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInnerInner.t()
-             )}
+             [
+               [
+                 Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateTestRecordRequestsBulkCreatePost200ResponseInnerInner.t()
+               ]
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_item_assignees_bulk_update_patch(
         connection,
@@ -175,9 +179,9 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanItemAssignees do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanItemAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_item_assignees_get(
         connection,
@@ -471,9 +475,9 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanItemAssignees do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanItemAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_action_plans_plan_item_assignees_get(
         connection,

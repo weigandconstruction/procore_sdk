@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionTypes do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.InspectionType2.t())}
+          | {:ok, [Procore.Model.InspectionType2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_inspection_types_get(
         connection,

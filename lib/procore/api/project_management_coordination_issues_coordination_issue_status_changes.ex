@@ -37,8 +37,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueStatus
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10CoordinationIssuesIdStatusChangesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CoordinationIssuesIdStatusChangesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_id_status_changes_get(
         connection,

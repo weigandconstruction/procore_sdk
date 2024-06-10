@@ -35,7 +35,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentMake do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ManagedEquipmentMake.t())}
+          | {:ok, [Procore.Model.ManagedEquipmentMake.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_makes_get(
         connection,

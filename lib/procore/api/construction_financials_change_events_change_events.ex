@@ -29,7 +29,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeEventsChangeEvents do
   """
   @spec rest_v10_change_event_statuses_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ChangeEventStatusesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ChangeEventStatusesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_change_event_statuses_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -77,7 +77,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeEventsChangeEvents do
   """
   @spec rest_v10_change_events_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ChangeEventsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ChangeEventsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_change_events_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

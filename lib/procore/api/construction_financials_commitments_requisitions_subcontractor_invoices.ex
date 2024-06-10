@@ -36,7 +36,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionsSubcontractor
   """
   @spec rest_v10_requisitions_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10RequisitionsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10RequisitionsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_requisitions_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -297,11 +297,11 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionsSubcontractor
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10RequisitionsRequisitionIdAddChangeOrderPackagePost201ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10RequisitionsRequisitionIdAddChangeOrderPackagePost201ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_requisitions_requisition_id_add_change_order_package_post(
         connection,
@@ -363,8 +363,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionsSubcontractor
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
              Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10RequisitionsRequisitionIdDetailGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10RequisitionsRequisitionIdDetailGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_requisitions_requisition_id_detail_get(
         connection,
@@ -482,8 +481,8 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionsSubcontractor
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v11_requisitions_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV11RequisitionsGet200ResponseInner.t())}
+          {:ok, [Procore.Model.RestV11RequisitionsGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_requisitions_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

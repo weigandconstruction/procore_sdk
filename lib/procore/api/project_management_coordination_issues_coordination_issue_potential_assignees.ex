@@ -34,8 +34,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssuePotent
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10CoordinationIssuesGet200ResponseInnerAllOfAssignee.t())}
+          | {:ok, [Procore.Model.RestV10CoordinationIssuesGet200ResponseInnerAllOfAssignee.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_coordination_issues_assignees_get(
         connection,

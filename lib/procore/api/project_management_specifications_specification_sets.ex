@@ -37,7 +37,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSets do
           | {:ok,
              Procore.Model.RestV10CompaniesCompanyIdProjectsProjectIdTaskItemCommentsPost403Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdSpecificationSetsGet200ResponseInner.t())}
+             [Procore.Model.RestV10ProjectsProjectIdSpecificationSetsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_specification_sets_get(
         connection,

@@ -38,9 +38,9 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanReceivers do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlansGet200ResponseInnerPlanReceiversInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_receivers_get(
         connection,

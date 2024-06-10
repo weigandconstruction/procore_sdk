@@ -105,7 +105,7 @@ defmodule Procore.Api.CoreConfigurationsConfigurableFieldSets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ConfigurableFieldSet.t())}
+          | {:ok, [Procore.Model.ConfigurableFieldSet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_configurable_field_sets_get(
         connection,
@@ -395,9 +395,9 @@ defmodule Procore.Api.CoreConfigurationsConfigurableFieldSets do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdConfigurableFieldSetsIdProjectOptionsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_configurable_field_sets_id_project_options_get(
         connection,
@@ -583,7 +583,7 @@ defmodule Procore.Api.CoreConfigurationsConfigurableFieldSets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ConfigurableFieldSet.t())}
+          | {:ok, [Procore.Model.ConfigurableFieldSet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_configurable_field_sets_get(
         connection,
@@ -644,9 +644,9 @@ defmodule Procore.Api.CoreConfigurationsConfigurableFieldSets do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdRfisDefaultDistributionGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_custom_fields_tool_name_user_options_get(
         connection,

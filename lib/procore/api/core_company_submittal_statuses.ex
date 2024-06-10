@@ -34,8 +34,7 @@ defmodule Procore.Api.CoreCompanySubmittalStatuses do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInnerStatus.t())}
+          | {:ok, [Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInnerStatus.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_submittal_statuses_get(
         connection,

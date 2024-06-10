@@ -38,7 +38,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, String}
+          | {:ok, String.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_csv_export_get(
         connection,
@@ -102,7 +102,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Timesheet1.t())}
+          | {:ok, [Procore.Model.Timesheet1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_get(
         connection,
@@ -214,7 +214,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimecardEntry2.t())}
+          | {:ok, [Procore.Model.TimecardEntry2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timesheets_post(
         connection,
@@ -421,11 +421,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdTimesheetsChangeHistoryGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV10ProjectsProjectIdTimesheetsChangeHistoryGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_change_history_get(
         connection,
@@ -479,11 +477,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           Procore.Model.TimesheetChangeHistoryBody.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdTimesheetsChangeHistoryGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV10ProjectsProjectIdTimesheetsChangeHistoryGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_change_history_post(
         connection,
@@ -592,7 +588,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Timesheet.t())}
+          | {:ok, [Procore.Model.Timesheet.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_get(
         connection,
@@ -869,7 +865,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Integer)}
+          | {:ok, [integer()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_potential_timesheet_creator_ids_get(
         connection,
@@ -919,9 +915,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimesheetsPotentialTimesheetCreatorsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_potential_timesheet_creators_get(
         connection,
@@ -976,7 +972,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Integer)}
+          | {:ok, [integer()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_scoped_cost_code_ids_get(
         connection,
@@ -1032,9 +1028,9 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimesheetsScopedCostCodesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_scoped_cost_codes_get(
         connection,
@@ -1090,7 +1086,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.TimesheetsSignature.t())}
+          | {:ok, [Procore.Model.TimesheetsSignature.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timesheets_signatures_get(
         connection,
@@ -1580,7 +1576,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Integer)}
+          | {:ok, [integer()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_project_timesheet_timecard_entries_recent_wbs_code_ids_get(
         connection,

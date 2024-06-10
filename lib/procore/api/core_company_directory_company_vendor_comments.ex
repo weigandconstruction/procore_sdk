@@ -37,7 +37,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorComments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.VendorComment.t())}
+          | {:ok, [Procore.Model.VendorComment.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_vendors_vendor_id_comments_get(
         connection,

@@ -35,8 +35,8 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentManagedEquipmentAttachmen
           Procore.Model.RestV10CompaniesCompanyIdManagedEquipmentIdManagedEquipmentAttachmentsBulkDestroyDeleteRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ManagedEquipmentAttachment.t())}
+          {:ok, [Procore.Model.ManagedEquipmentAttachment.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_managed_equipment_id_managed_equipment_attachments_bulk_destroy_delete(
         connection,

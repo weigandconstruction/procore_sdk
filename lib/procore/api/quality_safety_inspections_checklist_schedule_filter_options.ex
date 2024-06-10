@@ -33,9 +33,9 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdChecklistSchedulesFilterOptionsAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_schedules_filter_options_assignees_get(
         connection,
@@ -84,9 +84,9 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdChecklistSchedulesFilterOptionsAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_schedules_filter_options_inspection_templates_get(
         connection,
@@ -137,9 +137,9 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdChecklistSchedulesFilterOptionsAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_schedules_filter_options_locations_get(
         connection,
@@ -188,9 +188,9 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdChecklistSchedulesFilterOptionsAssigneesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_schedules_filter_options_types_get(
         connection,

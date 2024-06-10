@@ -40,7 +40,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyChecklistTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyChecklistTemplate.t())}
+          | {:ok, [Procore.Model.CompanyChecklistTemplate.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_checklist_list_templates_get(
         connection,
@@ -430,7 +430,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyChecklistTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistTemplate3.t())}
+          | {:ok, [Procore.Model.ChecklistTemplate3.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_recycle_bin_checklist_list_templates_get(
         connection,

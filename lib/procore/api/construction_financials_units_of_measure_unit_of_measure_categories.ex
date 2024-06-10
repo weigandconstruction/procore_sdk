@@ -32,8 +32,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitOfMeasureCategorie
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10CompaniesCompanyIdUomCategoriesGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdUomCategoriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_uom_categories_get(
         connection,

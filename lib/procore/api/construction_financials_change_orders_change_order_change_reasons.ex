@@ -34,7 +34,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersChangeOrderChangeReasons
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RfqChangeEventChangeOrderChangeReason.t())}
+          | {:ok, [Procore.Model.RfqChangeEventChangeOrderChangeReason.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_change_order_change_reasons_get(
         connection,

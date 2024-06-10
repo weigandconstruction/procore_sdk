@@ -35,9 +35,9 @@ defmodule Procore.Api.FieldProductivityBudgetedProductionQuantitiesBudgetedProdu
           keyword()
         ) ::
           {:ok,
-           list(
+           [
              Procore.Model.RestV10ProjectsProjectIdBudgetedProductionQuantitiesGet200ResponseInner.t()
-           )}
+           ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_budgeted_production_quantities_get(
         connection,
@@ -246,7 +246,7 @@ defmodule Procore.Api.FieldProductivityBudgetedProductionQuantitiesBudgetedProdu
           integer(),
           integer(),
           keyword()
-        ) :: {:ok, list(Integer)} | {:error, Tesla.Env.t()}
+        ) :: {:ok, [integer()]} | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_budgeted_production_quantities_ids_get(
         connection,
         procore_company_id,

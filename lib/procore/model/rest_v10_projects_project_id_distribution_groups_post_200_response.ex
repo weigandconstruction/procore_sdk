@@ -20,7 +20,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200Respons
           :name => String.t() | nil,
           :users =>
             [
-              Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner.t()
+              Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner.t()
             ]
             | nil
         }
@@ -32,7 +32,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200Respons
     |> Deserializer.deserialize(
       :users,
       :list,
-      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsGet200ResponseInnerUsersInner
+      Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200ResponseUsersInner
     )
   end
 end

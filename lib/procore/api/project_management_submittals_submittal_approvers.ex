@@ -39,7 +39,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalApprovers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10SubmittalApproversIdPatch200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10SubmittalApproversIdPatch200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_submittal_approvers_id_patch(
         connection,

@@ -34,7 +34,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRFQs do
   """
   @spec rest_v10_rfqs_get(Tesla.Env.client(), integer(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Rfq.t())}
+          | {:ok, [Procore.Model.Rfq.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_rfqs_get(connection, procore_company_id, project_id, contract_id, opts \\ []) do
     optional_params = %{
@@ -305,7 +305,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRFQs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RfqQuote.t())}
+          | {:ok, [Procore.Model.RfqQuote.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_rfqs_rfq_id_quotes_get(
         connection,
@@ -536,8 +536,8 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRFQs do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.RfqResponse.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.RfqResponse.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_rfqs_rfq_id_responses_get(
         connection,

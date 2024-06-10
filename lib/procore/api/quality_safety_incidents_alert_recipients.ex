@@ -38,7 +38,7 @@ defmodule Procore.Api.QualitySafetyIncidentsAlertRecipients do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t())}
+             [Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_severity_levels_severity_level_id_alert_recipients_get(
         connection,

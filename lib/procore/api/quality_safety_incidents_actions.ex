@@ -38,11 +38,11 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV11ProjectsProjectIdRecycleBinIncidentsActionsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV11ProjectsProjectIdRecycleBinIncidentsActionsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_actions_get(
         connection,
@@ -349,11 +349,11 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV11ProjectsProjectIdRecycleBinIncidentsActionsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV11ProjectsProjectIdRecycleBinIncidentsActionsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_incidents_actions_get(
         connection,
@@ -533,11 +533,11 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
           integer(),
           keyword()
         ) ::
-          {:ok,
-           list(
-             Procore.Model.RestV11ProjectsProjectIdRecycleBinIncidentsActionsGet200ResponseInner.t()
-           )}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [
+               Procore.Model.RestV11ProjectsProjectIdRecycleBinIncidentsActionsGet200ResponseInner.t()
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_recycle_bin_incidents_actions_get(
         connection,

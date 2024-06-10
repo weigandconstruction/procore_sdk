@@ -38,7 +38,7 @@ defmodule Procore.Api.QualitySafetyIncidentsBodyParts do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.BodyPart.t())}
+          | {:ok, [Procore.Model.BodyPart.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_body_parts_get(
         connection,

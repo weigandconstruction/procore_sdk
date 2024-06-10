@@ -35,7 +35,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchListAssigneeOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t())}
+             [Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_punch_list_assignee_options_get(
         connection,

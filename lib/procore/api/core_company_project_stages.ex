@@ -34,8 +34,8 @@ defmodule Procore.Api.CoreCompanyProjectStages do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ProjectStage2.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ProjectStage2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_project_stages_get(
         connection,

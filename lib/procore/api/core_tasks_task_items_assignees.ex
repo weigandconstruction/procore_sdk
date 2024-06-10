@@ -28,8 +28,8 @@ defmodule Procore.Api.CoreTasksTaskItemsAssignees do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_task_items_assignees_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_task_items_assignees_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{

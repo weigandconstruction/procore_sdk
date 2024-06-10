@@ -36,7 +36,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ContractPaymentsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ContractPaymentsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_contract_payments_get(
         connection,

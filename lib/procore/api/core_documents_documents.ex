@@ -44,7 +44,7 @@ defmodule Procore.Api.CoreDocumentsDocuments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ExampleOfAFolderThatIsAFile.t())}
+          | {:ok, [Procore.Model.ExampleOfAFolderThatIsAFile.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_documents_get(
         connection,
@@ -122,7 +122,7 @@ defmodule Procore.Api.CoreDocumentsDocuments do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ExampleOfAFolderThatIsAFile.t())}
+          | {:ok, [Procore.Model.ExampleOfAFolderThatIsAFile.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_documents_get(
         connection,

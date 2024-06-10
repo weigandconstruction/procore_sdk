@@ -35,9 +35,9 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimesheetsPotentialTimesheetCreatorsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_manpower_logs_contact_options_get(
         connection,
@@ -156,7 +156,7 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10ProjectsProjectIdManpowerLogsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdManpowerLogsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_manpower_logs_get(
         connection,
@@ -434,7 +434,7 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.NameView.t())}
+          | {:ok, [Procore.Model.NameView.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_manpower_logs_vendor_options_get(
         connection,

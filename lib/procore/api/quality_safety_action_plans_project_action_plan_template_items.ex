@@ -36,13 +36,15 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateItems do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemsBulkUpdatePatch200ResponseInnerInner.t()
-             )}
-          | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemsBulkUpdatePatch422ResponseInner.t()
-             )}
+             ]}
+          | {:ok,
+             [
+               [
+                 Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemsBulkUpdatePatch200ResponseInnerInner.t()
+               ]
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_items_bulk_update_patch(
         connection,
@@ -177,9 +179,9 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateItems do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateItemsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_action_plans_plan_template_items_get(
         connection,

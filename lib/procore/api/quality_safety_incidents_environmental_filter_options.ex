@@ -33,9 +33,9 @@ defmodule Procore.Api.QualitySafetyIncidentsEnvironmentalFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_environmentals_filter_options_affected_companies_get(
         connection,
@@ -86,9 +86,9 @@ defmodule Procore.Api.QualitySafetyIncidentsEnvironmentalFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsInjuriesFilterOptionsAffectedBodyPartsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_environmentals_filter_options_environmental_types_get(
         connection,
@@ -139,9 +139,9 @@ defmodule Procore.Api.QualitySafetyIncidentsEnvironmentalFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_environmentals_filter_options_managed_equipment_get(
         connection,
@@ -192,9 +192,9 @@ defmodule Procore.Api.QualitySafetyIncidentsEnvironmentalFilterOptions do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesFilterOptionsAffectedCompaniesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_environmentals_filter_options_work_activities_get(
         connection,

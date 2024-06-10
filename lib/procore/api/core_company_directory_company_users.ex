@@ -83,7 +83,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyUser5.t())}
+          | {:ok, [Procore.Model.CompanyUser5.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_users_get(
         connection,
@@ -195,8 +195,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_users_id_invite_patch(
         connection,
@@ -422,7 +422,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   """
   @spec rest_v10_users_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyUser5.t())}
+          | {:ok, [Procore.Model.CompanyUser5.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_users_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{
@@ -836,7 +836,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyUser5.t())}
+          | {:ok, [Procore.Model.CompanyUser5.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_users_get(
         connection,
@@ -948,8 +948,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_users_id_invite_patch(
         connection,
@@ -1174,8 +1174,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v11_users_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.CompanyUser2.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.CompanyUser2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_users_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{
@@ -1589,7 +1589,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyUser5.t())}
+          | {:ok, [Procore.Model.CompanyUser5.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v12_companies_company_id_users_get(
         connection,
@@ -1701,8 +1701,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v12_companies_company_id_users_id_invite_patch(
         connection,
@@ -1927,8 +1927,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v12_users_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.CompanyUser2.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.CompanyUser2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v12_users_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{
@@ -2345,7 +2345,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV13CompaniesCompanyIdUsersGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV13CompaniesCompanyIdUsersGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v13_companies_company_id_users_get(
         connection,
@@ -2458,8 +2458,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v13_companies_company_id_users_id_invite_patch(
         connection,
@@ -2684,8 +2684,8 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v13_users_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.CompanyUser2.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.CompanyUser2.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v13_users_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{

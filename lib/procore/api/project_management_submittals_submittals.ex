@@ -35,9 +35,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsApproverIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_approver_id_get(
         connection,
@@ -94,9 +94,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsApproverIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_ball_in_court_id_get(
         connection,
@@ -151,9 +151,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsCreatedByIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_created_by_id_get(
         connection,
@@ -204,9 +204,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsCurrentRevisionGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_current_revision_get(
         connection,
@@ -263,9 +263,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsDivisionGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_division_get(
         connection,
@@ -320,9 +320,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_get(
         connection,
@@ -370,9 +370,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsLocationIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_location_id_get(
         connection,
@@ -423,9 +423,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsPrivateGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_private_get(
         connection,
@@ -482,9 +482,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsApproverIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_received_from_id_get(
         connection,
@@ -541,9 +541,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsResponseIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_response_id_get(
         connection,
@@ -600,9 +600,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsResponsibleContractorIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_responsible_contractor_id_get(
         connection,
@@ -661,9 +661,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsSpecificationSectionIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_specification_section_id_get(
         connection,
@@ -722,9 +722,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsStatusIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_status_id_get(
         connection,
@@ -781,9 +781,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsStatusIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_sub_job_id_get(
         connection,
@@ -840,9 +840,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsApproverIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_submittal_manager_id_get(
         connection,
@@ -897,9 +897,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsSubmittalPackageIdGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_submittal_package_id_get(
         connection,
@@ -948,11 +948,11 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsTypeGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10ProjectsProjectIdSubmittalsFilterOptionsTypeGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_filter_options_type_get(
         connection,
@@ -1024,11 +1024,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_get(
         connection,
@@ -1215,11 +1213,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_id_revisions_get(
         connection,
@@ -1502,11 +1498,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_submittals_recycle_bin_get(
         connection,
@@ -1579,8 +1573,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10SubmittalAssociatedAttachmentsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10SubmittalAssociatedAttachmentsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_submittal_associated_attachments_get(
         connection,
@@ -1637,9 +1630,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV11ProjectsProjectIdSubmittalsAttachmentsWithMarkupGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_submittals_attachments_with_markup_get(
         connection,
@@ -1760,7 +1753,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_submittals_get(
         connection,
@@ -1999,11 +1992,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_submittals_id_revisions_get(
         connection,
@@ -2337,11 +2328,9 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()
-             )}
+          {:ok,
+           [Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200ResponseInner.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_submittals_recycle_bin_get(
         connection,

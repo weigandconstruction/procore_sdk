@@ -70,8 +70,8 @@ defmodule Procore.Api.AuthenticationOAuth20Authentication do
           Procore.Model.OauthRevokePostRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Map}
+          {:ok, map()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def oauth_revoke_post(connection, procore_company_id, oauth_revoke_post_request, _opts \\ []) do
     request =

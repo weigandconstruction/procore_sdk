@@ -39,9 +39,9 @@ defmodule Procore.Api.QualitySafetyIncidentsPropertyDamages do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_property_damages_get(
         connection,
@@ -348,9 +348,9 @@ defmodule Procore.Api.QualitySafetyIncidentsPropertyDamages do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdIncidentsPropertyDamagesGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_incidents_property_damages_get(
         connection,

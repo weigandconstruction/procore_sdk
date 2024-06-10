@@ -35,9 +35,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialAttachment
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInnerTimeAndMaterialEntryAttachmentsInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entry_attachments_bulk_destroy_delete(
         connection,
@@ -95,9 +95,9 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialAttachment
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdTimeAndMaterialEntriesGet200ResponseInnerTimeAndMaterialEntryAttachmentsInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_time_and_material_entry_attachments_get(
         connection,

@@ -34,7 +34,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_bids_get(
         connection,
@@ -200,7 +200,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_bid_packages_bid_package_id_bids_get(
         connection,
@@ -429,7 +429,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
   """
   @spec rest_v10_projects_project_id_bids_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_bids_get(
         connection,

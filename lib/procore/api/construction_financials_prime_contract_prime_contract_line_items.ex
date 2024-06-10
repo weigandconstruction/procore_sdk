@@ -41,7 +41,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPrimeContractLineItems 
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Default.t())}
+          | {:ok, [Procore.Model.Default.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_prime_contracts_prime_contract_id_line_items_get(
         connection,

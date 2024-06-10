@@ -33,8 +33,8 @@ defmodule Procore.Api.QualitySafetyIncidentsWorkActivities do
           Procore.Model.RestV10CompaniesCompanyIdIncidentsWorkActivitiesBulkUpdatePatchRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.WorkActivity.t())}
+          {:ok, [Procore.Model.WorkActivity.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_work_activities_bulk_update_patch(
         connection,
@@ -95,8 +95,8 @@ defmodule Procore.Api.QualitySafetyIncidentsWorkActivities do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.WorkActivity.t())}
+          {:ok, [Procore.Model.WorkActivity.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_incidents_work_activities_get(
         connection,

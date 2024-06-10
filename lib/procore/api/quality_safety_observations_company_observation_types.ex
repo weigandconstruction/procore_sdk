@@ -33,8 +33,8 @@ defmodule Procore.Api.QualitySafetyObservationsCompanyObservationTypes do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.CompanyObservationType.t())}
+          {:ok, [Procore.Model.CompanyObservationType.t()]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_observation_types_get(
         connection,

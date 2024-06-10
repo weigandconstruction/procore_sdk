@@ -35,9 +35,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationCompa
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
-               Procore.Model.RestV10ProjectsProjectIdWorkClassificationsGet200ResponseInner.t()
-             )}
+             [Procore.Model.RestV10ProjectsProjectIdWorkClassificationsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_work_classifications_get(
         connection,

@@ -12,7 +12,8 @@ defmodule Procore.Model.RestV10ProjectProjectIdEmailCommunicationsCommunicationI
   ]
 
   @type t :: %__MODULE__{
-          :email => Procore.Model.RestV10ProjectProjectIdEmailCommunicationsPostRequestEmail.t()
+          :email =>
+            Procore.Model.RestV10ProjectProjectIdEmailCommunicationsCommunicationIdEmailsPostRequestEmail.t()
         }
 
   alias Procore.Deserializer
@@ -22,7 +23,7 @@ defmodule Procore.Model.RestV10ProjectProjectIdEmailCommunicationsCommunicationI
     |> Deserializer.deserialize(
       :email,
       :struct,
-      Procore.Model.RestV10ProjectProjectIdEmailCommunicationsPostRequestEmail
+      Procore.Model.RestV10ProjectProjectIdEmailCommunicationsCommunicationIdEmailsPostRequestEmail
     )
   end
 end

@@ -50,7 +50,7 @@ defmodule Procore.Api.QualitySafetyIncidentsInjuries do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdIncidentsInjuriesGet200ResponseInner.t())}
+             [Procore.Model.RestV10ProjectsProjectIdIncidentsInjuriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_incidents_injuries_get(
         connection,
@@ -375,7 +375,7 @@ defmodule Procore.Api.QualitySafetyIncidentsInjuries do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(Procore.Model.RestV10ProjectsProjectIdIncidentsInjuriesGet200ResponseInner.t())}
+             [Procore.Model.RestV10ProjectsProjectIdIncidentsInjuriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_incidents_injuries_get(
         connection,

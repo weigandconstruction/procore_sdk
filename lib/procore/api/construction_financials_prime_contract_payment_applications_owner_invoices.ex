@@ -28,8 +28,8 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_payment_applications_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
-          {:ok, list(Procore.Model.RestV10PaymentApplicationsGet200ResponseInner.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.RestV10PaymentApplicationsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_payment_applications_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -191,11 +191,11 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(
-               Procore.Model.RestV10PrimeContractsPrimeContractIdPaymentApplicationsGet200ResponseInner.t()
-             )}
+          {:ok,
+           [
+             Procore.Model.RestV10PrimeContractsPrimeContractIdPaymentApplicationsGet200ResponseInner.t()
+           ]}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_prime_contracts_prime_contract_id_payment_applications_get(
         connection,

@@ -40,9 +40,9 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyConstructionReportLogs do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10ProjectsProjectIdDailyConstructionReportLogsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_daily_construction_report_logs_get(
         connection,
@@ -326,7 +326,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyConstructionReportLogs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.NameView.t())}
+          | {:ok, [Procore.Model.NameView.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_daily_construction_report_logs_vendor_options_get(
         connection,

@@ -39,9 +39,9 @@ defmodule Procore.Api.CoreTasksTaskItemComments do
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             list(
+             [
                Procore.Model.RestV10CompaniesCompanyIdProjectsProjectIdTaskItemCommentsGet200ResponseInner.t()
-             )}
+             ]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_projects_project_id_task_item_comments_get(
         connection,

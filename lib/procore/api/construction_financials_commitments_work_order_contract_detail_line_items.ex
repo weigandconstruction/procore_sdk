@@ -37,11 +37,11 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsWorkOrderContractDetailLi
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
-             Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
-          | {:ok,
-             list(
+             [
                Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdLineItemContractDetailsGet200ResponseInner.t()
-             )}
+             ]}
+          | {:ok,
+             Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_work_order_contracts_work_order_contract_id_line_item_contract_details_get(
         connection,

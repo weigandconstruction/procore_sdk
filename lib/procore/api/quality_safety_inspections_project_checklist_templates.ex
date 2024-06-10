@@ -99,8 +99,8 @@ defmodule Procore.Api.QualitySafetyInspectionsProjectChecklistTemplates do
           integer(),
           keyword()
         ) ::
-          {:ok, list(Procore.Model.ProjectChecklistTemplate1.t())}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, [Procore.Model.ProjectChecklistTemplate1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_checklist_list_templates_get(
         connection,
@@ -486,7 +486,7 @@ defmodule Procore.Api.QualitySafetyInspectionsProjectChecklistTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ChecklistTemplate1.t())}
+          | {:ok, [Procore.Model.ChecklistTemplate1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_recycle_bin_checklist_list_templates_get(
         connection,
@@ -661,7 +661,7 @@ defmodule Procore.Api.QualitySafetyInspectionsProjectChecklistTemplates do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ProjectChecklistTemplate.t())}
+          | {:ok, [Procore.Model.ProjectChecklistTemplate.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_checklist_list_templates_get(
         connection,

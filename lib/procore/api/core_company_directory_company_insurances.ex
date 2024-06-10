@@ -34,7 +34,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInsurances do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.Insurance.t())}
+          | {:ok, [Procore.Model.Insurance.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_insurances_get(
         connection,

@@ -37,8 +37,7 @@ defmodule Procore.Api.FieldProductivityTimecardGpsPositions do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok,
-             list(Procore.Model.RestV10CompaniesCompanyIdGpsPositionsGet200ResponseInner.t())}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdGpsPositionsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_gps_positions_get(
         connection,

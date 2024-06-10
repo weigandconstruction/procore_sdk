@@ -34,7 +34,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingBehaviors do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ContributingBehavior1.t())}
+          | {:ok, [Procore.Model.ContributingBehavior1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_contributing_behaviors_bulk_update_patch(
         connection,
@@ -96,7 +96,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingBehaviors do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, list(Procore.Model.ContributingBehavior1.t())}
+          | {:ok, [Procore.Model.ContributingBehavior1.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_contributing_behaviors_get(
         connection,
