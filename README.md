@@ -34,7 +34,7 @@ client = Procore.Connection.new(base_url: "https://api.procore.com")
 
 ## Usage
 
-Documentation can be found at [https://hexdocs.pm/procore_sdk][docs].
+Documentation can be found at https://hexdocs.pm/procore_sdk.
 
 ### Authentication
 
@@ -69,7 +69,9 @@ This SDK is automatically generated from the Procore OpenAPI spec. Very few file
 
 ## Generating SDK
 
-This SDK uses a patched version of [openapi-generator](https://openapi-generator.tech/) that is available at [this fork](https://github.com/ntodd/openapi-generator/tree/ntodd/feature/elixir-improvements). Until these changes are merged back into the main project, generate files with the included jar. Java is required on the system running this generator.
+This SDK uses a patched version of [openapi-generator](https://openapi-generator.tech/) that is available at [this fork](https://github.com/ntodd/openapi-generator/tree/ntodd/feature/elixir-improvements). These changes were [merged](https://github.com/OpenAPITools/openapi-generator/pull/18788) into the openapi-generator project on June 10, 2024 and will be available in v7.7.0. Until that version is available, the vendored jar file must be used to generate the spec.
+
+Java is required on the system running this generator.
 
 To generate a new version of this SDK:
 
