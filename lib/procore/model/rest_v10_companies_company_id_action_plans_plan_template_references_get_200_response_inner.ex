@@ -22,7 +22,7 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateReferenc
           :plan_template_item_id => integer() | nil,
           :created_at => String.t() | nil,
           :payload =>
-            Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayload.t()
+            Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayload.t()
             | nil,
           :plan_template_id => integer() | nil,
           :type => String.t() | nil,
@@ -36,7 +36,7 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateReferenc
     |> Deserializer.deserialize(
       :payload,
       :struct,
-      Procore.Model.RestV10CompaniesCompanyIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayload
+      Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayload
     )
   end
 end

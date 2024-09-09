@@ -16,13 +16,13 @@ defmodule Procore.Model.Body98 do
   @type t :: %__MODULE__{
           :company_id => integer(),
           :standard_cost_code_list_id => integer(),
-          :standard_cost_code => Procore.Model.StandardCostCode2.t()
+          :standard_cost_code => Procore.Model.StandardCostCode1.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:standard_cost_code, :struct, Procore.Model.StandardCostCode2)
+    |> Deserializer.deserialize(:standard_cost_code, :struct, Procore.Model.StandardCostCode1)
   end
 end

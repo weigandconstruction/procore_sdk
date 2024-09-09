@@ -12,13 +12,13 @@ defmodule Procore.Model.Body83 do
   ]
 
   @type t :: %__MODULE__{
-          :drawing => Procore.Model.Drawing1.t()
+          :drawing => Procore.Model.Drawing.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:drawing, :struct, Procore.Model.Drawing1)
+    |> Deserializer.deserialize(:drawing, :struct, Procore.Model.Drawing)
   end
 end

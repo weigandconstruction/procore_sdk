@@ -21,6 +21,7 @@ defmodule Procore.Api.CoreTasksTaskItemsAssignees do
   - `opts` (keyword): Optional parameters
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
+    - `:"filters[search]"` (String.t): Returns item(s) matching the specified search query string.
 
   ### Returns
 
@@ -34,7 +35,8 @@ defmodule Procore.Api.CoreTasksTaskItemsAssignees do
   def rest_v10_task_items_assignees_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
       :page => :query,
-      :per_page => :query
+      :per_page => :query,
+      :"filters[search]" => :query
     }
 
     request =

@@ -29,7 +29,7 @@ defmodule Procore.Api.CorePortfolioProjects do
     - `:"filters[synced]"` (boolean()): If true, returns only item(s) with a `synced` status.
     - `:"filters[vendor_id]"` (integer()): Return item(s) with the specified Vendor ID.
     - `:"filters[custom_fields]"` (map()): JSON object returns project with matching custom_field_values
-    - `:view` (String.t): The 'compact' view only returns id, name and display_name. Passing any other value (or passing no value at all) will result in the more complete list of attributes shown below.
+    - `:serializer_view` (String.t): The 'compact' view only returns id, name and display_name. Passing any other value (or passing no value at all) will result in the more complete list of attributes shown below.
     - `:sort` (String.t): Return items with the specified sort.
 
   ### Returns
@@ -54,7 +54,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       :"filters[synced]" => :query,
       :"filters[vendor_id]" => :query,
       :"filters[custom_fields]" => :query,
-      :view => :query,
+      :serializer_view => :query,
       :sort => :query
     }
 
@@ -495,6 +495,15 @@ defmodule Procore.Api.CorePortfolioProjects do
     - `:"filters[vendor_id]"` (integer()): Return item(s) with the specified Vendor ID.
     - `:"filters[is_demo]"` (boolean()): Filters on project is_demo attribute, which indicates whether project is for demonstration purposes. 
     - `:"filters[custom_fields]"` (map()): JSON object returns project with matching custom_field_values
+    - `:"filters[template]"` (boolean()): Filters on project template attribute, which indicates whether project is a template 
+    - `:"filters[by_owner_type]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project owner type ID(s).
+    - `:"filters[by_department]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified department ID(s).
+    - `:"filters[by_region]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project region ID(s).
+    - `:"filters[by_office]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified office ID(s).
+    - `:"filters[by_program]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project program ID(s).
+    - `:"filters[by_stage]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project stage ID(s).
+    - `:"filters[by_type]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project type ID(s).
+    - `:"filters[by_bid_type]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project bid type ID(s).
     - `:view` (String.t): The view determines which fields are returned. 'compact' will only return id and name. 'normal' returns more fields, while 'extended' returns all the project information
     - `:sort` (String.t): Return items with the specified sort.
 
@@ -521,6 +530,15 @@ defmodule Procore.Api.CorePortfolioProjects do
       :"filters[vendor_id]" => :query,
       :"filters[is_demo]" => :query,
       :"filters[custom_fields]" => :query,
+      :"filters[template]" => :query,
+      :"filters[by_owner_type]" => :query,
+      :"filters[by_department]" => :query,
+      :"filters[by_region]" => :query,
+      :"filters[by_office]" => :query,
+      :"filters[by_program]" => :query,
+      :"filters[by_stage]" => :query,
+      :"filters[by_type]" => :query,
+      :"filters[by_bid_type]" => :query,
       :view => :query,
       :sort => :query
     }

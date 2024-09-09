@@ -78,6 +78,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
     - `:"filters[status][]"` ([String.t]): Filter results to only return codes with the included statuses. Options are 'active' or 'inactive'. Defaults to returning all results.
     - `:"filters[updated_at]"` (String.t): Filter results to only return codes that were updated within the range of the two specified ISO 8601 timestamps separated by the ... delimiter.
     - `:scope` (String.t): Filter results to only return codes that match the specified WBS scope.
+    - `:query` (String.t): Searches the WBS code and description values and returns results sorted in descending order of relevance to the search query.
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
 
@@ -109,6 +110,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       :"filters[status][]" => :query,
       :"filters[updated_at]" => :query,
       :scope => :query,
+      :query => :query,
       :page => :query,
       :per_page => :query
     }

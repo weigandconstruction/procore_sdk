@@ -21,6 +21,8 @@ defmodule Procore.Model.RestV11ProjectsProjectIdMeetingsPost201Response do
     :is_private,
     :is_draft,
     :mode,
+    :created_at,
+    :updated_at,
     :description,
     :conclusion,
     :remote_meeting_url,
@@ -43,6 +45,8 @@ defmodule Procore.Model.RestV11ProjectsProjectIdMeetingsPost201Response do
           :is_private => boolean() | nil,
           :is_draft => boolean() | nil,
           :mode => String.t() | nil,
+          :created_at => DateTime.t() | nil,
+          :updated_at => DateTime.t() | nil,
           :description => String.t() | nil,
           :conclusion => String.t() | nil,
           :remote_meeting_url => String.t() | nil,
@@ -64,6 +68,8 @@ defmodule Procore.Model.RestV11ProjectsProjectIdMeetingsPost201Response do
     value
     |> Deserializer.deserialize(:starts_at, :datetime, nil)
     |> Deserializer.deserialize(:ends_at, :datetime, nil)
+    |> Deserializer.deserialize(:created_at, :datetime, nil)
+    |> Deserializer.deserialize(:updated_at, :datetime, nil)
     |> Deserializer.deserialize(
       :attachments,
       :list,

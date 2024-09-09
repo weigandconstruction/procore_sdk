@@ -9,18 +9,18 @@ defmodule Procore.Model.Body117 do
   @derive Jason.Encoder
   defstruct [
     :project_id,
-    :bim_viewpoints
+    :bim_viewpoint
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
-          :bim_viewpoints => [Procore.Model.Body116BimViewpointOneOf2.t()]
+          :bim_viewpoint => Procore.Model.Body117BimViewpoint.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:bim_viewpoints, :list, Procore.Model.Body116BimViewpointOneOf2)
+    |> Deserializer.deserialize(:bim_viewpoint, :struct, Procore.Model.Body117BimViewpoint)
   end
 end

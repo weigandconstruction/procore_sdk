@@ -14,6 +14,7 @@ defmodule Procore.Model.RestV10ProjectProjectIdEmailCommunicationsIdGet200Respon
     :attachments,
     :bcc_distribution,
     :body,
+    :sanitized_body_html,
     :cc_distribution,
     :distribution,
     :email_sent_at,
@@ -35,6 +36,7 @@ defmodule Procore.Model.RestV10ProjectProjectIdEmailCommunicationsIdGet200Respon
             ]
             | nil,
           :body => String.t() | nil,
+          :sanitized_body_html => String.t() | nil,
           :cc_distribution =>
             [
               Procore.Model.RestV10ProjectProjectIdEmailCommunicationsIdGet200ResponseEmailsInnerBccDistributionInner.t()

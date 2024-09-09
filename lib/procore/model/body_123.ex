@@ -10,19 +10,19 @@ defmodule Procore.Model.Body123 do
   defstruct [
     :project_id,
     :view,
-    :bim_model
+    :bim_plans
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
           :view => String.t() | nil,
-          :bim_model => Procore.Model.Body123BimModel.t()
+          :bim_plans => [Procore.Model.Body121BimPlan.t()]
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:bim_model, :struct, Procore.Model.Body123BimModel)
+    |> Deserializer.deserialize(:bim_plans, :list, Procore.Model.Body121BimPlan)
   end
 end

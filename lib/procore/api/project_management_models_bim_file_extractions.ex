@@ -24,6 +24,8 @@ defmodule Procore.Api.ProjectManagementModelsBIMFileExtractions do
     - `:"filters[id]"` ([integer()]): Return item(s) with the specified IDs.
     - `:"filters[status]"` (String.t): Filter item(s) with matching status
     - `:"filters[extraction_format]"` ([String.t]): Filter item(s) with matching extraction format
+    - `:"filters[bim_file_id]"` ([integer()]): Return item(s) with the specified bim_file_id in bim_file_upload
+    - `:"filters[bim_file_upload_id]"` ([integer()]): Return item(s) with the specified bim_file_upload_id
     - `:"filters[file_version_id]"` ([integer()]): Return item(s) with the specified file_version_id in bim_file_upload
     - `:"filters[document_upload_id]"` ([String.t]): Return item(s) with the specified document_upload_id in bim_file_upload
 
@@ -43,6 +45,8 @@ defmodule Procore.Api.ProjectManagementModelsBIMFileExtractions do
       :"filters[id]" => :query,
       :"filters[status]" => :query,
       :"filters[extraction_format]" => :query,
+      :"filters[bim_file_id]" => :query,
+      :"filters[bim_file_upload_id]" => :query,
       :"filters[file_version_id]" => :query,
       :"filters[document_upload_id]" => :query
     }

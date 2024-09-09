@@ -19,7 +19,9 @@ defmodule Procore.Model.RestV10MeetingsGet200ResponseInnerMeetingsInner do
     :location,
     :meeting_topics_count,
     :occurred,
-    :is_private
+    :is_private,
+    :created_at,
+    :updated_at
   ]
 
   @type t :: %__MODULE__{
@@ -34,7 +36,9 @@ defmodule Procore.Model.RestV10MeetingsGet200ResponseInnerMeetingsInner do
           :location => String.t() | nil,
           :meeting_topics_count => integer() | nil,
           :occurred => boolean() | nil,
-          :is_private => boolean() | nil
+          :is_private => boolean() | nil,
+          :created_at => DateTime.t() | nil,
+          :updated_at => DateTime.t() | nil
         }
 
   alias Procore.Deserializer
@@ -42,5 +46,7 @@ defmodule Procore.Model.RestV10MeetingsGet200ResponseInnerMeetingsInner do
   def decode(value) do
     value
     |> Deserializer.deserialize(:meeting_date, :date, nil)
+    |> Deserializer.deserialize(:created_at, :datetime, nil)
+    |> Deserializer.deserialize(:updated_at, :datetime, nil)
   end
 end

@@ -10,13 +10,19 @@ defmodule Procore.Model.Form1 do
   defstruct [
     :name,
     :description,
-    :private
+    :form_template_id,
+    :private,
+    :fillable_pdf,
+    :attachments
   ]
 
   @type t :: %__MODULE__{
-          :name => String.t() | nil,
-          :description => String.t() | nil,
-          :private => boolean() | nil
+          :name => String.t(),
+          :description => String.t(),
+          :form_template_id => integer(),
+          :private => boolean() | nil,
+          :fillable_pdf => String.t(),
+          :attachments => [String.t()] | nil
         }
 
   def decode(value) do

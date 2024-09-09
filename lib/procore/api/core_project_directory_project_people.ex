@@ -24,8 +24,15 @@ defmodule Procore.Api.CoreProjectDirectoryProjectPeople do
     - `:per_page` (integer()): Elements per page
     - `:"filters[is_employee]"` (boolean()): If true, returns item(s) where `is_employee` value is true.
     - `:"filters[reference_users_only]"` (boolean()): If true, returns only people who are reference users.
+    - `:"filters[without_reference_users]"` (boolean()): If true, returns only people who are not reference users.
     - `:"filters[include_company_people]"` (boolean()): If true, returns people in the Company not just the Project. This option only works if the user has permission to create people in the project directory or permission to read from the company directory.
     - `:"filters[search]"` (String.t): Returns item(s) matching the specified search query string.
+    - `:"filters[connected]"` (boolean()): If true, returns only people who are connected users. If false, returns only people who are not connected users.
+    - `:"filters[vendor_id]"` ([integer()]): Return item(s) with the specified Vendor IDs.
+    - `:"filters[job_title]"` (String.t): Returns only people who have the specified job title.
+    - `:"filters[country_code]"` (String.t): Returns only people who have the specified country code.
+    - `:"filters[state_code]"` (String.t): Returns only people who have the specified state code.
+    - `:sort` (String.t): Return items with the specified sort
 
   ### Returns
 
@@ -53,8 +60,15 @@ defmodule Procore.Api.CoreProjectDirectoryProjectPeople do
       :per_page => :query,
       :"filters[is_employee]" => :query,
       :"filters[reference_users_only]" => :query,
+      :"filters[without_reference_users]" => :query,
       :"filters[include_company_people]" => :query,
-      :"filters[search]" => :query
+      :"filters[search]" => :query,
+      :"filters[connected]" => :query,
+      :"filters[vendor_id]" => :query,
+      :"filters[job_title]" => :query,
+      :"filters[country_code]" => :query,
+      :"filters[state_code]" => :query,
+      :sort => :query
     }
 
     request =

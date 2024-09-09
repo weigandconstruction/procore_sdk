@@ -734,7 +734,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
 
   @doc """
   Update Timecard Entries
-  Update Timecard Entries associated with the specific Project.
+  Update the date of Timecard Entries associated with the specific Project.
 
   ### Parameters
 
@@ -1342,7 +1342,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry.t}` on success
+  - `{:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v11_projects_project_id_project_timecard_entries_id_patch(
@@ -1353,7 +1353,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry.t()}
+          | {:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_project_timecard_entries_id_patch(
         connection,
@@ -1378,7 +1378,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry},
+      {200, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -1399,7 +1399,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry.t}` on success
+  - `{:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v11_projects_project_id_project_timecard_entries_post(
@@ -1409,7 +1409,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry.t()}
+          | {:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_projects_project_id_project_timecard_entries_post(
         connection,
@@ -1433,7 +1433,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry},
+      {200, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}

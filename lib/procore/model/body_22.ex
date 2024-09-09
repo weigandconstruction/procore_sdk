@@ -12,7 +12,7 @@ defmodule Procore.Model.Body22 do
   ]
 
   @type t :: %__MODULE__{
-          :files => [Procore.Model.Body22FilesInner.t()] | nil
+          :files => [Procore.Model.Body22FilesInner.t()]
         }
 
   alias Procore.Deserializer

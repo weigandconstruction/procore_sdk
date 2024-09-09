@@ -24,7 +24,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTemplat
           :created_at => String.t() | nil,
           :deleted_at => String.t() | nil,
           :payload =>
-            Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayload.t()
+            Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTemplateReferencesGet200ResponseInnerPayload.t()
             | nil,
           :plan_template_id => integer() | nil,
           :type => String.t() | nil,
@@ -38,7 +38,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTemplat
     |> Deserializer.deserialize(
       :payload,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayload
+      Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTemplateReferencesGet200ResponseInnerPayload
     )
   end
 end

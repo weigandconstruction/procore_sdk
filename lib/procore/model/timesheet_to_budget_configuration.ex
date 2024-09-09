@@ -10,6 +10,7 @@ defmodule Procore.Model.TimesheetToBudgetConfiguration do
   defstruct [
     :id,
     :line_item_type_id,
+    :erp_default_line_item_type_id,
     :company_id,
     :has_backfilled
   ]
@@ -17,6 +18,7 @@ defmodule Procore.Model.TimesheetToBudgetConfiguration do
   @type t :: %__MODULE__{
           :id => integer() | nil,
           :line_item_type_id => integer() | nil,
+          :erp_default_line_item_type_id => integer() | nil,
           :company_id => integer() | nil,
           :has_backfilled => boolean() | nil
         }

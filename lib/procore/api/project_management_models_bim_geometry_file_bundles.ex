@@ -75,7 +75,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMGeometryFileBundles do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body134` (Body134): 
+  - `body135` (Body135): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -86,7 +86,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMGeometryFileBundles do
   @spec rest_v10_bim_geometry_file_bundles_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body134.t(),
+          Procore.Model.Body135.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -95,7 +95,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMGeometryFileBundles do
   def rest_v10_bim_geometry_file_bundles_post(
         connection,
         procore_company_id,
-        body134,
+        body135,
         _opts \\ []
       ) do
     request =
@@ -103,7 +103,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMGeometryFileBundles do
       |> method(:post)
       |> url("/rest/v1.0/bim_geometry_file_bundles")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body134)
+      |> add_param(:body, :body, body135)
       |> Enum.into([])
 
     connection

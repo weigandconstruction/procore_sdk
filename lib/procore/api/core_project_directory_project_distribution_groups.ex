@@ -10,6 +10,128 @@ defmodule Procore.Api.CoreProjectDirectoryProjectDistributionGroups do
   import Procore.RequestBuilder
 
   @doc """
+  Delete Project Distribution Group
+  Delete a Distribution Group associated with the given Project.
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `project_id` (integer()): Unique identifier for the project.
+  - `distribution_group_id` (integer()): Unique identifier for the distribution group.
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, nil}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_projects_project_id_distribution_groups_distribution_group_id_delete(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          integer(),
+          keyword()
+        ) ::
+          {:ok, nil}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
+          | {:error, Tesla.Env.t()}
+  def rest_v10_projects_project_id_distribution_groups_distribution_group_id_delete(
+        connection,
+        procore_company_id,
+        project_id,
+        distribution_group_id,
+        _opts \\ []
+      ) do
+    request =
+      %{}
+      |> method(:delete)
+      |> url("/rest/v1.0/projects/#{project_id}/distribution_groups/#{distribution_group_id}")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {204, false},
+      {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {404,
+       Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+    ])
+  end
+
+  @doc """
+  Update Project Distribution Group
+  Update a Distribution Group associated with the given Project.
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `project_id` (integer()): Unique identifier for the project.
+  - `distribution_group_id` (integer()): Unique identifier for the distribution group.
+  - `update_distribution_group_body` (UpdateDistributionGroupBody): 
+  - `opts` (keyword): Optional parameters
+    - `:"Idempotency-Token"` (String.t): Unique idempotent token
+
+  ### Returns
+
+  - `{:ok, Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200Response.t}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_projects_project_id_distribution_groups_distribution_group_id_patch(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          integer(),
+          Procore.Model.UpdateDistributionGroupBody.t(),
+          keyword()
+        ) ::
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200Response.t()}
+          | {:ok,
+             Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response.t()}
+          | {:error, Tesla.Env.t()}
+  def rest_v10_projects_project_id_distribution_groups_distribution_group_id_patch(
+        connection,
+        procore_company_id,
+        project_id,
+        distribution_group_id,
+        update_distribution_group_body,
+        opts \\ []
+      ) do
+    optional_params = %{
+      :"Idempotency-Token" => :headers
+    }
+
+    request =
+      %{}
+      |> method(:patch)
+      |> url("/rest/v1.0/projects/#{project_id}/distribution_groups/#{distribution_group_id}")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_param(:body, :body, update_distribution_group_body)
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, Procore.Model.RestV10ProjectsProjectIdDistributionGroupsPost200Response},
+      {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {404,
+       Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdSubcontractorScheduleOfValuesStatusPatch404Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+    ])
+  end
+
+  @doc """
   List Project Distribution Groups
   Return a list of all Distribution Groups associated with a Project.
 

@@ -24,10 +24,10 @@ defmodule Procore.Api.CoreProjectProjectAssignments do
     - `:per_page` (integer()): Elements per page
     - `:"filters[active]"` (boolean()): If true, returns item(s) with a status of 'active'.
     - `:"filters[name]"` ([String.t]): Filter item(s) with matching name.
-    - `:"filters[by_stage]"` (RestV10CompaniesCompanyIdUsersUserIdProjectAssignmentsGetFiltersByStageParameter): Return item(s) with the specified project stage ID(s).
-    - `:"filters[by_type]"` (RestV10CompaniesCompanyIdUsersUserIdProjectAssignmentsGetFiltersByStageParameter): Return item(s) with the specified project type ID(s).
-    - `:"filters[by_program]"` (RestV10CompaniesCompanyIdUsersUserIdProjectAssignmentsGetFiltersByStageParameter): Return item(s) with the specified project program ID(s).
-    - `:"filters[by_region]"` (RestV10CompaniesCompanyIdUsersUserIdProjectAssignmentsGetFiltersByStageParameter): Return item(s) with the specified project region ID(s).
+    - `:"filters[by_stage]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project stage ID(s).
+    - `:"filters[by_type]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project type ID(s).
+    - `:"filters[by_program]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project program ID(s).
+    - `:"filters[by_region]"` (RestV11ProjectsGetFiltersByOwnerTypeParameter): Return item(s) with the specified project region ID(s).
     - `:"filters[by_status]"` (String.t): Return item(s) with the specified status value. Must be one of Active, Inactive, or All.
     - `:sort` (String.t): Sort the results by the specified field.
     - `:direction` (String.t): Sort direction. Default is ascending, nulls first.

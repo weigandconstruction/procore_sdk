@@ -74,7 +74,7 @@ defmodule Procore.Model.RestV10RequisitionsGet200ResponseInner do
             Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields.t()
             | nil,
           :currency_configuration =>
-            Procore.Model.RestV11RequisitionsGet200ResponseInnerCurrencyConfiguration.t() | nil,
+            Procore.Model.RestV10RequisitionsGet200ResponseInnerCurrencyConfiguration.t() | nil,
           :attachments =>
             [Procore.Model.RestV11RequisitionsGet200ResponseInnerAttachmentsInner.t()] | nil,
           :summary => Procore.Model.RestV10RequisitionsGet200ResponseInnerSummary.t() | nil,
@@ -105,7 +105,7 @@ defmodule Procore.Model.RestV10RequisitionsGet200ResponseInner do
     |> Deserializer.deserialize(
       :currency_configuration,
       :struct,
-      Procore.Model.RestV11RequisitionsGet200ResponseInnerCurrencyConfiguration
+      Procore.Model.RestV10RequisitionsGet200ResponseInnerCurrencyConfiguration
     )
     |> Deserializer.deserialize(
       :attachments,

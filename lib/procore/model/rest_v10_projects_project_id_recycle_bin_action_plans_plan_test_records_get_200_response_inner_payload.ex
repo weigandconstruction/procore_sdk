@@ -17,7 +17,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTestRec
           :checklist_id => integer() | nil,
           :checklist_template_id => integer() | nil,
           :attachment =>
-            Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment.t()
+            Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment.t()
             | nil
         }
 
@@ -28,7 +28,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdRecycleBinActionPlansPlanTestRec
     |> Deserializer.deserialize(
       :attachment,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment
+      Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment
     )
   end
 end

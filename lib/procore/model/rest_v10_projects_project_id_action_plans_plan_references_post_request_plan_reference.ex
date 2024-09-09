@@ -16,7 +16,8 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanReferencesPostReq
   @type t :: %__MODULE__{
           :plan_item_id => integer(),
           :type => String.t(),
-          :payload => Procore.Model.ActionPlanTemplateReferencesInner1Payload.t()
+          :payload =>
+            Procore.Model.RestV10ProjectsProjectIdActionPlansPlanReferencesPostRequestPlanReferencePayload.t()
         }
 
   alias Procore.Deserializer
@@ -26,7 +27,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanReferencesPostReq
     |> Deserializer.deserialize(
       :payload,
       :struct,
-      Procore.Model.ActionPlanTemplateReferencesInner1Payload
+      Procore.Model.RestV10ProjectsProjectIdActionPlansPlanReferencesPostRequestPlanReferencePayload
     )
   end
 end

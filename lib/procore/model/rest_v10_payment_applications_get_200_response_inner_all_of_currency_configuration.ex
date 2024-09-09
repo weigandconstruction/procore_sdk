@@ -8,11 +8,15 @@ defmodule Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurren
 
   @derive Jason.Encoder
   defstruct [
-    :currency_iso_code
+    :currency_iso_code,
+    :currency_exchange_rate,
+    :base_currency_iso_code
   ]
 
   @type t :: %__MODULE__{
-          :currency_iso_code => String.t() | nil
+          :currency_iso_code => String.t() | nil,
+          :currency_exchange_rate => String.t() | nil,
+          :base_currency_iso_code => String.t() | nil
         }
 
   def decode(value) do

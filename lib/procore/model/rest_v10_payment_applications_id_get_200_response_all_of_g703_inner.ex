@@ -62,7 +62,7 @@ defmodule Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703Inner
           :description_of_work => String.t() | nil,
           :description_override => String.t() | nil,
           :currency_configuration =>
-            Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration.t()
+            Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703InnerCurrencyConfiguration.t()
             | nil,
           :item_number => integer() | nil,
           :cost_code =>
@@ -95,7 +95,7 @@ defmodule Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703Inner
     |> Deserializer.deserialize(
       :currency_configuration,
       :struct,
-      Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration
+      Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703InnerCurrencyConfiguration
     )
     |> Deserializer.deserialize(
       :cost_code,

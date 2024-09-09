@@ -10,23 +10,19 @@ defmodule Procore.Model.Body134 do
   defstruct [
     :project_id,
     :view,
-    :bim_geometry_file_bundle
+    :bim_levels
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
           :view => String.t() | nil,
-          :bim_geometry_file_bundle => Procore.Model.Body134BimGeometryFileBundle.t()
+          :bim_levels => [Procore.Model.Body132BimLevel.t()]
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(
-      :bim_geometry_file_bundle,
-      :struct,
-      Procore.Model.Body134BimGeometryFileBundle
-    )
+    |> Deserializer.deserialize(:bim_levels, :list, Procore.Model.Body132BimLevel)
   end
 end

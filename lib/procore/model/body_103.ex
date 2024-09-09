@@ -9,18 +9,18 @@ defmodule Procore.Model.Body103 do
   @derive Jason.Encoder
   defstruct [
     :project_id,
-    :procore_item
+    :deletes
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
-          :procore_item => Procore.Model.ProcoreItemDetails.t() | nil
+          :deletes => [Procore.Model.Body103DeletesInner.t()]
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:procore_item, :struct, Procore.Model.ProcoreItemDetails)
+    |> Deserializer.deserialize(:deletes, :list, Procore.Model.Body103DeletesInner)
   end
 end

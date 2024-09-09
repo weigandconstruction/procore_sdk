@@ -9,6 +9,8 @@ defmodule Procore.Model.Body121BimPlan do
   @derive Jason.Encoder
   defstruct [
     :bim_level_id,
+    :drawing_id,
+    :upload_uuid,
     :sheet_map_start,
     :sheet_map_end,
     :model_map_start,
@@ -17,6 +19,8 @@ defmodule Procore.Model.Body121BimPlan do
 
   @type t :: %__MODULE__{
           :bim_level_id => integer(),
+          :drawing_id => integer() | nil,
+          :upload_uuid => String.t() | nil,
           :sheet_map_start =>
             Procore.Model.RestV10BimPlansGet200ResponseInnerAllOfSheetMapStart.t() | nil,
           :sheet_map_end =>

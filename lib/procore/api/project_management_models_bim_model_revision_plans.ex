@@ -189,7 +189,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionPlans do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body128` (Body128): 
+  - `body129` (Body129): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -200,19 +200,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionPlans do
   @spec rest_v10_bim_model_revision_plans_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body128.t(),
+          Procore.Model.Body129.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BimModelRevisionPlansGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_model_revision_plans_post(connection, procore_company_id, body128, _opts \\ []) do
+  def rest_v10_bim_model_revision_plans_post(connection, procore_company_id, body129, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_model_revision_plans")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body128)
+      |> add_param(:body, :body, body129)
       |> Enum.into([])
 
     connection

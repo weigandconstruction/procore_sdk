@@ -31,7 +31,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTestRecordsGet200
           :submittal_log_id => integer() | nil,
           :observation_item_id => integer() | nil,
           :attachment =>
-            Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment.t()
+            Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment.t()
             | nil
         }
 
@@ -42,7 +42,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTestRecordsGet200
     |> Deserializer.deserialize(
       :attachment,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment
+      Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment
     )
   end
 end

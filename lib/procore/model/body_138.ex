@@ -8,22 +8,17 @@ defmodule Procore.Model.Body138 do
 
   @derive Jason.Encoder
   defstruct [
-    :title,
-    :base_bid,
-    :alternates
+    :billing_period
   ]
 
   @type t :: %__MODULE__{
-          :title => String.t(),
-          :base_bid => [Procore.Model.Body138BaseBidInner.t()] | nil,
-          :alternates => [Procore.Model.Body138AlternatesInner.t()] | nil
+          :billing_period => Procore.Model.BillingPeriod1.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:base_bid, :list, Procore.Model.Body138BaseBidInner)
-    |> Deserializer.deserialize(:alternates, :list, Procore.Model.Body138AlternatesInner)
+    |> Deserializer.deserialize(:billing_period, :struct, Procore.Model.BillingPeriod1)
   end
 end

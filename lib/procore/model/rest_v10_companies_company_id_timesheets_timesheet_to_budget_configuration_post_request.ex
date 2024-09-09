@@ -8,11 +8,13 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdTimesheetsTimesheetToBudgetConf
 
   @derive Jason.Encoder
   defstruct [
-    :line_item_type_id
+    :line_item_type_id,
+    :erp_default_line_item_type_id
   ]
 
   @type t :: %__MODULE__{
-          :line_item_type_id => integer()
+          :line_item_type_id => integer(),
+          :erp_default_line_item_type_id => integer()
         }
 
   def decode(value) do

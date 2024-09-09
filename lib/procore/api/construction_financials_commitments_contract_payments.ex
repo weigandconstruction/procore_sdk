@@ -192,7 +192,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID
-  - `body104` (Body104): 
+  - `body105` (Body105): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -204,7 +204,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body104.t(),
+          Procore.Model.Body105.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -214,7 +214,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
         connection,
         procore_company_id,
         id,
-        body104,
+        body105,
         _opts \\ []
       ) do
     request =
@@ -222,7 +222,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
       |> method(:patch)
       |> url("/rest/v1.0/contract_payments/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body104)
+      |> add_param(:body, :body, body105)
       |> Enum.into([])
 
     connection
@@ -244,7 +244,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body104` (Body104): 
+  - `body105` (Body105): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -255,19 +255,19 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsContractPayments do
   @spec rest_v10_contract_payments_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body104.t(),
+          Procore.Model.Body105.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10ContractPaymentsGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_contract_payments_post(connection, procore_company_id, body104, _opts \\ []) do
+  def rest_v10_contract_payments_post(connection, procore_company_id, body105, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/contract_payments")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body104)
+      |> add_param(:body, :body, body105)
       |> Enum.into([])
 
     connection

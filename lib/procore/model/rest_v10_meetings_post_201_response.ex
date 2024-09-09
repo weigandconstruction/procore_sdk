@@ -23,6 +23,8 @@ defmodule Procore.Model.RestV10MeetingsPost201Response do
     :mode,
     :description,
     :conclusion,
+    :created_at,
+    :updated_at,
     :attachments,
     :attendees,
     :meeting_categories
@@ -44,6 +46,8 @@ defmodule Procore.Model.RestV10MeetingsPost201Response do
           :mode => String.t() | nil,
           :description => String.t() | nil,
           :conclusion => String.t() | nil,
+          :created_at => DateTime.t() | nil,
+          :updated_at => DateTime.t() | nil,
           :attachments =>
             [Procore.Model.RestV10WorkOrderContractsPost201ResponseAttachmentsInner.t()] | nil,
           :attendees => [Procore.Model.RestV10MeetingsPost201ResponseAttendeesInner.t()] | nil,
@@ -56,6 +60,8 @@ defmodule Procore.Model.RestV10MeetingsPost201Response do
   def decode(value) do
     value
     |> Deserializer.deserialize(:meeting_date, :date, nil)
+    |> Deserializer.deserialize(:created_at, :datetime, nil)
+    |> Deserializer.deserialize(:updated_at, :datetime, nil)
     |> Deserializer.deserialize(
       :attachments,
       :list,

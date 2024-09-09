@@ -204,7 +204,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `project_id` (integer()): Unique identifier for the project.
   - `direct_cost_id` (integer()): ID
   - `id` (integer()): Direct Cost Line Item ID
-  - `body89` (Body89): 
+  - `body90` (Body90): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -218,7 +218,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body89.t(),
+          Procore.Model.Body90.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -231,7 +231,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         project_id,
         direct_cost_id,
         id,
-        body89,
+        body90,
         _opts \\ []
       ) do
     request =
@@ -239,7 +239,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body89)
+      |> add_param(:body, :body, body90)
       |> Enum.into([])
 
     connection
@@ -265,7 +265,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `direct_cost_id` (integer()): ID
-  - `body89` (Body89): 
+  - `body90` (Body90): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -278,7 +278,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body89.t(),
+          Procore.Model.Body90.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -290,7 +290,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         procore_company_id,
         project_id,
         direct_cost_id,
-        body89,
+        body90,
         _opts \\ []
       ) do
     request =
@@ -298,7 +298,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body89)
+      |> add_param(:body, :body, body90)
       |> Enum.into([])
 
     connection
@@ -497,7 +497,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID
-  - `body92` (Body92): 
+  - `body93` (Body93): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -510,7 +510,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body92.t(),
+          Procore.Model.Body93.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -521,7 +521,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         procore_company_id,
         project_id,
         id,
-        body92,
+        body93,
         _opts \\ []
       ) do
     request =
@@ -529,7 +529,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body92)
+      |> add_param(:body, :body, body93)
       |> Enum.into([])
 
     connection
@@ -537,6 +537,75 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
     |> evaluate_response([
       {200, Procore.Model.RestV10ProjectsProjectIdDirectCostsPost201Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+    ])
+  end
+
+  @doc """
+  List All Direct Cost Line Items
+  Return a list of all Direct Cost Line Items.  See [Filtering on List Actions](https://developers.procore.com/documentation/filtering-on-list-actions) for information on using the filtering capabilities provided by this endpoint.
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `project_id` (integer()): Unique identifier for the project.
+  - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
+    - `:"filters[direct_cost_id]"` (integer()): Return item(s) with the specified Direct Cost ID or range of Direct Cost IDs.
+    - `:"filters[id]"` ([integer()]): Return item(s) with the specified IDs.
+    - `:"filters[created_at]"` (Date.t): Return item(s) created within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
+    - `:"filters[updated_at]"` (Date.t): Return item(s) last updated within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00`...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
+    - `:"filters[cost_code_id]"` (String.t): Cost Code ID. Returns item(s) with the specified Cost Code ID or within the specified range of Cost Code IDs.
+    - `:"filters[line_item_type_id]"` (integer()): Line Item Type ID. Returns item(s) with the specified Line Item Type ID or range of Line Item Type IDs.
+
+  ### Returns
+
+  - `{:ok, [%RestV10ProjectsProjectIdDirectCostsLineItemsGet200ResponseInner{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_projects_project_id_direct_costs_line_items_get(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          keyword()
+        ) ::
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok,
+             [Procore.Model.RestV10ProjectsProjectIdDirectCostsLineItemsGet200ResponseInner.t()]}
+          | {:error, Tesla.Env.t()}
+  def rest_v10_projects_project_id_direct_costs_line_items_get(
+        connection,
+        procore_company_id,
+        project_id,
+        opts \\ []
+      ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query,
+      :"filters[direct_cost_id]" => :query,
+      :"filters[id]" => :query,
+      :"filters[created_at]" => :query,
+      :"filters[updated_at]" => :query,
+      :"filters[cost_code_id]" => :query,
+      :"filters[line_item_type_id]" => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/rest/v1.0/projects/#{project_id}/direct_costs/line_items")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, Procore.Model.RestV10ProjectsProjectIdDirectCostsLineItemsGet200ResponseInner},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -605,7 +674,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body90` (Body90): 
+  - `body91` (Body91): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -617,7 +686,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body90.t(),
+          Procore.Model.Body91.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -627,7 +696,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         connection,
         procore_company_id,
         project_id,
-        body90,
+        body91,
         _opts \\ []
       ) do
     request =
@@ -635,7 +704,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body90)
+      |> add_param(:body, :body, body91)
       |> Enum.into([])
 
     connection
@@ -658,7 +727,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body91` (Body91): 
+  - `body92` (Body92): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -670,7 +739,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body91.t(),
+          Procore.Model.Body92.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -680,7 +749,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         connection,
         procore_company_id,
         project_id,
-        body91,
+        body92,
         _opts \\ []
       ) do
     request =
@@ -688,7 +757,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/sync")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body91)
+      |> add_param(:body, :body, body92)
       |> Enum.into([])
 
     connection
@@ -885,7 +954,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID
-  - `body88` (Body88): 
+  - `body89` (Body89): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -898,7 +967,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body88.t(),
+          Procore.Model.Body89.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -909,7 +978,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         procore_company_id,
         project_id,
         id,
-        body88,
+        body89,
         _opts \\ []
       ) do
     request =
@@ -917,7 +986,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body88)
+      |> add_param(:body, :body, body89)
       |> Enum.into([])
 
     connection
@@ -940,7 +1009,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body87` (Body87): 
+  - `body88` (Body88): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -952,7 +1021,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body87.t(),
+          Procore.Model.Body88.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -962,7 +1031,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
         connection,
         procore_company_id,
         project_id,
-        body87,
+        body88,
         _opts \\ []
       ) do
     request =
@@ -970,7 +1039,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body87)
+      |> add_param(:body, :body, body88)
       |> Enum.into([])
 
     connection

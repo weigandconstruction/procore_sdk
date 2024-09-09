@@ -11,16 +11,16 @@ defmodule Procore.Model.Form2 do
     :name,
     :description,
     :private,
-    :fillable_pdf,
-    :attachments
+    :fillable_pdf_prostore_file_id,
+    :prostore_file_ids
   ]
 
   @type t :: %__MODULE__{
           :name => String.t() | nil,
           :description => String.t() | nil,
           :private => boolean() | nil,
-          :fillable_pdf => String.t() | nil,
-          :attachments => [String.t()] | nil
+          :fillable_pdf_prostore_file_id => integer() | nil,
+          :prostore_file_ids => [integer()] | nil
         }
 
   def decode(value) do

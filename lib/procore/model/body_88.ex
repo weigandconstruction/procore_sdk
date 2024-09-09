@@ -14,13 +14,13 @@ defmodule Procore.Model.Body88 do
 
   @type t :: %__MODULE__{
           :attachments => [String.t()] | nil,
-          :direct_cost => Procore.Model.DirectCostItem1.t() | nil
+          :direct_cost => Procore.Model.DirectCostItem.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:direct_cost, :struct, Procore.Model.DirectCostItem1)
+    |> Deserializer.deserialize(:direct_cost, :struct, Procore.Model.DirectCostItem)
   end
 end

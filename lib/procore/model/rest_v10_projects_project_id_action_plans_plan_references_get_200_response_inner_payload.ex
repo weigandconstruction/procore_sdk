@@ -24,7 +24,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanReferencesGet200R
 
   @type t :: %__MODULE__{
           :attachment =>
-            Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment.t()
+            Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment.t()
             | nil,
           :drawing_id => integer() | nil,
           :drawing_revision_id => integer() | nil,
@@ -46,7 +46,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanReferencesGet200R
     |> Deserializer.deserialize(
       :attachment,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment
+      Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment
     )
   end
 end

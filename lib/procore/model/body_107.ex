@@ -8,17 +8,22 @@ defmodule Procore.Model.Body107 do
 
   @derive Jason.Encoder
   defstruct [
-    :calendar_item
+    :subject,
+    :body,
+    :distribution_ids,
+    :cc_distribution_ids,
+    :bcc_distribution_ids
   ]
 
   @type t :: %__MODULE__{
-          :calendar_item => Procore.Model.Body107CalendarItem.t()
+          :subject => String.t() | nil,
+          :body => String.t() | nil,
+          :distribution_ids => [integer()] | nil,
+          :cc_distribution_ids => [integer()] | nil,
+          :bcc_distribution_ids => [integer()] | nil
         }
-
-  alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:calendar_item, :struct, Procore.Model.Body107CalendarItem)
   end
 end

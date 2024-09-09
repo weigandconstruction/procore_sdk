@@ -570,6 +570,10 @@ defmodule Procore.Api.CoreConfigurationsConfigurableFieldSets do
     - `:include_lov_entries` (boolean()): whether or not to include LOV entries in the response (defaults to true)
     - `:types` ([String.t]): Filter by of configurable field set types
     - `:include_default_configurable_field_sets` (boolean()): Flag to include the default values for each type of Configurable Field Set if one has not been created.
+    - `:generic_tool_id` (integer()): Filter by generic tool id(s). Could be a integer or an array of integer.
+    - `:action_plan_type_id` (integer()): Filter by Action Plan type id.
+    - `:inspection_type_id` (integer()): Filter by inspection type id.
+    - `:category` (String.t): Filter by category.
 
   ### Returns
 
@@ -596,7 +600,11 @@ defmodule Procore.Api.CoreConfigurationsConfigurableFieldSets do
       :per_page => :query,
       :include_lov_entries => :query,
       :types => :query,
-      :include_default_configurable_field_sets => :query
+      :include_default_configurable_field_sets => :query,
+      :generic_tool_id => :query,
+      :action_plan_type_id => :query,
+      :inspection_type_id => :query,
+      :category => :query
     }
 
     request =

@@ -14,13 +14,13 @@ defmodule Procore.Model.Body113 do
 
   @type t :: %__MODULE__{
           :project_id => integer(),
-          :budget_line_item => Procore.Model.BudgetLineItem2.t()
+          :budget_line_item => Procore.Model.BudgetLineItem1.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:budget_line_item, :struct, Procore.Model.BudgetLineItem2)
+    |> Deserializer.deserialize(:budget_line_item, :struct, Procore.Model.BudgetLineItem1)
   end
 end

@@ -10,16 +10,19 @@ defmodule Procore.Model.Body94 do
   defstruct [
     :project_id,
     :sub_job_id,
-    :standard_cost_code_list_id
+    :cost_code
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
           :sub_job_id => integer() | nil,
-          :standard_cost_code_list_id => integer()
+          :cost_code => Procore.Model.CostCode1.t()
         }
+
+  alias Procore.Deserializer
 
   def decode(value) do
     value
+    |> Deserializer.deserialize(:cost_code, :struct, Procore.Model.CostCode1)
   end
 end

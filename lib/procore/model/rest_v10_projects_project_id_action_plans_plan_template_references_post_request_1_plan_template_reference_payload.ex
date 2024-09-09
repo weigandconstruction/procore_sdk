@@ -3,7 +3,7 @@
 
 defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesPostRequest1PlanTemplateReferencePayload do
   @moduledoc """
-  One of attachment, drawing_revision_id, file_version_id, specification_section_id, generic_tool_item_id, form_id, meeting_id, or observation_item_id is accepted depending on the type provided
+  One of attachment, drawing_revision_id, file_version_id, specification_section_id, generic_tool_item_id, form_id, image_id, meeting_id, or observation_item_id is accepted depending on the type provided
   """
 
   @derive Jason.Encoder
@@ -14,6 +14,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReference
     :attachment,
     :generic_tool_item_id,
     :form_id,
+    :image_id,
     :meeting_id,
     :observation_item_id
   ]
@@ -25,6 +26,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReference
           :attachment => String.t() | nil,
           :generic_tool_item_id => integer() | nil,
           :form_id => integer() | nil,
+          :image_id => integer() | nil,
           :meeting_id => integer() | nil,
           :observation_item_id => integer() | nil
         }

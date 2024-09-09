@@ -17,13 +17,14 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReference
     :specification_section_current_revision_id,
     :generic_tool_item_id,
     :form_id,
+    :image_id,
     :meeting_id,
     :observation_item_id
   ]
 
   @type t :: %__MODULE__{
           :attachment =>
-            Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment.t()
+            Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment.t()
             | nil,
           :drawing_id => integer() | nil,
           :drawing_revision_id => integer() | nil,
@@ -33,6 +34,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReference
           :specification_section_current_revision_id => integer() | nil,
           :generic_tool_item_id => integer() | nil,
           :form_id => integer() | nil,
+          :image_id => integer() | nil,
           :meeting_id => integer() | nil,
           :observation_item_id => integer() | nil
         }
@@ -44,7 +46,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReference
     |> Deserializer.deserialize(
       :attachment,
       :struct,
-      Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplateReferencesGet200ResponseInnerPayloadAttachment
+      Procore.Model.RestV10ProjectsProjectIdInspectionTemplatesInspectionTemplateIdItemReferencesGet200ResponseInnerPayloadAttachment
     )
   end
 end

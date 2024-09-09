@@ -14,13 +14,17 @@ defmodule Procore.Model.Body100 do
 
   @type t :: %__MODULE__{
           :project_id => integer(),
-          :coordination_issue => Procore.Model.CoordinationIssue.t()
+          :coordination_issue => Procore.Model.Body100CoordinationIssue.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:coordination_issue, :struct, Procore.Model.CoordinationIssue)
+    |> Deserializer.deserialize(
+      :coordination_issue,
+      :struct,
+      Procore.Model.Body100CoordinationIssue
+    )
   end
 end

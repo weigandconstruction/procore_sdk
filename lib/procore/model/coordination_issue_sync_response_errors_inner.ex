@@ -38,7 +38,7 @@ defmodule Procore.Model.CoordinationIssueSyncResponseErrorsInner do
           :drawing_revision_id => integer() | nil,
           :bim_model_id => integer() | nil,
           :due_date => String.t() | nil,
-          :origin => Procore.Model.Body99CoordinationIssueOrigin.t() | nil,
+          :origin => Procore.Model.Body100CoordinationIssueOrigin.t() | nil,
           :attachment_upload_uuids => [String.t()] | nil,
           :attachments => [String.t()] | nil,
           :viewpoints =>
@@ -52,7 +52,7 @@ defmodule Procore.Model.CoordinationIssueSyncResponseErrorsInner do
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:origin, :struct, Procore.Model.Body99CoordinationIssueOrigin)
+    |> Deserializer.deserialize(:origin, :struct, Procore.Model.Body100CoordinationIssueOrigin)
     |> Deserializer.deserialize(
       :viewpoints,
       :list,

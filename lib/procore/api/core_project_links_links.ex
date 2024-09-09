@@ -11,7 +11,7 @@ defmodule Procore.Api.CoreProjectLinksLinks do
 
   @doc """
   List links
-  Returns a list of Project Home Links on a given project.
+  Returns a list of Project Home Links on a given project.  This endpoint will be deprecated; please use the [V2](https://developers.procore.com/reference/rest/v2/links?version=2.0#list-project-links) endpoint.
 
   ### Parameters
 
@@ -57,7 +57,7 @@ defmodule Procore.Api.CoreProjectLinksLinks do
 
   @doc """
   Delete link
-  Send a specific Project Home Link to the recycle bin. Note: Requires either Company Admin or Project Home Admin permission.
+  Send a specific Project Home Link to the recycle bin. Note: Requires either Company Admin or Project Home Admin permission. This endpoint will be deprecated; please use the [V2](https://developers.procore.com/reference/rest/v2/links?version=2.0#delete-a-link) endpoint.
 
   ### Parameters
 
@@ -136,7 +136,7 @@ defmodule Procore.Api.CoreProjectLinksLinks do
 
   @doc """
   Update link
-  Update one or more attributes of a specific Project Home Link. Note: Requires either Company Admin or Project Home Admin permission.
+  Update one or more attributes of a specific Project Home Link. Note: Requires either Company Admin or Project Home Admin permission. This endpoint will be deprecated; please use the [V2](https://developers.procore.com/reference/rest/v2/links?version=2.0#bulk-update-links) endpoint.
 
   ### Parameters
 
@@ -238,7 +238,7 @@ defmodule Procore.Api.CoreProjectLinksLinks do
 
   @doc """
   Create link
-  Creates a Project Home Link on a given project. Note: Requires either Company Admin or Project Home Admin permission.
+  Creates a Project Home Link on a given project. Note: Requires either Company Admin or Project Home Admin permission. This endpoint will be deprecated; please use the [V2](https://developers.procore.com/reference/rest/v2/links?version=2.0#bulk-update-links) endpoint.
 
   ### Parameters
 

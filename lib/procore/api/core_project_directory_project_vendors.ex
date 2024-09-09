@@ -27,6 +27,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
     - `:"filters[trade_id][]"` ([integer()]): Returns vendors associated with the specified trade id(s)
     - `:"filters[id][]"` ([integer()]): Returns vendors with the specified id(s)
     - `:"filters[parent_id][]"` ([integer()]): Returns vendors with the specified parent id(s)
+    - `:"filters[abbreviated_name][]"` ([String.t]): Return vendors(s) matching any of the specified abbreviated names in the abbreviated_name filter.
     - `:sort` (String.t): Return items with the specified sort.
 
   ### Returns
@@ -58,6 +59,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       :"filters[trade_id][]" => :query,
       :"filters[id][]" => :query,
       :"filters[parent_id][]" => :query,
+      :"filters[abbreviated_name][]" => :query,
       :sort => :query
     }
 
@@ -89,7 +91,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID of the vendor
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view and normal view provides what is shown below. The extended view is the same as the normal view but includes children_count, legal_name, parent, and bidding. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is normal.
+    - `:view` (String.t): The normal view provides what is shown below. The extended view is the same as the normal view but includes children_count, legal_name, parent, and bidding. The name view is a minimal view only including the name and id. The default view is normal.
 
   ### Returns
 

@@ -8,17 +8,17 @@ defmodule Procore.Model.Body108 do
 
   @derive Jason.Encoder
   defstruct [
-    :updates
+    :calendar_item
   ]
 
   @type t :: %__MODULE__{
-          :updates => [Procore.Model.Body108UpdatesInner.t()]
+          :calendar_item => Procore.Model.Body108CalendarItem.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:updates, :list, Procore.Model.Body108UpdatesInner)
+    |> Deserializer.deserialize(:calendar_item, :struct, Procore.Model.Body108CalendarItem)
   end
 end

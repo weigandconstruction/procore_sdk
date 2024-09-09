@@ -12,6 +12,7 @@ defmodule Procore.Model.RestV11RequisitionsGet200ResponseInnerItemsInner do
     :item_type,
     :accounting_method,
     :cost_code_id,
+    :currency_configuration,
     :line_item_id,
     :description_of_work,
     :net_amount,
@@ -24,6 +25,8 @@ defmodule Procore.Model.RestV11RequisitionsGet200ResponseInnerItemsInner do
     :materials_presently_stored_quantity,
     :materials_presently_stored_from_previous_progress,
     :materials_previously_stored_quantity,
+    :materials_moved,
+    :materials_retainage_retained_moved,
     :total_completed_and_stored_to_date,
     :total_completed_and_stored_to_date_percent,
     :total_completed_and_stored_to_date_from_previous,
@@ -52,6 +55,8 @@ defmodule Procore.Model.RestV11RequisitionsGet200ResponseInnerItemsInner do
           :item_type => String.t() | nil,
           :accounting_method => String.t() | nil,
           :cost_code_id => integer() | nil,
+          :currency_configuration =>
+            Procore.Model.RestV11RequisitionsGet200ResponseInnerCurrencyConfiguration.t() | nil,
           :line_item_id => integer() | nil,
           :description_of_work => String.t() | nil,
           :net_amount => String.t() | nil,
@@ -65,6 +70,8 @@ defmodule Procore.Model.RestV11RequisitionsGet200ResponseInnerItemsInner do
           :materials_presently_stored_quantity => String.t() | nil,
           :materials_presently_stored_from_previous_progress => String.t() | nil,
           :materials_previously_stored_quantity => String.t() | nil,
+          :materials_moved => float() | nil,
+          :materials_retainage_retained_moved => float() | nil,
           :total_completed_and_stored_to_date => String.t() | nil,
           :total_completed_and_stored_to_date_percent => String.t() | nil,
           :total_completed_and_stored_to_date_from_previous => String.t() | nil,
@@ -92,6 +99,11 @@ defmodule Procore.Model.RestV11RequisitionsGet200ResponseInnerItemsInner do
 
   def decode(value) do
     value
+    |> Deserializer.deserialize(
+      :currency_configuration,
+      :struct,
+      Procore.Model.RestV11RequisitionsGet200ResponseInnerCurrencyConfiguration
+    )
     |> Deserializer.deserialize(
       :wbs_code,
       :struct,

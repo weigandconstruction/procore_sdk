@@ -194,7 +194,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): Calendar Item ID
-  - `body107` (Body107): 
+  - `body108` (Body108): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -207,7 +207,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body107.t(),
+          Procore.Model.Body108.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -219,7 +219,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
         procore_company_id,
         project_id,
         id,
-        body107,
+        body108,
         _opts \\ []
       ) do
     request =
@@ -227,7 +227,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/calendar_items/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body107)
+      |> add_param(:body, :body, body108)
       |> Enum.into([])
 
     connection
@@ -250,7 +250,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body107` (Body107): 
+  - `body108` (Body108): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -262,7 +262,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body107.t(),
+          Procore.Model.Body108.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -273,7 +273,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
         connection,
         procore_company_id,
         project_id,
-        body107,
+        body108,
         _opts \\ []
       ) do
     request =
@@ -281,7 +281,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/calendar_items")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body107)
+      |> add_param(:body, :body, body108)
       |> Enum.into([])
 
     connection
@@ -304,7 +304,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body108` (Body108): 
+  - `body109` (Body109): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -316,7 +316,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body108.t(),
+          Procore.Model.Body109.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -327,7 +327,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
         connection,
         procore_company_id,
         project_id,
-        body108,
+        body109,
         _opts \\ []
       ) do
     request =
@@ -335,7 +335,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleCalendarItems do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/calendar_items/sync")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body108)
+      |> add_param(:body, :body, body109)
       |> Enum.into([])
 
     connection

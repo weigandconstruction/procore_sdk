@@ -114,7 +114,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `rest_v10_companies_company_id_timesheets_timesheet_to_budget_configuration_post_request` (RestV10CompaniesCompanyIdTimesheetsTimesheetToBudgetConfigurationPostRequest): 
+  - `rest_v10_companies_company_id_timesheets_timesheet_to_budget_configuration_patch_request` (RestV10CompaniesCompanyIdTimesheetsTimesheetToBudgetConfigurationPatchRequest): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -126,7 +126,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.RestV10CompaniesCompanyIdTimesheetsTimesheetToBudgetConfigurationPostRequest.t(),
+          Procore.Model.RestV10CompaniesCompanyIdTimesheetsTimesheetToBudgetConfigurationPatchRequest.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -136,7 +136,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
         connection,
         procore_company_id,
         company_id,
-        rest_v10_companies_company_id_timesheets_timesheet_to_budget_configuration_post_request,
+        rest_v10_companies_company_id_timesheets_timesheet_to_budget_configuration_patch_request,
         _opts \\ []
       ) do
     request =
@@ -147,7 +147,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
       |> add_param(
         :body,
         :body,
-        rest_v10_companies_company_id_timesheets_timesheet_to_budget_configuration_post_request
+        rest_v10_companies_company_id_timesheets_timesheet_to_budget_configuration_patch_request
       )
       |> Enum.into([])
 

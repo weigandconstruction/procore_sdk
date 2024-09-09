@@ -10,13 +10,15 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdGenericToolsGenericToolIdStatus
   defstruct [
     :id,
     :status_name,
-    :status
+    :status,
+    :is_used
   ]
 
   @type t :: %__MODULE__{
           :id => integer() | nil,
           :status_name => String.t() | nil,
-          :status => String.t() | nil
+          :status => String.t() | nil,
+          :is_used => boolean() | nil
         }
 
   def decode(value) do

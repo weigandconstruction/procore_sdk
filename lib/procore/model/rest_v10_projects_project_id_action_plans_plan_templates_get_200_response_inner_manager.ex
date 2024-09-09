@@ -27,7 +27,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdActionPlansPlanTemplatesGet200Re
           :name => String.t() | nil,
           :user_id => integer() | nil,
           :is_employee => boolean() | nil,
-          :employee_id => integer() | nil,
+          :employee_id => String.t() | nil,
           :login => String.t() | nil,
           :updated_at => DateTime.t() | nil,
           :vendor =>

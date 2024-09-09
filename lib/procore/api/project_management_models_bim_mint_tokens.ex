@@ -17,7 +17,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMMintTokens do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body130` (Body130): 
+  - `body131` (Body131): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -28,19 +28,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMMintTokens do
   @spec rest_v10_bim_mint_tokens_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body130.t(),
+          Procore.Model.Body131.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.BimMintTokens.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_mint_tokens_post(connection, procore_company_id, body130, _opts \\ []) do
+  def rest_v10_bim_mint_tokens_post(connection, procore_company_id, body131, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_mint_tokens")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body130)
+      |> add_param(:body, :body, body131)
       |> Enum.into([])
 
     connection

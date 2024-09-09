@@ -567,7 +567,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
 
   @doc """
   List Correspondence Type Permissions
-  Returns a list of all Correspondence Types Permissions for the requesting User in the specificied Project.  For more information on Generic Tool and Correspondence Tool endpoints,  see [Working with the Correspondence Tool](/documentation/tutorial-correspondence).
+  Returns a list of all Correspondence Types Permissions for the requesting User in the specificied Project.  Granular Permissions that are granted via UAL and are force-checked are not included in the list. For more information on Generic Tool and Correspondence Tool endpoints,  see [Working with the Correspondence Tool](/documentation/tutorial-correspondence).
 
   ### Parameters
 
@@ -1308,7 +1308,72 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+    ])
+  end
+
+  @doc """
+  Send a response from a Generic Tool Item and then update the item status
+  Send a response from a generic tool item and then update that item. For more information on Generic Tool and Correspondence Tool endpoints,  see [Working with the Correspondence Tool](/documentation/tutorial-correspondence).
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `generic_tool_item_id` (integer()): Unique identifier for the Generic Tool Item
+  - `generic_tool_id` (integer()): Unique identifier for the Generic Tool
+  - `project_id` (integer()): Unique identifier for the project.
+  - `rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_update_and_send_response_post_request` (RestV10ProjectsProjectIdGenericToolsGenericToolIdGenericToolItemsGenericToolItemIdUpdateAndSendResponsePostRequest): 
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, Procore.Model.GenericToolItem1.t}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_update_and_send_response_post(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          integer(),
+          integer(),
+          Procore.Model.RestV10ProjectsProjectIdGenericToolsGenericToolIdGenericToolItemsGenericToolItemIdUpdateAndSendResponsePostRequest.t(),
+          keyword()
+        ) ::
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.GenericToolItem1.t()}
+          | {:error, Tesla.Env.t()}
+  def rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_update_and_send_response_post(
+        connection,
+        procore_company_id,
+        generic_tool_item_id,
+        generic_tool_id,
+        project_id,
+        rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_update_and_send_response_post_request,
+        _opts \\ []
+      ) do
+    request =
+      %{}
+      |> method(:post)
+      |> url(
+        "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/update_and_send_response"
+      )
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_param(
+        :body,
+        :body,
+        rest_v10_projects_project_id_generic_tools_generic_tool_id_generic_tool_items_generic_tool_item_id_update_and_send_response_post_request
+      )
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, Procore.Model.GenericToolItem1},
+      {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -1610,6 +1675,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end

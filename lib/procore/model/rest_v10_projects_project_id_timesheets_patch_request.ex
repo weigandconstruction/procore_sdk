@@ -15,7 +15,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdTimesheetsPatchRequest do
   @type t :: %__MODULE__{
           :timesheet_id => integer() | nil,
           :timecard_entries => [
-            Procore.Model.RestV10ProjectsProjectIdTimesheetsPatchRequestTimecardEntriesInner.t()
+            Procore.Model.RestV11ProjectsProjectIdProjectTimesheetTimecardEntriesIdPatchRequestTimesheet.t()
           ]
         }
 
@@ -26,7 +26,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdTimesheetsPatchRequest do
     |> Deserializer.deserialize(
       :timecard_entries,
       :list,
-      Procore.Model.RestV10ProjectsProjectIdTimesheetsPatchRequestTimecardEntriesInner
+      Procore.Model.RestV11ProjectsProjectIdProjectTimesheetTimecardEntriesIdPatchRequestTimesheet
     )
   end
 end

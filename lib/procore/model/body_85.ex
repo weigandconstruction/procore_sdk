@@ -8,14 +8,17 @@ defmodule Procore.Model.Body85 do
 
   @derive Jason.Encoder
   defstruct [
-    :name
+    :drawing_revision
   ]
 
   @type t :: %__MODULE__{
-          :name => String.t()
+          :drawing_revision => Procore.Model.DrawingRevision.t()
         }
+
+  alias Procore.Deserializer
 
   def decode(value) do
     value
+    |> Deserializer.deserialize(:drawing_revision, :struct, Procore.Model.DrawingRevision)
   end
 end

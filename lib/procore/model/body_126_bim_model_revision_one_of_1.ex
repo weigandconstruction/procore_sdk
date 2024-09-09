@@ -3,32 +3,40 @@
 
 defmodule Procore.Model.Body126BimModelRevisionOneOf1 do
   @moduledoc """
-  BIM Model Revision object
+  BIM Model Revision
   """
 
   @derive Jason.Encoder
   defstruct [
+    :bim_file_id,
+    :bim_model_id,
     :home_viewpoint_id,
     :suitability,
-    :publish_status,
+    :publisher_name,
+    :publisher_version,
     :min_boundary,
     :max_boundary,
     :rotation,
-    :geometry_file_id,
-    :geometry_file_bundle_id,
-    :property_file_id
+    :published_model_upload_uuid,
+    :object_definition_upload_uuid
   ]
 
   @type t :: %__MODULE__{
+          :bim_file_id => integer(),
+          :bim_model_id => integer(),
           :home_viewpoint_id => integer() | nil,
-          :suitability => String.t() | nil,
-          :publish_status => String.t() | nil,
-          :min_boundary => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil,
-          :max_boundary => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil,
-          :rotation => Procore.Model.Body126BimModelRevisionOneOfRotation.t() | nil,
-          :geometry_file_id => integer() | nil,
-          :geometry_file_bundle_id => integer() | nil,
-          :property_file_id => integer() | nil
+          :suitability => String.t(),
+          :publisher_name => String.t() | nil,
+          :publisher_version => String.t() | nil,
+          :min_boundary =>
+            Procore.Model.RestV10BimModelsGet200ResponseInnerOneOf1CurrentRevisionMinBoundary.t(),
+          :max_boundary =>
+            Procore.Model.RestV10BimModelsGet200ResponseInnerOneOf1CurrentRevisionMinBoundary.t(),
+          :rotation =>
+            Procore.Model.RestV10BimModelsGet200ResponseInnerOneOf1CurrentRevisionMinBoundary.t()
+            | nil,
+          :published_model_upload_uuid => String.t() | nil,
+          :object_definition_upload_uuid => String.t() | nil
         }
 
   alias Procore.Deserializer
@@ -38,17 +46,17 @@ defmodule Procore.Model.Body126BimModelRevisionOneOf1 do
     |> Deserializer.deserialize(
       :min_boundary,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.RestV10BimModelsGet200ResponseInnerOneOf1CurrentRevisionMinBoundary
     )
     |> Deserializer.deserialize(
       :max_boundary,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.RestV10BimModelsGet200ResponseInnerOneOf1CurrentRevisionMinBoundary
     )
     |> Deserializer.deserialize(
       :rotation,
       :struct,
-      Procore.Model.Body126BimModelRevisionOneOfRotation
+      Procore.Model.RestV10BimModelsGet200ResponseInnerOneOf1CurrentRevisionMinBoundary
     )
   end
 end

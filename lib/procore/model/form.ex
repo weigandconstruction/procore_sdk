@@ -12,8 +12,8 @@ defmodule Procore.Model.Form do
     :description,
     :form_template_id,
     :private,
-    :fillable_pdf,
-    :attachments
+    :fillable_pdf_prostore_file_id,
+    :prostore_file_ids
   ]
 
   @type t :: %__MODULE__{
@@ -21,8 +21,8 @@ defmodule Procore.Model.Form do
           :description => String.t(),
           :form_template_id => integer(),
           :private => boolean() | nil,
-          :fillable_pdf => String.t(),
-          :attachments => [String.t()] | nil
+          :fillable_pdf_prostore_file_id => integer(),
+          :prostore_file_ids => [integer()] | nil
         }
 
   def decode(value) do

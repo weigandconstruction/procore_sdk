@@ -38,9 +38,9 @@ defmodule Procore.Model.RestV10BimModelRevisionsGet200ResponseInnerOneOf do
           :revision => integer() | nil,
           :publisher_name => String.t() | nil,
           :publisher_version => String.t() | nil,
-          :min_boundary => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil,
-          :max_boundary => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil,
-          :rotation => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil,
+          :min_boundary => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil,
+          :max_boundary => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil,
+          :rotation => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil,
           :viewpoints =>
             [Procore.Model.RestV10CoordinationIssuesGet200ResponseInnerAllOfViewpointsInner.t()]
             | nil,
@@ -57,17 +57,17 @@ defmodule Procore.Model.RestV10BimModelRevisionsGet200ResponseInnerOneOf do
     |> Deserializer.deserialize(
       :min_boundary,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.Body121BimPlanOneOfModelMapStart
     )
     |> Deserializer.deserialize(
       :max_boundary,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.Body121BimPlanOneOfModelMapStart
     )
     |> Deserializer.deserialize(
       :rotation,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.Body121BimPlanOneOfModelMapStart
     )
     |> Deserializer.deserialize(
       :viewpoints,

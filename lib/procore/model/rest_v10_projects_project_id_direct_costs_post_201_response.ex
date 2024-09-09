@@ -60,7 +60,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdDirectCostsPost201Response do
           :vendor_id => integer() | nil,
           :vendor_name => String.t() | nil,
           :currency_configuration =>
-            Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration.t()
+            Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703InnerCurrencyConfiguration.t()
             | nil
         }
 
@@ -92,7 +92,7 @@ defmodule Procore.Model.RestV10ProjectsProjectIdDirectCostsPost201Response do
     |> Deserializer.deserialize(
       :currency_configuration,
       :struct,
-      Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration
+      Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703InnerCurrencyConfiguration
     )
   end
 end

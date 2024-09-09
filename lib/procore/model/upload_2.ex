@@ -10,12 +10,14 @@ defmodule Procore.Model.Upload2 do
   defstruct [
     :response_filename,
     :response_content_type,
+    :attachment_content_disposition,
     :segments
   ]
 
   @type t :: %__MODULE__{
           :response_filename => String.t() | nil,
           :response_content_type => String.t() | nil,
+          :attachment_content_disposition => boolean() | nil,
           :segments => [Procore.Model.UploadSegmentsInner.t()] | nil
         }
 

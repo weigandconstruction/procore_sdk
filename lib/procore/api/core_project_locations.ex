@@ -300,6 +300,7 @@ defmodule Procore.Api.CoreProjectLocations do
   - `opts` (keyword): Optional parameters
     - `:"filters[id]"` ([integer()]): Return item(s) with the specified IDs.
     - `:"filters[parent_id]"` (integer()): Return location(s) with the specified parent_ids.
+    - `:"filters[code]"` ([String.t]): Return location(s) matching any of the specified codes in the search term.
     - `:"filters[search]"` (String.t): Returns item(s) matching the specified search query string.
     - `:"filters[search_with_code]"` (String.t): Return item(s) where the location code or the location name match the search term
     - `:"filters[superlocations_for]"` (integer()): Return superlocations (ancestors) of the specified location ids.
@@ -332,6 +333,7 @@ defmodule Procore.Api.CoreProjectLocations do
     optional_params = %{
       :"filters[id]" => :query,
       :"filters[parent_id]" => :query,
+      :"filters[code]" => :query,
       :"filters[search]" => :query,
       :"filters[search_with_code]" => :query,
       :"filters[superlocations_for]" => :query,

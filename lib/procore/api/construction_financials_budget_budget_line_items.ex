@@ -70,7 +70,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID
-  - `body114` (Body114): 
+  - `body115` (Body115): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -82,7 +82,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body114.t(),
+          Procore.Model.Body115.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -93,7 +93,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
         connection,
         procore_company_id,
         id,
-        body114,
+        body115,
         _opts \\ []
       ) do
     request =
@@ -101,7 +101,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
       |> method(:patch)
       |> url("/rest/v1.0/budget_line_items/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body114)
+      |> add_param(:body, :body, body115)
       |> Enum.into([])
 
     connection
@@ -124,7 +124,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body113` (Body113): 
+  - `body114` (Body114): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -135,20 +135,20 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
   @spec rest_v10_budget_line_items_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body113.t(),
+          Procore.Model.Body114.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BudgetLineItemsPost201Response.t()}
           | {:ok, Procore.Model.RestV10BudgetLineItemsPost422Response.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_budget_line_items_post(connection, procore_company_id, body113, _opts \\ []) do
+  def rest_v10_budget_line_items_post(connection, procore_company_id, body114, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/budget_line_items")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body113)
+      |> add_param(:body, :body, body114)
       |> Enum.into([])
 
     connection
@@ -171,7 +171,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body115` (Body115): 
+  - `body116` (Body116): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -182,20 +182,20 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
   @spec rest_v10_budget_line_items_sync_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body115.t(),
+          Procore.Model.Body116.t(),
           keyword()
         ) ::
           {:ok, [Procore.Model.RestV11BudgetLineItemsPost201Response.t()]}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BudgetLineItemsPost422Response.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_budget_line_items_sync_post(connection, procore_company_id, body115, _opts \\ []) do
+  def rest_v10_budget_line_items_sync_post(connection, procore_company_id, body116, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/budget_line_items/sync")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body115)
+      |> add_param(:body, :body, body116)
       |> Enum.into([])
 
     connection
@@ -272,7 +272,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID
-  - `body112` (Body112): 
+  - `body113` (Body113): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -284,7 +284,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body112.t(),
+          Procore.Model.Body113.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV11BudgetLineItemsPost201Response.t()}
@@ -294,7 +294,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
         connection,
         procore_company_id,
         id,
-        body112,
+        body113,
         _opts \\ []
       ) do
     request =
@@ -302,7 +302,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
       |> method(:patch)
       |> url("/rest/v1.1/budget_line_items/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body112)
+      |> add_param(:body, :body, body113)
       |> Enum.into([])
 
     connection
@@ -324,7 +324,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body111` (Body111): 
+  - `body112` (Body112): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -335,19 +335,19 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetLineItems do
   @spec rest_v11_budget_line_items_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body111.t(),
+          Procore.Model.Body112.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV11BudgetLineItemsPost201Response.t()}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v11_budget_line_items_post(connection, procore_company_id, body111, _opts \\ []) do
+  def rest_v11_budget_line_items_post(connection, procore_company_id, body112, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.1/budget_line_items")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body111)
+      |> add_param(:body, :body, body112)
       |> Enum.into([])
 
     connection

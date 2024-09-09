@@ -52,7 +52,7 @@ defmodule Procore.Model.RestV11ProjectsProjectIdDirectCostsGet200ResponseInner d
           :vendor_id => integer() | nil,
           :vendor_name => String.t() | nil,
           :currency_configuration =>
-            Procore.Model.RestV11ProjectsProjectIdDirectCostsGet200ResponseInnerCurrencyConfiguration.t()
+            Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration.t()
             | nil,
           :employee =>
             Procore.Model.RestV11ProjectsProjectIdDirectCostsGet200ResponseInnerEmployee.t() | nil
@@ -71,7 +71,7 @@ defmodule Procore.Model.RestV11ProjectsProjectIdDirectCostsGet200ResponseInner d
     |> Deserializer.deserialize(
       :currency_configuration,
       :struct,
-      Procore.Model.RestV11ProjectsProjectIdDirectCostsGet200ResponseInnerCurrencyConfiguration
+      Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration
     )
     |> Deserializer.deserialize(
       :employee,

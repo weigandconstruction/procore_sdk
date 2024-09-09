@@ -3,7 +3,7 @@
 
 defmodule Procore.Model.ActionPlanTemplateReferencesInner1Payload do
   @moduledoc """
-  One of attachment, drawing_revision_id, file_version_id, specification_section_id, submittal_log_id, generic_tool_item_id, form_id, meeting_id, or observation_item_id is accepted depending on the type provided
+  One of attachment, drawing_revision_id, file_version_id, specification_section_id, submittal_log_id, generic_tool_item_id, form_id, image_id, meeting_id, or observation_item_id is accepted depending on the type provided
   """
 
   @derive Jason.Encoder
@@ -14,6 +14,7 @@ defmodule Procore.Model.ActionPlanTemplateReferencesInner1Payload do
     :submittal_log_id,
     :generic_tool_item_id,
     :form_id,
+    :image_id,
     :meeting_id,
     :observation_item_id
   ]
@@ -25,6 +26,7 @@ defmodule Procore.Model.ActionPlanTemplateReferencesInner1Payload do
           :submittal_log_id => integer() | nil,
           :generic_tool_item_id => integer() | nil,
           :form_id => integer() | nil,
+          :image_id => integer() | nil,
           :meeting_id => integer() | nil,
           :observation_item_id => integer() | nil
         }

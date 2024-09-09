@@ -155,7 +155,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID of the office
-  - `body105` (Body105): 
+  - `body106` (Body106): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -167,19 +167,19 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body105.t(),
+          Procore.Model.Body106.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.Office1.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_offices_id_patch(connection, procore_company_id, id, body105, _opts \\ []) do
+  def rest_v10_offices_id_patch(connection, procore_company_id, id, body106, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/offices/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body105)
+      |> add_param(:body, :body, body106)
       |> Enum.into([])
 
     connection
@@ -201,7 +201,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body105` (Body105): 
+  - `body106` (Body106): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -209,17 +209,17 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
   - `{:ok, Procore.Model.Office1.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec rest_v10_offices_post(Tesla.Env.client(), integer(), Procore.Model.Body105.t(), keyword()) ::
+  @spec rest_v10_offices_post(Tesla.Env.client(), integer(), Procore.Model.Body106.t(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.Office1.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_offices_post(connection, procore_company_id, body105, _opts \\ []) do
+  def rest_v10_offices_post(connection, procore_company_id, body106, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/offices")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body105)
+      |> add_param(:body, :body, body106)
       |> Enum.into([])
 
     connection

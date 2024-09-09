@@ -12,7 +12,12 @@ defmodule Procore.Model.RestV10ProjectProjectIdEmailCommunicationsCommunicationI
     :prostore_file_ids,
     :distribution_ids,
     :cc_distribution_ids,
-    :bcc_distribution_ids
+    :bcc_distribution_ids,
+    :drawing_revision_ids,
+    :file_version_ids,
+    :form_ids,
+    :image_ids,
+    :upload_ids
   ]
 
   @type t :: %__MODULE__{
@@ -20,7 +25,12 @@ defmodule Procore.Model.RestV10ProjectProjectIdEmailCommunicationsCommunicationI
           :prostore_file_ids => [integer()] | nil,
           :distribution_ids => [integer()] | nil,
           :cc_distribution_ids => [integer()] | nil,
-          :bcc_distribution_ids => [integer()] | nil
+          :bcc_distribution_ids => [integer()] | nil,
+          :drawing_revision_ids => [integer()] | nil,
+          :file_version_ids => [integer()] | nil,
+          :form_ids => [integer()] | nil,
+          :image_ids => [integer()] | nil,
+          :upload_ids => [String.t()] | nil
         }
 
   def decode(value) do

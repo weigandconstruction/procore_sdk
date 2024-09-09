@@ -191,7 +191,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): Form ID
-  - `body78` (Body78): 
+  - `body79` (Body79): 
   - `opts` (keyword): Optional parameters
     - `:send_emails` (boolean()): Designates whether or not emails will be sent (default false)
 
@@ -205,7 +205,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body78.t(),
+          Procore.Model.Body79.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -216,7 +216,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
         procore_company_id,
         project_id,
         id,
-        body78,
+        body79,
         opts \\ []
       ) do
     optional_params = %{
@@ -228,7 +228,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/forms/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body78)
+      |> add_param(:body, :body, body79)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -236,6 +236,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
     |> Connection.request(request)
     |> evaluate_response([
       {200, Procore.Model.RestV11ProjectsProjectIdFormsGet200ResponseInner},
+      {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {404, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
@@ -252,7 +253,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `form` (Procore.Model.Form.t): 
+  - `body77` (Body77): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -264,7 +265,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Form.t(),
+          Procore.Model.Body77.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -274,7 +275,7 @@ defmodule Procore.Api.QualitySafetyFormsForms do
         connection,
         procore_company_id,
         project_id,
-        form,
+        body77,
         _opts \\ []
       ) do
     request =
@@ -282,13 +283,14 @@ defmodule Procore.Api.QualitySafetyFormsForms do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/forms")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:form, :form, form)
+      |> add_param(:body, :body, body77)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
       {201, Procore.Model.RestV11ProjectsProjectIdFormsGet200ResponseInner},
+      {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}

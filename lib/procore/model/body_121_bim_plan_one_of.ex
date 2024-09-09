@@ -9,6 +9,8 @@ defmodule Procore.Model.Body121BimPlanOneOf do
   @derive Jason.Encoder
   defstruct [
     :bim_level_id,
+    :drawing_id,
+    :upload_uuid,
     :sheet_map_start,
     :sheet_map_end,
     :model_map_start,
@@ -17,10 +19,12 @@ defmodule Procore.Model.Body121BimPlanOneOf do
 
   @type t :: %__MODULE__{
           :bim_level_id => integer(),
-          :sheet_map_start => Procore.Model.Body120BimPlanOneOfSheetMapStart.t() | nil,
-          :sheet_map_end => Procore.Model.Body120BimPlanOneOfSheetMapStart.t() | nil,
-          :model_map_start => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil,
-          :model_map_end => Procore.Model.Body120BimPlanOneOfModelMapStart.t() | nil
+          :drawing_id => integer() | nil,
+          :upload_uuid => String.t() | nil,
+          :sheet_map_start => Procore.Model.Body121BimPlanOneOfSheetMapStart.t() | nil,
+          :sheet_map_end => Procore.Model.Body121BimPlanOneOfSheetMapStart.t() | nil,
+          :model_map_start => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil,
+          :model_map_end => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil
         }
 
   alias Procore.Deserializer
@@ -30,22 +34,22 @@ defmodule Procore.Model.Body121BimPlanOneOf do
     |> Deserializer.deserialize(
       :sheet_map_start,
       :struct,
-      Procore.Model.Body120BimPlanOneOfSheetMapStart
+      Procore.Model.Body121BimPlanOneOfSheetMapStart
     )
     |> Deserializer.deserialize(
       :sheet_map_end,
       :struct,
-      Procore.Model.Body120BimPlanOneOfSheetMapStart
+      Procore.Model.Body121BimPlanOneOfSheetMapStart
     )
     |> Deserializer.deserialize(
       :model_map_start,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.Body121BimPlanOneOfModelMapStart
     )
     |> Deserializer.deserialize(
       :model_map_end,
       :struct,
-      Procore.Model.Body120BimPlanOneOfModelMapStart
+      Procore.Model.Body121BimPlanOneOfModelMapStart
     )
   end
 end

@@ -14,13 +14,13 @@ defmodule Procore.Model.Body136 do
 
   @type t :: %__MODULE__{
           :project_id => integer(),
-          :bim_file => Procore.Model.BimFile1.t()
+          :bim_file => Procore.Model.BimFile.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:bim_file, :struct, Procore.Model.BimFile1)
+    |> Deserializer.deserialize(:bim_file, :struct, Procore.Model.BimFile)
   end
 end

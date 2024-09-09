@@ -21,7 +21,9 @@ defmodule Procore.Model.RestV11ProjectsProjectIdMeetingsGet200ResponseOneOfInner
     :location,
     :meeting_topics_count,
     :occurred,
-    :is_private
+    :is_private,
+    :created_at,
+    :updated_at
   ]
 
   @type t :: %__MODULE__{
@@ -38,7 +40,9 @@ defmodule Procore.Model.RestV11ProjectsProjectIdMeetingsGet200ResponseOneOfInner
           :location => String.t() | nil,
           :meeting_topics_count => integer() | nil,
           :occurred => boolean() | nil,
-          :is_private => boolean() | nil
+          :is_private => boolean() | nil,
+          :created_at => DateTime.t() | nil,
+          :updated_at => DateTime.t() | nil
         }
 
   alias Procore.Deserializer
@@ -47,5 +51,7 @@ defmodule Procore.Model.RestV11ProjectsProjectIdMeetingsGet200ResponseOneOfInner
     value
     |> Deserializer.deserialize(:starts_at, :datetime, nil)
     |> Deserializer.deserialize(:ends_at, :datetime, nil)
+    |> Deserializer.deserialize(:created_at, :datetime, nil)
+    |> Deserializer.deserialize(:updated_at, :datetime, nil)
   end
 end

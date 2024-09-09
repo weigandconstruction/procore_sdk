@@ -132,7 +132,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
   - `project_id` (integer()): Unique identifier for the project.
   - `bid_package_id` (integer()): Bid Package ID
   - `bid_form_id` (integer()): Bid Form ID
-  - `body138` (Body138): 
+  - `body139` (Body139): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -146,7 +146,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body138.t(),
+          Procore.Model.Body139.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -159,7 +159,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
         project_id,
         bid_package_id,
         bid_form_id,
-        body138,
+        body139,
         _opts \\ []
       ) do
     request =
@@ -169,7 +169,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
         "/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bid_forms/#{bid_form_id}"
       )
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body138)
+      |> add_param(:body, :body, body139)
       |> Enum.into([])
 
     connection
@@ -260,7 +260,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `bid_package_id` (integer()): Bid Package ID
-  - `body138` (Body138): 
+  - `body139` (Body139): 
   - `opts` (keyword): Optional parameters
     - `:excluded_bid_form_id` (integer()): Bid Form Id to exclude
     - `:view` (String.t): View that enables Use Previous Bidders functionality and provides project and bid package name
@@ -277,7 +277,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body138.t(),
+          Procore.Model.Body139.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -289,7 +289,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
         procore_company_id,
         project_id,
         bid_package_id,
-        body138,
+        body139,
         opts \\ []
       ) do
     optional_params = %{
@@ -304,7 +304,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidForms do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bid_forms")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body138)
+      |> add_param(:body, :body, body139)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

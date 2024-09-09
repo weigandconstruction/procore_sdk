@@ -69,7 +69,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewFolders do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body119` (Body119): 
+  - `body120` (Body120): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -80,19 +80,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewFolders do
   @spec rest_v10_bim_view_folders_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body119.t(),
+          Procore.Model.Body120.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10NestedBimViewFoldersPost200Response.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_view_folders_post(connection, procore_company_id, body119, _opts \\ []) do
+  def rest_v10_bim_view_folders_post(connection, procore_company_id, body120, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_view_folders")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body119)
+      |> add_param(:body, :body, body120)
       |> Enum.into([])
 
     connection

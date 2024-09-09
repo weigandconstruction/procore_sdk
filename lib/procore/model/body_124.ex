@@ -9,11 +9,13 @@ defmodule Procore.Model.Body124 do
   @derive Jason.Encoder
   defstruct [
     :project_id,
+    :view,
     :bim_model
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
+          :view => String.t() | nil,
           :bim_model => Procore.Model.Body124BimModel.t()
         }
 

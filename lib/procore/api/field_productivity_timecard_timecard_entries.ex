@@ -35,7 +35,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, [%TimecardEntry3{}, ...]}` on success
+  - `{:ok, [%RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_timecard_entries_get(
@@ -45,7 +45,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.TimecardEntry3.t()]}
+          | {:ok, [Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_get(
         connection,
@@ -80,7 +80,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry3},
+      {200, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -150,7 +150,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry3.t}` on success
+  - `{:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_timecard_entries_id_delete(
@@ -160,8 +160,8 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.TimecardEntry3.t()}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_id_delete(
         connection,
@@ -180,7 +180,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry3},
+      {200, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -201,7 +201,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry3.t}` on success
+  - `{:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_timecard_entries_id_get(
@@ -211,8 +211,8 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           integer(),
           keyword()
         ) ::
-          {:ok, Procore.Model.TimecardEntry3.t()}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_id_get(
         connection,
@@ -231,7 +231,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry3},
+      {200, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -252,7 +252,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry3.t}` on success
+  - `{:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_timecard_entries_id_patch(
@@ -263,8 +263,8 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesIdPatchRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.TimecardEntry3.t()}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_id_patch(
         connection,
@@ -285,7 +285,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry3},
+      {200, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
@@ -307,7 +307,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry3.t}` on success
+  - `{:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_timecard_entries_post(
@@ -317,8 +317,8 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesPostRequest.t(),
           keyword()
         ) ::
-          {:ok, Procore.Model.TimecardEntry3.t()}
-          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_timecard_entries_post(
         connection,
@@ -338,7 +338,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {201, Procore.Model.TimecardEntry3},
+      {201, Procore.Model.RestV10CompaniesCompanyIdTimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
@@ -365,7 +365,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, [%TimecardEntry8{}, ...]}` on success
+  - `{:ok, [%RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_timecard_entries_get(
@@ -375,7 +375,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.TimecardEntry8.t()]}
+          | {:ok, [Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_get(
         connection,
@@ -403,7 +403,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry8},
+      {200, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -474,7 +474,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry8.t}` on success
+  - `{:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_timecard_entries_id_get(
@@ -485,7 +485,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry8.t()}
+          | {:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_id_get(
         connection,
@@ -504,7 +504,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry8},
+      {200, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -525,7 +525,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry8.t}` on success
+  - `{:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_timecard_entries_id_patch(
@@ -537,7 +537,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry8.t()}
+          | {:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_id_patch(
         connection,
@@ -558,7 +558,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry8},
+      {200, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -579,7 +579,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry8.t}` on success
+  - `{:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_timecard_entries_id_remove_signature_patch(
@@ -590,7 +590,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry8.t()}
+          | {:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_id_remove_signature_patch(
         connection,
@@ -610,7 +610,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry8},
+      {200, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {404, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -632,7 +632,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry8.t}` on success
+  - `{:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_timecard_entries_id_sign_patch(
@@ -644,7 +644,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry8.t()}
+          | {:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_id_sign_patch(
         connection,
@@ -669,7 +669,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry8},
+      {200, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {404, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
@@ -691,7 +691,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry8.t}` on success
+  - `{:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_timecard_entries_post(
@@ -702,7 +702,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry8.t()}
+          | {:ok, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_timecard_entries_post(
         connection,
@@ -722,7 +722,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {201, Procore.Model.TimecardEntry8},
+      {201, Procore.Model.RestV10ProjectsProjectIdTimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -746,12 +746,12 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, [%TimecardEntry6{}, ...]}` on success
+  - `{:ok, [%RestV10TimecardEntriesGet200ResponseInner{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_timecard_entries_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.TimecardEntry6.t()]}
+          | {:ok, [Procore.Model.RestV10TimecardEntriesGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_timecard_entries_get(connection, procore_company_id, project_id, opts \\ []) do
     optional_params = %{
@@ -773,7 +773,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry6},
+      {200, Procore.Model.RestV10TimecardEntriesGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -846,7 +846,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry.t}` on success
+  - `{:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_timecard_entries_id_get(
@@ -857,7 +857,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry.t()}
+          | {:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_timecard_entries_id_get(
         connection,
@@ -877,7 +877,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry},
+      {200, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -898,7 +898,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry.t}` on success
+  - `{:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_timecard_entries_id_patch(
@@ -909,7 +909,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry.t()}
+          | {:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_timecard_entries_id_patch(
         connection,
@@ -929,7 +929,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.TimecardEntry},
+      {200, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -949,7 +949,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
 
   ### Returns
 
-  - `{:ok, Procore.Model.TimecardEntry.t}` on success
+  - `{:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_timecard_entries_post(
@@ -959,7 +959,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.TimecardEntry.t()}
+          | {:ok, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_timecard_entries_post(
         connection,
@@ -978,7 +978,7 @@ defmodule Procore.Api.FieldProductivityTimecardTimecardEntries do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {201, Procore.Model.TimecardEntry},
+      {201, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}

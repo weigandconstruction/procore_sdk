@@ -8,11 +8,15 @@ defmodule Procore.Model.BusinessNormalViewTags do
 
   @derive Jason.Encoder
   defstruct [
-    :claim_status
+    :claim_status,
+    :approval_status,
+    :publishable
   ]
 
   @type t :: %__MODULE__{
-          :claim_status => String.t() | nil
+          :claim_status => String.t() | nil,
+          :approval_status => String.t() | nil,
+          :publishable => String.t() | nil
         }
 
   def decode(value) do

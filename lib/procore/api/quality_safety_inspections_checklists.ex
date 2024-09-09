@@ -656,7 +656,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Checklist ID
   - `project_id` (integer()): Unique identifier for the project.
-  - `body106` (Body106): 
+  - `body107` (Body107): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -669,7 +669,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body106.t(),
+          Procore.Model.Body107.t(),
           keyword()
         ) ::
           {:ok, nil}
@@ -680,7 +680,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
         procore_company_id,
         id,
         project_id,
-        body106,
+        body107,
         _opts \\ []
       ) do
     request =
@@ -688,7 +688,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/#{id}/send_email")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body106)
+      |> add_param(:body, :body, body107)
       |> Enum.into([])
 
     connection

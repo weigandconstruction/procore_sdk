@@ -8,22 +8,19 @@ defmodule Procore.Model.Body106 do
 
   @derive Jason.Encoder
   defstruct [
-    :subject,
-    :body,
-    :distribution_ids,
-    :cc_distribution_ids,
-    :bcc_distribution_ids
+    :company_id,
+    :office
   ]
 
   @type t :: %__MODULE__{
-          :subject => String.t() | nil,
-          :body => String.t() | nil,
-          :distribution_ids => [integer()] | nil,
-          :cc_distribution_ids => [integer()] | nil,
-          :bcc_distribution_ids => [integer()] | nil
+          :company_id => integer(),
+          :office => Procore.Model.Office2.t()
         }
+
+  alias Procore.Deserializer
 
   def decode(value) do
     value
+    |> Deserializer.deserialize(:office, :struct, Procore.Model.Office2)
   end
 end

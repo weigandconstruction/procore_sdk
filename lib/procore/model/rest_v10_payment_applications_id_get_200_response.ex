@@ -51,7 +51,7 @@ defmodule Procore.Model.RestV10PaymentApplicationsIdGet200Response do
           :total_amount_accrued_this_period => String.t() | nil,
           :formatted_contract_company => String.t() | nil,
           :currency_configuration =>
-            Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration.t()
+            Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703InnerCurrencyConfiguration.t()
             | nil,
           :description_type => String.t() | nil,
           :g702 => Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfG702.t() | nil,
@@ -82,7 +82,7 @@ defmodule Procore.Model.RestV10PaymentApplicationsIdGet200Response do
     |> Deserializer.deserialize(
       :currency_configuration,
       :struct,
-      Procore.Model.RestV10PaymentApplicationsGet200ResponseInnerAllOfCurrencyConfiguration
+      Procore.Model.RestV10PaymentApplicationsIdGet200ResponseAllOfG703InnerCurrencyConfiguration
     )
     |> Deserializer.deserialize(
       :g702,
