@@ -69,21 +69,21 @@ This SDK is automatically generated from the Procore OpenAPI spec. Very few file
 
 ## Generating SDK
 
-This SDK uses [openapi-generator](https://openapi-generator.tech/). Docker must be running on the machine used to build
-the SDK.
+This SDK uses [openapi-generator](https://openapi-generator.tech/). Docker must be running on the machine used to build the SDK.
+
+The OpenAPI Spec (OAS) can be downloaded from the dropdown on the [Procore REST API Overview page](https://developers.procore.com/reference/rest/v1/docs/rest-api-overview).
 
 To generate a new version of this SDK:
 
-1. Download the OpenAPI Spec (OAS) from the dropdown on the [Procore REST API Overview page](https://developers.procore.com/reference/rest/v1/docs/rest-api-overview) and replace the `rest_v1_OAS_all.json` file.
-2. Generate the library with:
+1. Generate the library with:
    ```bash
    # From the project root directory
-   docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest-release generate \
-       -i /local/rest_v1_OAS_all.json \
+   docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v7.8.0 generate \
+       -i https://developers.procore.com/api/v1/resource_groups/full_oas?version=1 \
        -g elixir \
        -o /local \
        -c /local/config.json
    ```
-3. Ensure that files are formatted with `mix format`
+2. Ensure that files are formatted with `mix format`
 
 In the future this process will be automated through CI.
