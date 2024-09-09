@@ -4,13 +4,14 @@ defmodule Procore.Mixfile do
   def project do
     [
       app: :procore_sdk,
-      version: "0.1.2",
+      version: "0.1.3",
       elixir: "~> 1.15",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       package: package(),
       description: "Unofficial Procore API SDK for Elixir",
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -49,6 +50,15 @@ defmodule Procore.Mixfile do
       },
       maintainers: ["ntodd"],
       files: ~w(.formatter.exs config lib mix.exs README* LICENSE*)
+    ]
+  end
+
+  defp docs do
+    [
+      name: "Procore SDK",
+      main: "readme",
+      extras: ["README.md"],
+      nest_modules_by_prefix: [Procore.Api, Procore.Model]
     ]
   end
 end
