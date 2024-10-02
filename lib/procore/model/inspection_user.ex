@@ -23,7 +23,7 @@ defmodule Procore.Model.InspectionUser do
           :id => integer() | nil,
           :login => String.t() | nil,
           :name => String.t() | nil,
-          :vendor => Procore.Model.NameView.t() | nil,
+          :vendor => Procore.Model.Compact.t() | nil,
           :potential_assignee => boolean() | nil,
           :potential_point_of_contact => boolean() | nil,
           :potential_distribution_member => boolean() | nil,
@@ -35,7 +35,7 @@ defmodule Procore.Model.InspectionUser do
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.NameView)
+    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.Compact)
     |> Deserializer.deserialize(:custom_fields, :struct, Procore.Model.InspectionUserCustomFields)
   end
 end

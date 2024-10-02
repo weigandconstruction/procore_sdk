@@ -21,7 +21,7 @@ defmodule Procore.Model.ProjectPerson1 do
   ]
 
   @type t :: %__MODULE__{
-          :contact => Procore.Model.NormalView1Contact.t() | nil,
+          :contact => Procore.Model.NormalContact.t() | nil,
           :employee_id => String.t() | nil,
           :first_name => String.t() | nil,
           :id => integer() | nil,
@@ -37,6 +37,6 @@ defmodule Procore.Model.ProjectPerson1 do
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:contact, :struct, Procore.Model.NormalView1Contact)
+    |> Deserializer.deserialize(:contact, :struct, Procore.Model.NormalContact)
   end
 end

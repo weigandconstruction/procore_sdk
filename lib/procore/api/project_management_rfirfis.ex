@@ -484,6 +484,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
   - `opts` (keyword): Optional parameters
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
+    - `:"filters[updated_at]"` (Date.t): Return item(s) last updated within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00`...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
 
   ### Returns
 
@@ -507,7 +508,8 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       ) do
     optional_params = %{
       :page => :query,
-      :per_page => :query
+      :per_page => :query,
+      :"filters[updated_at]" => :query
     }
 
     request =

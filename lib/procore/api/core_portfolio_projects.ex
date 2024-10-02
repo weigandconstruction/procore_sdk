@@ -22,6 +22,7 @@ defmodule Procore.Api.CorePortfolioProjects do
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
     - `:"filters[by_status]"` (String.t): Filters on project status. Must be one of Active, Inactive, or All.
+    - `:"filters[name]"` (String.t): Filters projects to those matching the given string.
     - `:"filters[created_at]"` (Date.t): Return item(s) created within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
     - `:"filters[updated_at]"` (Date.t): Return item(s) last updated within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00`...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
     - `:"filters[origin_id]"` (String.t): Origin ID. Returns item(s) with the specified Origin ID.
@@ -47,6 +48,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       :page => :query,
       :per_page => :query,
       :"filters[by_status]" => :query,
+      :"filters[name]" => :query,
       :"filters[created_at]" => :query,
       :"filters[updated_at]" => :query,
       :"filters[origin_id]" => :query,
@@ -486,6 +488,7 @@ defmodule Procore.Api.CorePortfolioProjects do
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
     - `:"filters[by_status]"` (String.t): Filters on project status. Must be one of Active, Inactive, or All.
+    - `:"filters[name]"` (String.t): Filters projects to those matching the given string.
     - `:"filters[project_number]"` (String.t): Filters on project number.
     - `:"filters[created_at]"` (Date.t): Return item(s) created within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
     - `:"filters[updated_at]"` (Date.t): Return item(s) last updated within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00`...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
@@ -521,6 +524,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       :page => :query,
       :per_page => :query,
       :"filters[by_status]" => :query,
+      :"filters[name]" => :query,
       :"filters[project_number]" => :query,
       :"filters[created_at]" => :query,
       :"filters[updated_at]" => :query,

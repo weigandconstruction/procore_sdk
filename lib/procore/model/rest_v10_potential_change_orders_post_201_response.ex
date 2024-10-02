@@ -38,7 +38,8 @@ defmodule Procore.Model.RestV10PotentialChangeOrdersPost201Response do
     :updated_at,
     :vendor,
     :void,
-    :currency_configuration
+    :currency_configuration,
+    :custom_fields
   ]
 
   @type t :: %__MODULE__{
@@ -75,6 +76,9 @@ defmodule Procore.Model.RestV10PotentialChangeOrdersPost201Response do
           :void => boolean() | nil,
           :currency_configuration =>
             Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration.t()
+            | nil,
+          :custom_fields =>
+            Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields.t()
             | nil
         }
 
@@ -101,6 +105,11 @@ defmodule Procore.Model.RestV10PotentialChangeOrdersPost201Response do
       :currency_configuration,
       :struct,
       Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration
+    )
+    |> Deserializer.deserialize(
+      :custom_fields,
+      :struct,
+      Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields
     )
   end
 end

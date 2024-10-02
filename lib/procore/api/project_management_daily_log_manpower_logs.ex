@@ -348,7 +348,8 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
     |> evaluate_response([
       {200, Procore.Model.RestV10ProjectsProjectIdManpowerLogsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -405,7 +406,8 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
     |> evaluate_response([
       {201, Procore.Model.RestV10ProjectsProjectIdManpowerLogsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -424,7 +426,7 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
 
   ### Returns
 
-  - `{:ok, [%NameView{}, ...]}` on success
+  - `{:ok, [%Compact{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_manpower_logs_vendor_options_get(
@@ -434,7 +436,7 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.NameView.t()]}
+          | {:ok, [Procore.Model.Compact.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_manpower_logs_vendor_options_get(
         connection,
@@ -458,7 +460,7 @@ defmodule Procore.Api.ProjectManagementDailyLogManpowerLogs do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.NameView},
+      {200, Procore.Model.Compact},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end

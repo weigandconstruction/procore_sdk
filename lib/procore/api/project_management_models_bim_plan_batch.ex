@@ -17,7 +17,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMPlanBatch do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body123` (Body123): 
+  - `body127` (Body127): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -28,19 +28,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMPlanBatch do
   @spec rest_v10_bim_plans_batch_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body123.t(),
+          Procore.Model.Body127.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.BimPlanBatchCreateResponse.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_plans_batch_post(connection, procore_company_id, body123, _opts \\ []) do
+  def rest_v10_bim_plans_batch_post(connection, procore_company_id, body127, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_plans/batch")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body123)
+      |> add_param(:body, :body, body127)
       |> Enum.into([])
 
     connection

@@ -8,17 +8,17 @@ defmodule Procore.Model.Body76 do
 
   @derive Jason.Encoder
   defstruct [
-    :image_category
+    :instruction_type
   ]
 
   @type t :: %__MODULE__{
-          :image_category => Procore.Model.ImageCategory1.t()
+          :instruction_type => Procore.Model.InstructionType.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:image_category, :struct, Procore.Model.ImageCategory1)
+    |> Deserializer.deserialize(:instruction_type, :struct, Procore.Model.InstructionType)
   end
 end

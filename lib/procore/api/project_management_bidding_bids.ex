@@ -169,6 +169,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {409, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
@@ -507,6 +508,69 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       {200, Procore.Model.Bid},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+    ])
+  end
+
+  @doc """
+  Update a Bid from a Bid Package
+  Update a Bid with a Bid Package.
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `project_id` (integer()): Unique identifier for the project.
+  - `bid_package_id` (integer()): Bid Package ID
+  - `id` (integer()): ID
+  - `rest_v11_projects_project_id_bid_packages_bid_package_id_bids_id_patch_request` (RestV11ProjectsProjectIdBidPackagesBidPackageIdBidsIdPatchRequest): 
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, Procore.Model.Bid.t}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v11_projects_project_id_bid_packages_bid_package_id_bids_id_patch(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          integer(),
+          integer(),
+          Procore.Model.RestV11ProjectsProjectIdBidPackagesBidPackageIdBidsIdPatchRequest.t(),
+          keyword()
+        ) ::
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.Bid.t()}
+          | {:error, Tesla.Env.t()}
+  def rest_v11_projects_project_id_bid_packages_bid_package_id_bids_id_patch(
+        connection,
+        procore_company_id,
+        project_id,
+        bid_package_id,
+        id,
+        rest_v11_projects_project_id_bid_packages_bid_package_id_bids_id_patch_request,
+        _opts \\ []
+      ) do
+    request =
+      %{}
+      |> method(:patch)
+      |> url("/rest/v1.1/projects/#{project_id}/bid_packages/#{bid_package_id}/bids/#{id}")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_param(
+        :body,
+        :body,
+        rest_v11_projects_project_id_bid_packages_bid_package_id_bids_id_patch_request
+      )
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, Procore.Model.Bid},
+      {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end

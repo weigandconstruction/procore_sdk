@@ -81,7 +81,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInactiveUsers do
 
   ### Returns
 
-  - `{:ok, Procore.Model.CompanyUser5.t}` on success
+  - `{:ok, Procore.Model.CompanyUser7.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_users_inactive_id_patch(
@@ -92,7 +92,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInactiveUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.CompanyUser5.t()}
+          | {:ok, Procore.Model.CompanyUser7.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_users_inactive_id_patch(
         connection,
@@ -112,7 +112,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInactiveUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser5},
+      {200, Procore.Model.CompanyUser7},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}

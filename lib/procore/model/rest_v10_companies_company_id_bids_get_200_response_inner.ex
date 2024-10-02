@@ -46,12 +46,9 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner do
           :updated_at => DateTime.t() | nil,
           :due_date => DateTime.t() | nil,
           :bidder_comments => String.t() | nil,
-          :bid_requester =>
-            Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerBidRequester.t() | nil,
-          :vendor =>
-            Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerVendor.t() | nil,
-          :project =>
-            Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerProject.t() | nil
+          :bid_requester => Procore.Model.BidBidRequester.t() | nil,
+          :vendor => Procore.Model.BidVendor.t() | nil,
+          :project => Procore.Model.BidProject.t() | nil
         }
 
   alias Procore.Deserializer
@@ -62,20 +59,8 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInner do
     |> Deserializer.deserialize(:created_at, :datetime, nil)
     |> Deserializer.deserialize(:updated_at, :datetime, nil)
     |> Deserializer.deserialize(:due_date, :datetime, nil)
-    |> Deserializer.deserialize(
-      :bid_requester,
-      :struct,
-      Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerBidRequester
-    )
-    |> Deserializer.deserialize(
-      :vendor,
-      :struct,
-      Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerVendor
-    )
-    |> Deserializer.deserialize(
-      :project,
-      :struct,
-      Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerProject
-    )
+    |> Deserializer.deserialize(:bid_requester, :struct, Procore.Model.BidBidRequester)
+    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.BidVendor)
+    |> Deserializer.deserialize(:project, :struct, Procore.Model.BidProject)
   end
 end

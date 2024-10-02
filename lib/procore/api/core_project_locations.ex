@@ -152,7 +152,7 @@ defmodule Procore.Api.CoreProjectLocations do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID of the location
-  - `body66` (Body66): 
+  - `body70` (Body70): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -164,19 +164,19 @@ defmodule Procore.Api.CoreProjectLocations do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body66.t(),
+          Procore.Model.Body70.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.Location1.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_locations_id_patch(connection, procore_company_id, id, body66, _opts \\ []) do
+  def rest_v10_locations_id_patch(connection, procore_company_id, id, body70, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/locations/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body66)
+      |> add_param(:body, :body, body70)
       |> Enum.into([])
 
     connection
@@ -198,7 +198,7 @@ defmodule Procore.Api.CoreProjectLocations do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body65` (Body65): 
+  - `body69` (Body69): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -209,19 +209,19 @@ defmodule Procore.Api.CoreProjectLocations do
   @spec rest_v10_locations_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body65.t(),
+          Procore.Model.Body69.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.Location1.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_locations_post(connection, procore_company_id, body65, _opts \\ []) do
+  def rest_v10_locations_post(connection, procore_company_id, body69, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/locations")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body65)
+      |> add_param(:body, :body, body69)
       |> Enum.into([])
 
     connection
@@ -244,7 +244,7 @@ defmodule Procore.Api.CoreProjectLocations do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body68` (Body68): 
+  - `body72` (Body72): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -256,7 +256,7 @@ defmodule Procore.Api.CoreProjectLocations do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body68.t(),
+          Procore.Model.Body72.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -266,7 +266,7 @@ defmodule Procore.Api.CoreProjectLocations do
         connection,
         procore_company_id,
         project_id,
-        body68,
+        body72,
         _opts \\ []
       ) do
     request =
@@ -274,7 +274,7 @@ defmodule Procore.Api.CoreProjectLocations do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/locations/find_or_create_by_path")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body68)
+      |> add_param(:body, :body, body72)
       |> Enum.into([])
 
     connection
@@ -309,6 +309,7 @@ defmodule Procore.Api.CoreProjectLocations do
     - `:sort` (String.t): 
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
+    - `:"filters[depth_range]"` (String.t): Return item(s) with a tree depth within the specified range.  Examples: `0...1` - Parents and children `0...2` - Parents, children, and grandchildren `1...2` - Children and grandchildren
 
   ### Returns
 
@@ -341,7 +342,8 @@ defmodule Procore.Api.CoreProjectLocations do
       :"filters[updated_at]" => :query,
       :sort => :query,
       :page => :query,
-      :per_page => :query
+      :per_page => :query,
+      :"filters[depth_range]" => :query
     }
 
     request =
@@ -475,7 +477,7 @@ defmodule Procore.Api.CoreProjectLocations do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `location_id` (integer()): ID of the location
-  - `body67` (Body67): 
+  - `body71` (Body71): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -488,7 +490,7 @@ defmodule Procore.Api.CoreProjectLocations do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body67.t(),
+          Procore.Model.Body71.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -499,7 +501,7 @@ defmodule Procore.Api.CoreProjectLocations do
         procore_company_id,
         project_id,
         location_id,
-        body67,
+        body71,
         _opts \\ []
       ) do
     request =
@@ -507,7 +509,7 @@ defmodule Procore.Api.CoreProjectLocations do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/locations/#{location_id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body67)
+      |> add_param(:body, :body, body71)
       |> Enum.into([])
 
     connection

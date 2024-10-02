@@ -200,7 +200,8 @@ defmodule Procore.Api.ConstructionFinancialsChangeEventsChangeEvents do
     |> evaluate_response([
       {200, Procore.Model.RestV10ChangeEventsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -252,7 +253,8 @@ defmodule Procore.Api.ConstructionFinancialsChangeEventsChangeEvents do
     |> evaluate_response([
       {201, Procore.Model.RestV10ChangeEventsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 end

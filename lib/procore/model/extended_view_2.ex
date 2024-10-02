@@ -23,7 +23,7 @@ defmodule Procore.Model.ExtendedView2 do
   ]
 
   @type t :: %__MODULE__{
-          :contact => Procore.Model.NormalView1Contact.t() | nil,
+          :contact => Procore.Model.NormalContact.t() | nil,
           :employee_id => String.t() | nil,
           :first_name => String.t() | nil,
           :id => integer() | nil,
@@ -34,19 +34,19 @@ defmodule Procore.Model.ExtendedView2 do
           :work_classification_id => integer() | nil,
           :origin_id => integer() | nil,
           :work_classification => Procore.Model.ExtendedViewWorkClassification.t() | nil,
-          :vendor => Procore.Model.NameView.t() | nil
+          :vendor => Procore.Model.Compact.t() | nil
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:contact, :struct, Procore.Model.NormalView1Contact)
+    |> Deserializer.deserialize(:contact, :struct, Procore.Model.NormalContact)
     |> Deserializer.deserialize(
       :work_classification,
       :struct,
       Procore.Model.ExtendedViewWorkClassification
     )
-    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.NameView)
+    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.Compact)
   end
 end

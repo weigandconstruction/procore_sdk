@@ -17,7 +17,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body103` (Body103): 
+  - `body107` (Body107): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -28,7 +28,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
   @spec rest_v10_coordination_issues_bulk_delete_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body103.t(),
+          Procore.Model.Body107.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -37,7 +37,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
   def rest_v10_coordination_issues_bulk_delete_post(
         connection,
         procore_company_id,
-        body103,
+        body107,
         _opts \\ []
       ) do
     request =
@@ -45,7 +45,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
       |> method(:post)
       |> url("/rest/v1.0/coordination_issues/bulk_delete")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body103)
+      |> add_param(:body, :body, body107)
       |> Enum.into([])
 
     connection
@@ -67,7 +67,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body102` (Body102): 
+  - `body106` (Body106): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -78,7 +78,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
   @spec rest_v10_coordination_issues_sync_patch(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body102.t(),
+          Procore.Model.Body106.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -87,7 +87,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
   def rest_v10_coordination_issues_sync_patch(
         connection,
         procore_company_id,
-        body102,
+        body106,
         _opts \\ []
       ) do
     request =
@@ -95,7 +95,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
       |> method(:patch)
       |> url("/rest/v1.0/coordination_issues/sync")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body102)
+      |> add_param(:body, :body, body106)
       |> Enum.into([])
 
     connection

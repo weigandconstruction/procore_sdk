@@ -21,7 +21,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInactiveVendors do
   - `opts` (keyword): Optional parameters
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
-    - `:view` (String.t): The compact view provides only the id and name. The extended view provides what is shown below. The normal view is the same as the extended view but excludes children_count, legal_name, parent, bidding, project_ids, standard_cost_codes, contract_signers_name, invoice_contacts_names, default_bid_invitees_names, and country_name. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is extended.
+    - `:view` (String.t): Specifies which view of the resource to return (which attributes should be present in the response). The default view is extended.
     - `:sort` (String.t): Return items with the specified sort
 
   ### Returns
@@ -79,7 +79,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyInactiveVendors do
   - `company_id` (integer()): Unique identifier for the company.
   - `id` (integer()): ID of the vendor
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view provides only the id and name. The extended view provides what is shown below. The normal view is the same as the extended view but excludes children_count, legal_name, parent, bidding, project_ids, standard_cost_codes, contract_signers_name, invoice_contacts_names, default_bid_invitees_names, and country_name. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is extended.
+    - `:view` (String.t): Specifies which view of the resource to return (which attributes should be present in the response). The default view is extended.
 
   ### Returns
 

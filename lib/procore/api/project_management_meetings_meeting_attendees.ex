@@ -77,7 +77,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
   - `meeting_id` (integer()): ID of the Meeting
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID of the Meeting Attendee record
-  - `body64` (Body64): 
+  - `body68` (Body68): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -91,7 +91,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body64.t(),
+          Procore.Model.Body68.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -103,7 +103,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
         meeting_id,
         project_id,
         id,
-        body64,
+        body68,
         _opts \\ []
       ) do
     request =
@@ -113,7 +113,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :meeting_id, meeting_id)
       |> add_param(:query, :project_id, project_id)
-      |> add_param(:body, :body, body64)
+      |> add_param(:body, :body, body68)
       |> Enum.into([])
 
     connection
@@ -137,7 +137,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `meeting_id` (integer()): ID of the Meeting
-  - `body64` (Body64): 
+  - `body68` (Body68): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -150,7 +150,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body64.t(),
+          Procore.Model.Body68.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -161,7 +161,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
         procore_company_id,
         project_id,
         meeting_id,
-        body64,
+        body68,
         _opts \\ []
       ) do
     request =
@@ -171,7 +171,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingAttendees do
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :meeting_id, meeting_id)
-      |> add_param(:body, :body, body64)
+      |> add_param(:body, :body, body68)
       |> Enum.into([])
 
     connection

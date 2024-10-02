@@ -3,105 +3,69 @@
 
 defmodule Procore.Model.CompanyUser4 do
   @moduledoc """
-  Company User
+
   """
 
   @derive Jason.Encoder
   defstruct [
+    :first_name,
+    :last_name,
+    :job_title,
     :address,
-    :avatar,
+    :city,
+    :zip,
     :business_phone,
     :business_phone_extension,
-    :city,
-    :country_code,
+    :mobile_phone,
+    :fax_number,
     :email_address,
     :email_signature,
-    :employee_id,
-    :erp_integrated_accountant,
-    :fax_number,
-    :first_name,
-    :id,
-    :initials,
     :is_active,
     :is_employee,
-    :job_title,
-    :last_login_at,
-    :last_name,
-    :mobile_phone,
-    :name,
+    :employee_id,
     :notes,
+    :country_code,
     :state_code,
-    :welcome_email_sent_at,
-    :zip,
+    :initials,
     :origin_id,
     :origin_data,
-    :created_at,
-    :updated_at,
-    :vendor,
-    :is_insurance_manager,
-    :party_id,
-    :work_classification_id,
+    :vendor_id,
     :default_permission_template_id,
-    :permission_template,
     :company_permission_template_id,
-    :business_id,
-    :login_information_uuid
+    :work_classification_id,
+    :avatar
   ]
 
   @type t :: %__MODULE__{
+          :first_name => String.t() | nil,
+          :last_name => String.t(),
+          :job_title => String.t() | nil,
           :address => String.t() | nil,
-          :avatar => String.t() | nil,
+          :city => String.t() | nil,
+          :zip => String.t() | nil,
           :business_phone => String.t() | nil,
           :business_phone_extension => integer() | nil,
-          :city => String.t() | nil,
-          :country_code => String.t() | nil,
-          :email_address => String.t() | nil,
-          :email_signature => String.t() | nil,
-          :employee_id => String.t() | nil,
-          :erp_integrated_accountant => boolean() | nil,
+          :mobile_phone => String.t() | nil,
           :fax_number => String.t() | nil,
-          :first_name => String.t() | nil,
-          :id => integer() | nil,
-          :initials => String.t() | nil,
+          :email_address => String.t(),
+          :email_signature => String.t() | nil,
           :is_active => boolean() | nil,
           :is_employee => boolean() | nil,
-          :job_title => String.t() | nil,
-          :last_login_at => DateTime.t() | nil,
-          :last_name => String.t() | nil,
-          :mobile_phone => String.t() | nil,
-          :name => String.t() | nil,
+          :employee_id => String.t() | nil,
           :notes => String.t() | nil,
+          :country_code => String.t() | nil,
           :state_code => String.t() | nil,
-          :welcome_email_sent_at => DateTime.t() | nil,
-          :zip => String.t() | nil,
+          :initials => String.t() | nil,
           :origin_id => String.t() | nil,
           :origin_data => String.t() | nil,
-          :created_at => DateTime.t() | nil,
-          :updated_at => DateTime.t() | nil,
-          :vendor => Procore.Model.NameView.t() | nil,
-          :is_insurance_manager => boolean() | nil,
-          :party_id => integer() | nil,
-          :work_classification_id => integer() | nil,
+          :vendor_id => integer() | nil,
           :default_permission_template_id => integer() | nil,
-          :permission_template => Procore.Model.CompanyUser4AllOfPermissionTemplate.t() | nil,
           :company_permission_template_id => integer() | nil,
-          :business_id => String.t() | nil,
-          :login_information_uuid => String.t() | nil
+          :work_classification_id => integer() | nil,
+          :avatar => String.t() | nil
         }
-
-  alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:last_login_at, :datetime, nil)
-    |> Deserializer.deserialize(:welcome_email_sent_at, :datetime, nil)
-    |> Deserializer.deserialize(:created_at, :datetime, nil)
-    |> Deserializer.deserialize(:updated_at, :datetime, nil)
-    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.NameView)
-    |> Deserializer.deserialize(
-      :permission_template,
-      :struct,
-      Procore.Model.CompanyUser4AllOfPermissionTemplate
-    )
   end
 end

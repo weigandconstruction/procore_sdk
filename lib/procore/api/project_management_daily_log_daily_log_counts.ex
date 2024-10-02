@@ -24,6 +24,8 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogCounts do
     - `:end_date` (Date.t): End date of specific logs desired. Use together with start_date to specify a date range. Example formats YYYY-MM-DD, YYYY/MM/DD, DD-MM-YYYY, DD/MM/YYYY
     - `:"filters[status]"` (String.t): Filter on log status
     - `:"filters[created_by_id]"` ([integer()]): Returns item(s) created by the specified User IDs.
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -50,7 +52,9 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogCounts do
       :start_date => :query,
       :end_date => :query,
       :"filters[status]" => :query,
-      :"filters[created_by_id]" => :query
+      :"filters[created_by_id]" => :query,
+      :page => :query,
+      :per_page => :query
     }
 
     request =

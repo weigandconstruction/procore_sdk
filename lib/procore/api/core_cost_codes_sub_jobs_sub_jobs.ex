@@ -19,6 +19,8 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -29,13 +31,19 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, [Procore.Model.RestV10SubJobsGet200ResponseInner.t()]}
           | {:error, Tesla.Env.t()}
-  def rest_v10_sub_jobs_get(connection, procore_company_id, project_id, _opts \\ []) do
+  def rest_v10_sub_jobs_get(connection, procore_company_id, project_id, opts \\ []) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/sub_jobs")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

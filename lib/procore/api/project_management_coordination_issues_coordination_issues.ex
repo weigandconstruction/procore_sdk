@@ -217,7 +217,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Coordination Issue ID
-  - `body101` (Body101): 
+  - `body105` (Body105): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -229,7 +229,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body101.t(),
+          Procore.Model.Body105.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -239,7 +239,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
         connection,
         procore_company_id,
         id,
-        body101,
+        body105,
         _opts \\ []
       ) do
     request =
@@ -247,7 +247,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
       |> method(:patch)
       |> url("/rest/v1.0/coordination_issues/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body101)
+      |> add_param(:body, :body, body105)
       |> Enum.into([])
 
     connection
@@ -269,7 +269,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body100` (Body100): 
+  - `body104` (Body104): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -280,19 +280,19 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
   @spec rest_v10_coordination_issues_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body100.t(),
+          Procore.Model.Body104.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10CoordinationIssuesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_coordination_issues_post(connection, procore_company_id, body100, _opts \\ []) do
+  def rest_v10_coordination_issues_post(connection, procore_company_id, body104, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/coordination_issues")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body100)
+      |> add_param(:body, :body, body104)
       |> Enum.into([])
 
     connection

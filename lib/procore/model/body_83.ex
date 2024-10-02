@@ -8,17 +8,17 @@ defmodule Procore.Model.Body83 do
 
   @derive Jason.Encoder
   defstruct [
-    :drawing
+    :form
   ]
 
   @type t :: %__MODULE__{
-          :drawing => Procore.Model.Drawing.t()
+          :form => Procore.Model.Form2.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:drawing, :struct, Procore.Model.Drawing)
+    |> Deserializer.deserialize(:form, :struct, Procore.Model.Form2)
   end
 end

@@ -19,6 +19,7 @@ defmodule Procore.Api.CoreCompanyRoles do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
   - `opts` (keyword): Optional parameters
+    - `:"filters[users_only]"` (boolean()): If true, returns only project roles of type user.
 
   ### Returns
 
@@ -38,13 +39,18 @@ defmodule Procore.Api.CoreCompanyRoles do
         connection,
         procore_company_id,
         company_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :"filters[users_only]" => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/roles")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

@@ -22,6 +22,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyPeople do
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
     - `:"filters[is_employee]"` (boolean()): If true, returns item(s) where `is_employee` value is true.
+    - `:"filters[without_reference_users]"` (boolean()): If true, returns only people who are not reference users.
     - `:"filters[reference_users_only]"` (boolean()): If true, returns only people who are reference users.
     - `:"filters[include_company_people]"` (boolean()): If true, returns people in the Company not just the Project. This option only works if the user has permission to create people in the project directory or permission to read from the company directory.
     - `:"filters[search]"` (String.t): Returns item(s) matching the specified search query string.
@@ -50,6 +51,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyPeople do
       :page => :query,
       :per_page => :query,
       :"filters[is_employee]" => :query,
+      :"filters[without_reference_users]" => :query,
       :"filters[reference_users_only]" => :query,
       :"filters[include_company_people]" => :query,
       :"filters[search]" => :query

@@ -168,7 +168,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): Task Item ID
-  - `task_item` (Procore.Model.RestV10TaskItemsIdPatchRequestTaskItem.t): 
+  - `task_item` (Procore.Model.RestV10TaskItemsPostRequestTaskItem.t): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -181,7 +181,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
           integer(),
           integer(),
           integer(),
-          Procore.Model.RestV10TaskItemsIdPatchRequestTaskItem.t(),
+          Procore.Model.RestV10TaskItemsPostRequestTaskItem.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}

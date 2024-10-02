@@ -19,6 +19,13 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
+    - `:"filters[record_generic_tool_id]"` (integer()): Return item(s) with the specified Generic Tool ID.
+    - `:"filters[project_id]"` (integer()): Return item(s) with the Project ID.
+    - `:"filters[template_name]"` (String.t): Return item(s) with provided template_name.
+    - `:"filters[only_parent]"` (boolean()): Return only parent records.
+    - `:scope` (String.t): Return only scoped records.
 
   ### Returns
 
@@ -39,13 +46,24 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
         connection,
         procore_company_id,
         company_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query,
+      :"filters[record_generic_tool_id]" => :query,
+      :"filters[project_id]" => :query,
+      :"filters[template_name]" => :query,
+      :"filters[only_parent]" => :query,
+      :scope => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -169,7 +187,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
   - `id` (integer()): PDF Template Configs ID
-  - `body45` (Body45): 
+  - `body49` (Body49): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -182,7 +200,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body45.t(),
+          Procore.Model.Body49.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -194,7 +212,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
         procore_company_id,
         company_id,
         id,
-        body45,
+        body49,
         _opts \\ []
       ) do
     request =
@@ -202,7 +220,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body45)
+      |> add_param(:body, :body, body49)
       |> Enum.into([])
 
     connection
@@ -224,7 +242,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
   - `id` (integer()): ID of the PDF Template Config
-  - `body45` (Body45): 
+  - `body49` (Body49): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -237,7 +255,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body45.t(),
+          Procore.Model.Body49.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -249,7 +267,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
         procore_company_id,
         company_id,
         id,
-        body45,
+        body49,
         _opts \\ []
       ) do
     request =
@@ -259,7 +277,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
         "/rest/v1.0/companies/#{company_id}/pdf_template_configs/#{id}/update_default_project"
       )
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body45)
+      |> add_param(:body, :body, body49)
       |> Enum.into([])
 
     connection
@@ -280,7 +298,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `body45` (Body45): 
+  - `body49` (Body49): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -292,7 +310,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body45.t(),
+          Procore.Model.Body49.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -303,7 +321,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
         connection,
         procore_company_id,
         company_id,
-        body45,
+        body49,
         _opts \\ []
       ) do
     request =
@@ -311,7 +329,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body45)
+      |> add_param(:body, :body, body49)
       |> Enum.into([])
 
     connection

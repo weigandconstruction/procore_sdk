@@ -13,7 +13,8 @@ defmodule Procore.Model.RestV10ProjectsProjectIdScheduleGet200ResponseActiveFeat
     :schedule_gantt_crud,
     :schedule_task_comments,
     :schedule_task_details,
-    :schedule_linked_items
+    :schedule_linked_items,
+    :new_princess_enabled
   ]
 
   @type t :: %__MODULE__{
@@ -22,7 +23,8 @@ defmodule Procore.Model.RestV10ProjectsProjectIdScheduleGet200ResponseActiveFeat
           :schedule_gantt_crud => boolean() | nil,
           :schedule_task_comments => boolean() | nil,
           :schedule_task_details => boolean() | nil,
-          :schedule_linked_items => boolean() | nil
+          :schedule_linked_items => boolean() | nil,
+          :new_princess_enabled => boolean() | nil
         }
 
   def decode(value) do

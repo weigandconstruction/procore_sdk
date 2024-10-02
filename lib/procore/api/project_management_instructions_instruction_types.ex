@@ -181,7 +181,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): Instruction ID
-  - `body72` (Body72): 
+  - `body76` (Body76): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -194,7 +194,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body72.t(),
+          Procore.Model.Body76.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -206,7 +206,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
         procore_company_id,
         project_id,
         id,
-        body72,
+        body76,
         _opts \\ []
       ) do
     request =
@@ -214,7 +214,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/instruction_types/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body72)
+      |> add_param(:body, :body, body76)
       |> Enum.into([])
 
     connection
@@ -237,7 +237,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body72` (Body72): 
+  - `body76` (Body76): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -249,7 +249,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body72.t(),
+          Procore.Model.Body76.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -260,7 +260,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
         connection,
         procore_company_id,
         project_id,
-        body72,
+        body76,
         _opts \\ []
       ) do
     request =
@@ -268,7 +268,7 @@ defmodule Procore.Api.ProjectManagementInstructionsInstructionTypes do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/instruction_types")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body72)
+      |> add_param(:body, :body, body76)
       |> Enum.into([])
 
     connection

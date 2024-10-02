@@ -167,7 +167,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMLevels do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): BIM Level ID
-  - `body133` (Body133): 
+  - `body137` (Body137): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -179,19 +179,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMLevels do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body133.t(),
+          Procore.Model.Body137.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BimLevelsGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_levels_id_patch(connection, procore_company_id, id, body133, _opts \\ []) do
+  def rest_v10_bim_levels_id_patch(connection, procore_company_id, id, body137, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/bim_levels/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body133)
+      |> add_param(:body, :body, body137)
       |> Enum.into([])
 
     connection
@@ -213,7 +213,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMLevels do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body132` (Body132): 
+  - `body136` (Body136): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -224,19 +224,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMLevels do
   @spec rest_v10_bim_levels_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body132.t(),
+          Procore.Model.Body136.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BimLevelsGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_levels_post(connection, procore_company_id, body132, _opts \\ []) do
+  def rest_v10_bim_levels_post(connection, procore_company_id, body136, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_levels")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body132)
+      |> add_param(:body, :body, body136)
       |> Enum.into([])
 
     connection

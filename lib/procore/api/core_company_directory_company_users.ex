@@ -73,7 +73,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, [%CompanyUser5{}, ...]}` on success
+  - `{:ok, [%CompanyUser7{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_companies_company_id_users_get(
@@ -83,7 +83,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.CompanyUser5.t()]}
+          | {:ok, [Procore.Model.CompanyUser7.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_companies_company_id_users_get(
         connection,
@@ -114,7 +114,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser5},
+      {200, Procore.Model.CompanyUser7},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -292,7 +292,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -305,7 +305,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -315,7 +315,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -327,7 +327,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -417,12 +417,12 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, [%CompanyUser5{}, ...]}` on success
+  - `{:ok, [%CompanyUser7{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_users_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.CompanyUser5.t()]}
+          | {:ok, [Procore.Model.CompanyUser7.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_users_get(connection, procore_company_id, company_id, opts \\ []) do
     optional_params = %{
@@ -450,7 +450,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser5},
+      {200, Procore.Model.CompanyUser7},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -560,30 +560,30 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
   ### Returns
 
-  - `{:ok, Procore.Model.CompanyUser5.t}` on success
+  - `{:ok, Procore.Model.CompanyUser7.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_users_post(
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.CompanyUser5.t()}
+          | {:ok, Procore.Model.CompanyUser7.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_users_post(
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -596,14 +596,14 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> url("/rest/v1.0/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {201, Procore.Model.CompanyUser5},
+      {201, Procore.Model.CompanyUser7},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
@@ -671,12 +671,12 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, Procore.Model.CompanyUser4.t}` on success
+  - `{:ok, Procore.Model.CompanyUser6.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v11_companies_company_id_me_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.CompanyUser4.t()}
+          | {:ok, Procore.Model.CompanyUser6.t()}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_me_get(
         connection,
@@ -694,7 +694,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser4},
+      {200, Procore.Model.CompanyUser6},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -826,7 +826,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, [%CompanyUser5{}, ...]}` on success
+  - `{:ok, [%CompanyUser7{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v11_companies_company_id_users_get(
@@ -836,7 +836,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.CompanyUser5.t()]}
+          | {:ok, [Procore.Model.CompanyUser7.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v11_companies_company_id_users_get(
         connection,
@@ -867,7 +867,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser5},
+      {200, Procore.Model.CompanyUser7},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -1045,7 +1045,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -1058,7 +1058,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -1068,7 +1068,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -1080,7 +1080,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> method(:post)
       |> url("/rest/v1.1/companies/#{company_id}/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1313,7 +1313,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -1326,7 +1326,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -1336,7 +1336,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -1349,7 +1349,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> url("/rest/v1.1/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1424,12 +1424,12 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, Procore.Model.CompanyUser4.t}` on success
+  - `{:ok, Procore.Model.CompanyUser6.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v12_companies_company_id_me_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.CompanyUser4.t()}
+          | {:ok, Procore.Model.CompanyUser6.t()}
           | {:error, Tesla.Env.t()}
   def rest_v12_companies_company_id_me_get(
         connection,
@@ -1447,7 +1447,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser4},
+      {200, Procore.Model.CompanyUser6},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -1579,7 +1579,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, [%CompanyUser5{}, ...]}` on success
+  - `{:ok, [%CompanyUser7{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v12_companies_company_id_users_get(
@@ -1589,7 +1589,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.CompanyUser5.t()]}
+          | {:ok, [Procore.Model.CompanyUser7.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v12_companies_company_id_users_get(
         connection,
@@ -1620,7 +1620,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser5},
+      {200, Procore.Model.CompanyUser7},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -1798,7 +1798,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -1811,7 +1811,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -1821,7 +1821,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -1833,7 +1833,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> method(:post)
       |> url("/rest/v1.2/companies/#{company_id}/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -2066,7 +2066,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -2079,7 +2079,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -2089,7 +2089,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -2102,7 +2102,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> url("/rest/v1.2/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -2177,12 +2177,12 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
 
   ### Returns
 
-  - `{:ok, Procore.Model.CompanyUser4.t}` on success
+  - `{:ok, Procore.Model.CompanyUser6.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v13_companies_company_id_me_get(Tesla.Env.client(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.CompanyUser4.t()}
+          | {:ok, Procore.Model.CompanyUser6.t()}
           | {:error, Tesla.Env.t()}
   def rest_v13_companies_company_id_me_get(
         connection,
@@ -2200,7 +2200,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser4},
+      {200, Procore.Model.CompanyUser6},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
@@ -2823,7 +2823,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
-  - `company_user_body` (CompanyUserBody): 
+  - `company_user_body3` (CompanyUserBody3): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -2836,7 +2836,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.CompanyUserBody.t(),
+          Procore.Model.CompanyUserBody3.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -2846,7 +2846,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
         connection,
         procore_company_id,
         company_id,
-        company_user_body,
+        company_user_body3,
         opts \\ []
       ) do
     optional_params = %{
@@ -2859,7 +2859,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       |> url("/rest/v1.3/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
-      |> add_param(:body, :body, company_user_body)
+      |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

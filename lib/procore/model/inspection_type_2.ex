@@ -15,7 +15,8 @@ defmodule Procore.Model.InspectionType2 do
     :audit_transaction_timestamp,
     :source_id,
     :deleted_at,
-    :company_id
+    :company_id,
+    :is_deletable
   ]
 
   @type t :: %__MODULE__{
@@ -26,7 +27,8 @@ defmodule Procore.Model.InspectionType2 do
           :audit_transaction_timestamp => DateTime.t() | nil,
           :source_id => integer() | nil,
           :deleted_at => DateTime.t() | nil,
-          :company_id => integer() | nil
+          :company_id => integer() | nil,
+          :is_deletable => boolean() | nil
         }
 
   alias Procore.Deserializer

@@ -257,7 +257,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Observation Item ID
-  - `body52` (Body52): 
+  - `body56` (Body56): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -269,7 +269,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body52.t(),
+          Procore.Model.Body56.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.ObservationItem1.t()}
@@ -279,7 +279,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
         connection,
         procore_company_id,
         id,
-        body52,
+        body56,
         _opts \\ []
       ) do
     request =
@@ -287,7 +287,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       |> method(:patch)
       |> url("/rest/v1.0/observations/items/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body52)
+      |> add_param(:body, :body, body56)
       |> Enum.into([])
 
     connection
@@ -363,7 +363,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Observation Item ID
   - `project_id` (integer()): Project ID
-  - `body54` (Body54): 
+  - `body58` (Body58): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -376,7 +376,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body54.t(),
+          Procore.Model.Body58.t(),
           keyword()
         ) ::
           {:ok, nil}
@@ -387,7 +387,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
         procore_company_id,
         id,
         project_id,
-        body54,
+        body58,
         _opts \\ []
       ) do
     request =
@@ -396,7 +396,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       |> url("/rest/v1.0/observations/items/#{id}/send_email")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
-      |> add_param(:body, :body, body54)
+      |> add_param(:body, :body, body58)
       |> Enum.into([])
 
     connection
@@ -584,7 +584,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body50` (Body50): 
+  - `body54` (Body54): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): Whether or not Configurable validations from the Observation Items Category Configurable Field Set should be run (default: false). See (https://developers.procore.com/reference/observations#list-observation-category-configurable-field-sets) for a list of Observation Category configurable validations enabled on this project.
 
@@ -596,13 +596,13 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
   @spec rest_v10_observations_items_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body50.t(),
+          Procore.Model.Body54.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.ObservationItem1.t()}
           | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_observations_items_post(connection, procore_company_id, body50, opts \\ []) do
+  def rest_v10_observations_items_post(connection, procore_company_id, body54, opts \\ []) do
     optional_params = %{
       :run_configurable_validations => :query
     }
@@ -612,7 +612,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       |> method(:post)
       |> url("/rest/v1.0/observations/items")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body50)
+      |> add_param(:body, :body, body54)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

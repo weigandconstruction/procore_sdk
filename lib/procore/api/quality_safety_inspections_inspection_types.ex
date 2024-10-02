@@ -65,6 +65,57 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionTypes do
   end
 
   @doc """
+  Delete Inspection Type
+  Deletes an Inspection Type for a specified Company.
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `company_id` (integer()): Unique identifier for the company.
+  - `id` (integer()): Inspection Type ID
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, nil}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_companies_company_id_inspection_types_id_delete(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          integer(),
+          keyword()
+        ) ::
+          {:ok, nil}
+          | {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:error, Tesla.Env.t()}
+  def rest_v10_companies_company_id_inspection_types_id_delete(
+        connection,
+        procore_company_id,
+        company_id,
+        id,
+        _opts \\ []
+      ) do
+    request =
+      %{}
+      |> method(:delete)
+      |> url("/rest/v1.0/companies/#{company_id}/inspection_types/#{id}")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {204, false},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {404, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, false}
+    ])
+  end
+
+  @doc """
   Show Inspection Type
   Returns the details for a specified Inspection Type
 

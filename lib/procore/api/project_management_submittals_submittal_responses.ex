@@ -19,6 +19,8 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -41,13 +43,19 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
         connection,
         procore_company_id,
         project_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/submittal_responses")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -129,6 +137,8 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -142,13 +152,19 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
                Procore.Model.RestV11ProjectsProjectIdSubmittalsGet200ResponseInnerApproversInnerResponse.t()
              ]}
           | {:error, Tesla.Env.t()}
-  def rest_v10_submittal_responses_get(connection, procore_company_id, project_id, _opts \\ []) do
+  def rest_v10_submittal_responses_get(connection, procore_company_id, project_id, opts \\ []) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/submittal_responses")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

@@ -17,7 +17,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionViewpointBatch do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body128` (Body128): 
+  - `body132` (Body132): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -28,7 +28,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionViewpointBatch do
   @spec rest_v10_bim_model_revision_viewpoints_batch_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body128.t(),
+          Procore.Model.Body132.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -37,7 +37,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionViewpointBatch do
   def rest_v10_bim_model_revision_viewpoints_batch_post(
         connection,
         procore_company_id,
-        body128,
+        body132,
         _opts \\ []
       ) do
     request =
@@ -45,7 +45,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionViewpointBatch do
       |> method(:post)
       |> url("/rest/v1.0/bim_model_revision_viewpoints/batch")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body128)
+      |> add_param(:body, :body, body132)
       |> Enum.into([])
 
     connection

@@ -8,25 +8,17 @@ defmodule Procore.Model.Body46 do
 
   @derive Jason.Encoder
   defstruct [
-    :project_id,
-    :attachments,
-    :payment_application
+    :change_order
   ]
 
   @type t :: %__MODULE__{
-          :project_id => integer(),
-          :attachments => [String.t()] | nil,
-          :payment_application => Procore.Model.PaymentApplicationOwnerInvoice.t() | nil
+          :change_order => Procore.Model.ChangeOrder1.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(
-      :payment_application,
-      :struct,
-      Procore.Model.PaymentApplicationOwnerInvoice
-    )
+    |> Deserializer.deserialize(:change_order, :struct, Procore.Model.ChangeOrder1)
   end
 end

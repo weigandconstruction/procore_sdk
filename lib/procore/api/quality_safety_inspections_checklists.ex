@@ -656,7 +656,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Checklist ID
   - `project_id` (integer()): Unique identifier for the project.
-  - `body107` (Body107): 
+  - `body111` (Body111): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -669,7 +669,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body107.t(),
+          Procore.Model.Body111.t(),
           keyword()
         ) ::
           {:ok, nil}
@@ -680,7 +680,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
         procore_company_id,
         id,
         project_id,
-        body107,
+        body111,
         _opts \\ []
       ) do
     request =
@@ -688,7 +688,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/#{id}/send_email")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body107)
+      |> add_param(:body, :body, body111)
       |> Enum.into([])
 
     connection
@@ -1281,6 +1281,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {404, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end

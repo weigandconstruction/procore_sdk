@@ -16,6 +16,7 @@ defmodule Procore.Model.ArrayOfTaskItemsThatWereSentOutInner do
     :private,
     :task_item_category,
     :assignee,
+    :assignees,
     :id,
     :title
   ]
@@ -30,6 +31,8 @@ defmodule Procore.Model.ArrayOfTaskItemsThatWereSentOutInner do
           :task_item_category =>
             Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfTaskItemCategory.t() | nil,
           :assignee => Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee.t() | nil,
+          :assignees =>
+            [Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssigneesInner.t()] | nil,
           :id => integer() | nil,
           :title => String.t() | nil
         }
@@ -49,6 +52,11 @@ defmodule Procore.Model.ArrayOfTaskItemsThatWereSentOutInner do
       :assignee,
       :struct,
       Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee
+    )
+    |> Deserializer.deserialize(
+      :assignees,
+      :list,
+      Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssigneesInner
     )
   end
 end

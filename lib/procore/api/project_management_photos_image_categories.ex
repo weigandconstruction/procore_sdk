@@ -171,7 +171,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID of the image category
   - `project_id` (integer()): Unique identifier for the project.
-  - `body76` (Body76): 
+  - `body80` (Body80): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -184,7 +184,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body76.t(),
+          Procore.Model.Body80.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -195,7 +195,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
         procore_company_id,
         id,
         project_id,
-        body76,
+        body80,
         _opts \\ []
       ) do
     request =
@@ -204,7 +204,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
       |> url("/rest/v1.0/image_categories/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
-      |> add_param(:body, :body, body76)
+      |> add_param(:body, :body, body80)
       |> Enum.into([])
 
     connection
@@ -281,7 +281,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body76` (Body76): 
+  - `body80` (Body80): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -293,7 +293,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body76.t(),
+          Procore.Model.Body80.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -303,7 +303,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
         connection,
         procore_company_id,
         project_id,
-        body76,
+        body80,
         _opts \\ []
       ) do
     request =
@@ -312,7 +312,7 @@ defmodule Procore.Api.ProjectManagementPhotosImageCategories do
       |> url("/rest/v1.0/image_categories")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
-      |> add_param(:body, :body, body76)
+      |> add_param(:body, :body, body80)
       |> Enum.into([])
 
     connection

@@ -127,7 +127,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID
-  - `body69` (Body69): 
+  - `body73` (Body73): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -139,19 +139,19 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body69.t(),
+          Procore.Model.Body73.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.LineItemType1.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_line_item_types_id_patch(connection, procore_company_id, id, body69, _opts \\ []) do
+  def rest_v10_line_item_types_id_patch(connection, procore_company_id, id, body73, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/line_item_types/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body69)
+      |> add_param(:body, :body, body73)
       |> Enum.into([])
 
     connection
@@ -173,7 +173,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body69` (Body69): 
+  - `body73` (Body73): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -184,19 +184,19 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
   @spec rest_v10_line_item_types_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body69.t(),
+          Procore.Model.Body73.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.LineItemType1.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_line_item_types_post(connection, procore_company_id, body69, _opts \\ []) do
+  def rest_v10_line_item_types_post(connection, procore_company_id, body73, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/line_item_types")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body69)
+      |> add_param(:body, :body, body73)
       |> Enum.into([])
 
     connection

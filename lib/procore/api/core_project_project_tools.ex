@@ -22,6 +22,8 @@ defmodule Procore.Api.CoreProjectProjectTools do
     - `:"filters[is_active]"` (boolean()): Retrieve active or inactive tools.
     - `:for_mobile` (boolean()): Filters tools that Procore's iOS and Android apps support.
     - `:include_configurable_generic_tools` (boolean()): Includes configurable custom tools in the for_mobile view.
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -46,7 +48,9 @@ defmodule Procore.Api.CoreProjectProjectTools do
     optional_params = %{
       :"filters[is_active]" => :query,
       :for_mobile => :query,
-      :include_configurable_generic_tools => :query
+      :include_configurable_generic_tools => :query,
+      :page => :query,
+      :per_page => :query
     }
 
     request =

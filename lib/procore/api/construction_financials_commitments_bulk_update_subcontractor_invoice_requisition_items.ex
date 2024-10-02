@@ -19,7 +19,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBulkUpdateSubcontractorIn
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `requisition_id` (integer()): Requisition ID
   - `project_id` (integer()): Unique identifier for the project.
-  - `body110` (Body110): 
+  - `body114` (Body114): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -32,7 +32,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBulkUpdateSubcontractorIn
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body110.t(),
+          Procore.Model.Body114.t(),
           keyword()
         ) ::
           {:ok, nil}
@@ -45,7 +45,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBulkUpdateSubcontractorIn
         procore_company_id,
         requisition_id,
         project_id,
-        body110,
+        body114,
         _opts \\ []
       ) do
     request =
@@ -54,7 +54,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBulkUpdateSubcontractorIn
       |> url("/rest/v1.0/requisitions/#{requisition_id}/bulk_item_update")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
-      |> add_param(:body, :body, body110)
+      |> add_param(:body, :body, body114)
       |> Enum.into([])
 
     connection

@@ -77,6 +77,8 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
   - `company_id` (integer()): Unique identifier for the company.
   - `generic_tool_id` (integer()): Unique identifier for the Generic Tool
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -101,13 +103,19 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         procore_company_id,
         company_id,
         generic_tool_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools/#{generic_tool_id}/statuses")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -519,6 +527,8 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
     - `:"filters[generic_tool_id]"` ([integer()]): Return item(s) within the specified Generic Tool ID(s)
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -544,7 +554,9 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         opts \\ []
       ) do
     optional_params = %{
-      :"filters[generic_tool_id]" => :query
+      :"filters[generic_tool_id]" => :query,
+      :page => :query,
+      :per_page => :query
     }
 
     request =
@@ -575,6 +587,8 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -597,13 +611,19 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         connection,
         procore_company_id,
         project_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_types/permissions")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -627,6 +647,8 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -649,13 +671,19 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         connection,
         procore_company_id,
         project_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_types/users")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
@@ -804,6 +832,8 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
   - `generic_tool_id` (integer()): Unique identifier for the Generic Tool
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -828,8 +858,13 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         procore_company_id,
         generic_tool_id,
         project_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
@@ -837,6 +872,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/available_statuses"
       )
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

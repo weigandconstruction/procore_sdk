@@ -73,7 +73,7 @@ defmodule Procore.Api.CoreAppInstallationsInstallationRequests do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body73` (Body73): 
+  - `body77` (Body77): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -84,19 +84,19 @@ defmodule Procore.Api.CoreAppInstallationsInstallationRequests do
   @spec rest_v10_installation_requests_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body73.t(),
+          Procore.Model.Body77.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10InstallationRequestsGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_installation_requests_post(connection, procore_company_id, body73, _opts \\ []) do
+  def rest_v10_installation_requests_post(connection, procore_company_id, body77, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/installation_requests")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body73)
+      |> add_param(:body, :body, body77)
       |> Enum.into([])
 
     connection

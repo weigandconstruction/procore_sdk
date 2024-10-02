@@ -74,7 +74,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body87` (Body87): 
+  - `body91` (Body91): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -86,7 +86,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body87.t(),
+          Procore.Model.Body91.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -96,7 +96,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
         connection,
         procore_company_id,
         project_id,
-        body87,
+        body91,
         _opts \\ []
       ) do
     request =
@@ -104,7 +104,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_areas")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body87)
+      |> add_param(:body, :body, body91)
       |> Enum.into([])
 
     connection
@@ -187,7 +187,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body86` (Body86): 
+  - `body90` (Body90): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -199,7 +199,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body86.t(),
+          Procore.Model.Body90.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -209,7 +209,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
         connection,
         procore_company_id,
         project_id,
-        body86,
+        body90,
         _opts \\ []
       ) do
     request =
@@ -217,7 +217,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_areas")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body86)
+      |> add_param(:body, :body, body90)
       |> Enum.into([])
 
     connection

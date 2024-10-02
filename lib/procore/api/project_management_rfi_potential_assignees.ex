@@ -19,6 +19,8 @@ defmodule Procore.Api.ProjectManagementRFIPotentialAssignees do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -38,13 +40,19 @@ defmodule Procore.Api.ProjectManagementRFIPotentialAssignees do
         connection,
         procore_company_id,
         project_id,
-        _opts \\ []
+        opts \\ []
       ) do
+    optional_params = %{
+      :page => :query,
+      :per_page => :query
+    }
+
     request =
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/potential_assignees")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection

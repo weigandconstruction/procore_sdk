@@ -22,10 +22,10 @@ defmodule Procore.Model.BimPlanBatchCreateResponseErrorsInner do
           :bim_level_id => integer(),
           :drawing_id => integer() | nil,
           :upload_uuid => String.t() | nil,
-          :sheet_map_start => Procore.Model.Body121BimPlanOneOfSheetMapStart.t() | nil,
-          :sheet_map_end => Procore.Model.Body121BimPlanOneOfSheetMapStart.t() | nil,
-          :model_map_start => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil,
-          :model_map_end => Procore.Model.Body121BimPlanOneOfModelMapStart.t() | nil,
+          :sheet_map_start => Procore.Model.Body125BimPlanOneOfSheetMapStart.t() | nil,
+          :sheet_map_end => Procore.Model.Body125BimPlanOneOfSheetMapStart.t() | nil,
+          :model_map_start => Procore.Model.Body125BimPlanOneOfModelMapStart.t() | nil,
+          :model_map_end => Procore.Model.Body125BimPlanOneOfModelMapStart.t() | nil,
           :errors =>
             Procore.Model.RestV10WorkOrderContractsWorkOrderContractIdLineItemsSyncPatch200ResponseErrorsInnerAllOfErrors.t()
             | nil
@@ -38,22 +38,22 @@ defmodule Procore.Model.BimPlanBatchCreateResponseErrorsInner do
     |> Deserializer.deserialize(
       :sheet_map_start,
       :struct,
-      Procore.Model.Body121BimPlanOneOfSheetMapStart
+      Procore.Model.Body125BimPlanOneOfSheetMapStart
     )
     |> Deserializer.deserialize(
       :sheet_map_end,
       :struct,
-      Procore.Model.Body121BimPlanOneOfSheetMapStart
+      Procore.Model.Body125BimPlanOneOfSheetMapStart
     )
     |> Deserializer.deserialize(
       :model_map_start,
       :struct,
-      Procore.Model.Body121BimPlanOneOfModelMapStart
+      Procore.Model.Body125BimPlanOneOfModelMapStart
     )
     |> Deserializer.deserialize(
       :model_map_end,
       :struct,
-      Procore.Model.Body121BimPlanOneOfModelMapStart
+      Procore.Model.Body125BimPlanOneOfModelMapStart
     )
     |> Deserializer.deserialize(
       :errors,

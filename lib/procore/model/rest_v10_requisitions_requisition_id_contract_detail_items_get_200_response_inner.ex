@@ -32,7 +32,9 @@ defmodule Procore.Model.RestV10RequisitionsRequisitionIdContractDetailItemsGet20
     :subcontractor_claimed_amount,
     :wbs_code,
     :position,
-    :currency_configuration
+    :currency_configuration,
+    :materials_moved,
+    :materials_retainage_retained_moved
   ]
 
   @type t :: %__MODULE__{
@@ -64,7 +66,9 @@ defmodule Procore.Model.RestV10RequisitionsRequisitionIdContractDetailItemsGet20
           :position => integer() | nil,
           :currency_configuration =>
             Procore.Model.RestV10RequisitionsRequisitionIdAddChangeOrderPackagePost201ResponseInnerCurrencyConfiguration.t()
-            | nil
+            | nil,
+          :materials_moved => String.t() | nil,
+          :materials_retainage_retained_moved => String.t() | nil
         }
 
   alias Procore.Deserializer

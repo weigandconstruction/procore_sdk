@@ -8,17 +8,20 @@ defmodule Procore.Model.Body77 do
 
   @derive Jason.Encoder
   defstruct [
-    :form
+    :company_id,
+    :developer_app_id,
+    :notes,
+    :implicit
   ]
 
   @type t :: %__MODULE__{
-          :form => Procore.Model.Form.t()
+          :company_id => integer(),
+          :developer_app_id => String.t(),
+          :notes => String.t() | nil,
+          :implicit => boolean()
         }
-
-  alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:form, :struct, Procore.Model.Form)
   end
 end

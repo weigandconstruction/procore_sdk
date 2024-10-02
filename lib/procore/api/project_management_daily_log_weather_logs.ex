@@ -270,7 +270,8 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherLogs do
     |> evaluate_response([
       {200, Procore.Model.RestV10ProjectsProjectIdWeatherLogsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -321,7 +322,8 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherLogs do
     |> evaluate_response([
       {200, Procore.Model.RestV10ProjectsProjectIdWeatherLogsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -551,7 +553,8 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherLogs do
     |> evaluate_response([
       {200, Procore.Model.RestV11ProjectsProjectIdDailyLogsWeatherLogsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 
@@ -613,7 +616,8 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherLogs do
     |> evaluate_response([
       {200, Procore.Model.RestV11ProjectsProjectIdDailyLogsWeatherLogsGet200ResponseInner},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
-      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
 end

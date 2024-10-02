@@ -17,7 +17,7 @@ defmodule Procore.Api.ProjectManagementModelsNestedBIMViewFolderBatch do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body56` (Body56): 
+  - `body60` (Body60): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -28,7 +28,7 @@ defmodule Procore.Api.ProjectManagementModelsNestedBIMViewFolderBatch do
   @spec rest_v10_nested_bim_view_folders_batch_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body56.t(),
+          Procore.Model.Body60.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -37,7 +37,7 @@ defmodule Procore.Api.ProjectManagementModelsNestedBIMViewFolderBatch do
   def rest_v10_nested_bim_view_folders_batch_post(
         connection,
         procore_company_id,
-        body56,
+        body60,
         _opts \\ []
       ) do
     request =
@@ -45,7 +45,7 @@ defmodule Procore.Api.ProjectManagementModelsNestedBIMViewFolderBatch do
       |> method(:post)
       |> url("/rest/v1.0/nested_bim_view_folders/batch")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body56)
+      |> add_param(:body, :body, body60)
       |> Enum.into([])
 
     connection

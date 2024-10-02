@@ -8,14 +8,6 @@ defmodule Procore.Model.RestV11ProjectsProjectIdVendorsPost201Response do
 
   @derive Jason.Encoder
   defstruct [
-    :bidding,
-    :bidding_distribution,
-    :business,
-    :children_count,
-    :legal_name,
-    :company_vendor,
-    :parent,
-    :trades,
     :id,
     :name,
     :abbreviated_name,
@@ -52,19 +44,18 @@ defmodule Procore.Model.RestV11ProjectsProjectIdVendorsPost201Response do
     :updated_at,
     :vendor_group,
     :website,
-    :zip
+    :zip,
+    :bidding,
+    :bidding_distribution,
+    :business,
+    :children_count,
+    :legal_name,
+    :company_vendor,
+    :parent,
+    :trades
   ]
 
   @type t :: %__MODULE__{
-          :bidding => Procore.Model.ExtendedView2Bidding.t() | nil,
-          :bidding_distribution =>
-            [Procore.Model.ExtendedView2BiddingDistributionInner.t()] | nil,
-          :business => Procore.Model.BusinessNormalView.t() | nil,
-          :children_count => integer() | nil,
-          :legal_name => String.t() | nil,
-          :company_vendor => boolean() | nil,
-          :parent => Procore.Model.ExtendedView2Parent.t() | nil,
-          :trades => [Procore.Model.Trade.t()] | nil,
           :id => integer() | nil,
           :name => String.t() | nil,
           :abbreviated_name => String.t() | nil,
@@ -101,22 +92,22 @@ defmodule Procore.Model.RestV11ProjectsProjectIdVendorsPost201Response do
           :updated_at => DateTime.t() | nil,
           :vendor_group => Procore.Model.NormalViewVendorGroup.t() | nil,
           :website => String.t() | nil,
-          :zip => String.t() | nil
+          :zip => String.t() | nil,
+          :bidding => Procore.Model.ExtendedView2Bidding.t() | nil,
+          :bidding_distribution =>
+            [Procore.Model.ExtendedView2BiddingDistributionInner.t()] | nil,
+          :business => Procore.Model.BusinessNormalView.t() | nil,
+          :children_count => integer() | nil,
+          :legal_name => String.t() | nil,
+          :company_vendor => boolean() | nil,
+          :parent => Procore.Model.ExtendedView2Parent.t() | nil,
+          :trades => [Procore.Model.Trade.t()] | nil
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:bidding, :struct, Procore.Model.ExtendedView2Bidding)
-    |> Deserializer.deserialize(
-      :bidding_distribution,
-      :list,
-      Procore.Model.ExtendedView2BiddingDistributionInner
-    )
-    |> Deserializer.deserialize(:business, :struct, Procore.Model.BusinessNormalView)
-    |> Deserializer.deserialize(:parent, :struct, Procore.Model.ExtendedView2Parent)
-    |> Deserializer.deserialize(:trades, :list, Procore.Model.Trade)
     |> Deserializer.deserialize(:attachments, :list, Procore.Model.NormalViewAttachmentsInner)
     |> Deserializer.deserialize(
       :business_register,
@@ -127,5 +118,14 @@ defmodule Procore.Model.RestV11ProjectsProjectIdVendorsPost201Response do
     |> Deserializer.deserialize(:primary_contact, :struct, Procore.Model.NormalViewPrimaryContact)
     |> Deserializer.deserialize(:updated_at, :datetime, nil)
     |> Deserializer.deserialize(:vendor_group, :struct, Procore.Model.NormalViewVendorGroup)
+    |> Deserializer.deserialize(:bidding, :struct, Procore.Model.ExtendedView2Bidding)
+    |> Deserializer.deserialize(
+      :bidding_distribution,
+      :list,
+      Procore.Model.ExtendedView2BiddingDistributionInner
+    )
+    |> Deserializer.deserialize(:business, :struct, Procore.Model.BusinessNormalView)
+    |> Deserializer.deserialize(:parent, :struct, Procore.Model.ExtendedView2Parent)
+    |> Deserializer.deserialize(:trades, :list, Procore.Model.Trade)
   end
 end

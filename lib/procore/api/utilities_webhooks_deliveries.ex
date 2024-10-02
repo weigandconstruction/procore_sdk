@@ -23,7 +23,7 @@ defmodule Procore.Api.UtilitiesWebhooksDeliveries do
   - `opts` (keyword): Optional parameters
     - `:page_size` (integer()): Number of items to return for a page (default: 100)
     - `:page_start` (integer()): The last id of the previous page.
-    - `:"filters[status]"` (String.t): Filter on status for \"any\", \"successful\" or \"failing\"
+    - `:"filters[status]"` (String.t): Filter on status for \"any\", \"successful\", \"failing\" or \"discarded\"
 
   ### Returns
 

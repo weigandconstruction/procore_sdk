@@ -18,7 +18,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID of the meeting topic
-  - `body62` (Body62): 
+  - `body66` (Body66): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -30,20 +30,20 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body62.t(),
+          Procore.Model.Body66.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
              Procore.Model.RestV10MeetingsPost201ResponseMeetingCategoriesInnerMeetingTopicInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_meeting_topics_id_patch(connection, procore_company_id, id, body62, _opts \\ []) do
+  def rest_v10_meeting_topics_id_patch(connection, procore_company_id, id, body66, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/meeting_topics/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body62)
+      |> add_param(:body, :body, body66)
       |> Enum.into([])
 
     connection
@@ -116,7 +116,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body62` (Body62): 
+  - `body66` (Body66): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -127,20 +127,20 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
   @spec rest_v10_meeting_topics_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body62.t(),
+          Procore.Model.Body66.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok,
              Procore.Model.RestV10MeetingsPost201ResponseMeetingCategoriesInnerMeetingTopicInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_meeting_topics_post(connection, procore_company_id, body62, _opts \\ []) do
+  def rest_v10_meeting_topics_post(connection, procore_company_id, body66, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/meeting_topics")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body62)
+      |> add_param(:body, :body, body66)
       |> Enum.into([])
 
     connection
@@ -164,7 +164,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID of the Meeting Topic
-  - `body61` (Body61): 
+  - `body65` (Body65): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -177,7 +177,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body61.t(),
+          Procore.Model.Body65.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -188,7 +188,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
         procore_company_id,
         project_id,
         id,
-        body61,
+        body65,
         _opts \\ []
       ) do
     request =
@@ -196,7 +196,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/meeting_topics/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body61)
+      |> add_param(:body, :body, body65)
       |> Enum.into([])
 
     connection
@@ -280,7 +280,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body61` (Body61): 
+  - `body65` (Body65): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -292,7 +292,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body61.t(),
+          Procore.Model.Body65.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -302,7 +302,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
         connection,
         procore_company_id,
         project_id,
-        body61,
+        body65,
         _opts \\ []
       ) do
     request =
@@ -310,7 +310,7 @@ defmodule Procore.Api.ProjectManagementMeetingsMeetingTopics do
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/meeting_topics")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body61)
+      |> add_param(:body, :body, body65)
       |> Enum.into([])
 
     connection

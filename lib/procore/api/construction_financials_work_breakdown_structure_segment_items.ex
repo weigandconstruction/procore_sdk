@@ -87,6 +87,8 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegmentItems d
   - `segment_id` (integer()): Segment ID
   - `opts` (keyword): Optional parameters
     - `:segment_item_list_id` (integer()): Used to filter legacy segment items by list. Required for Cost Codes.
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -116,7 +118,9 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegmentItems d
         opts \\ []
       ) do
     optional_params = %{
-      :segment_item_list_id => :query
+      :segment_item_list_id => :query,
+      :page => :query,
+      :per_page => :query
     }
 
     request =
@@ -556,6 +560,13 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegmentItems d
   - `segment_id` (integer()): Segment ID
   - `opts` (keyword): Optional parameters
     - `:legacy_sub_job_id` (integer()): Used to filter legacy cost codes by sub job. Default will filter by project.
+    - `:legacy_cost_code_id` (integer()): 
+    - `:include_action_policy` (boolean()): 
+    - `:only_active_items` (boolean()): 
+    - `:with_descendant_counts` (boolean()): 
+    - `:include_sub_job_cost_codes` (boolean()): 
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
@@ -585,7 +596,14 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegmentItems d
         opts \\ []
       ) do
     optional_params = %{
-      :legacy_sub_job_id => :query
+      :legacy_sub_job_id => :query,
+      :legacy_cost_code_id => :query,
+      :include_action_policy => :query,
+      :only_active_items => :query,
+      :with_descendant_counts => :query,
+      :include_sub_job_cost_codes => :query,
+      :page => :query,
+      :per_page => :query
     }
 
     request =

@@ -33,7 +33,7 @@ defmodule Procore.Model.PunchItem6AssignmentsInner do
           :login_information => Procore.Model.PunchItem6CreatedBy.t() | nil,
           :attachments =>
             [Procore.Model.RestV10WorkOrderContractsPost201ResponseAttachmentsInner.t()] | nil,
-          :vendor => Procore.Model.NameView.t() | nil,
+          :vendor => Procore.Model.Compact.t() | nil,
           :notified_at => DateTime.t() | nil,
           :responded_at => DateTime.t() | nil,
           :status => String.t() | nil,
@@ -52,7 +52,7 @@ defmodule Procore.Model.PunchItem6AssignmentsInner do
       :list,
       Procore.Model.RestV10WorkOrderContractsPost201ResponseAttachmentsInner
     )
-    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.NameView)
+    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.Compact)
     |> Deserializer.deserialize(:notified_at, :datetime, nil)
     |> Deserializer.deserialize(:responded_at, :datetime, nil)
     |> Deserializer.deserialize(:manager_accepted_at, :datetime, nil)

@@ -36,7 +36,9 @@ defmodule Procore.Model.RestV10RequisitionsRequisitionIdDetailGet200ResponseInne
     :materials_stored_retainage_retained_this_period,
     :materials_stored_retainage_percent_this_period,
     :total_retainage_currently_retained,
-    :total_retainage_from_previous_application
+    :total_retainage_from_previous_application,
+    :materials_moved,
+    :materials_retainage_retained_moved
   ]
 
   @type t :: %__MODULE__{
@@ -68,7 +70,9 @@ defmodule Procore.Model.RestV10RequisitionsRequisitionIdDetailGet200ResponseInne
           :materials_stored_retainage_retained_this_period => String.t() | nil,
           :materials_stored_retainage_percent_this_period => String.t() | nil,
           :total_retainage_currently_retained => String.t() | nil,
-          :total_retainage_from_previous_application => String.t() | nil
+          :total_retainage_from_previous_application => String.t() | nil,
+          :materials_moved => String.t() | nil,
+          :materials_retainage_retained_moved => String.t() | nil
         }
 
   def decode(value) do

@@ -240,7 +240,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `prime_contract_id` (integer()): Prime Contract ID
   - `id` (integer()): Payment Application (Owner Invoice) ID
-  - `body47` (Body47): 
+  - `body51` (Body51): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -253,7 +253,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body47.t(),
+          Procore.Model.Body51.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -265,7 +265,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
         procore_company_id,
         prime_contract_id,
         id,
-        body47,
+        body51,
         _opts \\ []
       ) do
     request =
@@ -273,7 +273,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       |> method(:patch)
       |> url("/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_applications/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body47)
+      |> add_param(:body, :body, body51)
       |> Enum.into([])
 
     connection
@@ -297,7 +297,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `prime_contract_id` (integer()): Prime Contract ID
-  - `body46` (Body46): 
+  - `body50` (Body50): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -309,7 +309,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body46.t(),
+          Procore.Model.Body50.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -320,7 +320,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
         connection,
         procore_company_id,
         prime_contract_id,
-        body46,
+        body50,
         _opts \\ []
       ) do
     request =
@@ -328,7 +328,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       |> method(:post)
       |> url("/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_applications")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body46)
+      |> add_param(:body, :body, body50)
       |> Enum.into([])
 
     connection

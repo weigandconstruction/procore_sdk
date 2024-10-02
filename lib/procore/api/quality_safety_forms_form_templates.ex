@@ -183,7 +183,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Company Form Template ID
   - `company_id` (integer()): Unique identifier for the company.
-  - `body82` (Body82): 
+  - `body86` (Body86): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -196,7 +196,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body82.t(),
+          Procore.Model.Body86.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -207,7 +207,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
         procore_company_id,
         id,
         company_id,
-        body82,
+        body86,
         _opts \\ []
       ) do
     request =
@@ -215,7 +215,7 @@ defmodule Procore.Api.QualitySafetyFormsFormTemplates do
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/form_templates/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body82)
+      |> add_param(:body, :body, body86)
       |> Enum.into([])
 
     connection

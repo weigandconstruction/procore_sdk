@@ -3,7 +3,7 @@
 
 defmodule Procore.Model.RestV10VendorsGet200ResponseInner do
   @moduledoc """
-
+  Vendor Extended View
   """
 
   @derive Jason.Encoder
@@ -12,8 +12,11 @@ defmodule Procore.Model.RestV10VendorsGet200ResponseInner do
     :name,
     :abbreviated_name,
     :address,
+    :attachments,
     :authorized_bidder,
+    :business_id,
     :business_phone,
+    :business_register,
     :city,
     :contact_count,
     :company,
@@ -29,31 +32,28 @@ defmodule Procore.Model.RestV10VendorsGet200ResponseInner do
     :mobile_phone,
     :non_union_prevailing_wage,
     :notes,
+    :origin_code,
     :origin_data,
     :origin_id,
-    :origin_code,
     :prequalified,
+    :primary_contact,
     :state_code,
     :synced_to_erp,
     :trade_name,
     :union_member,
     :updated_at,
+    :vendor_group,
     :website,
     :zip,
-    :business_id,
-    :business_register,
-    :vendor_group,
-    :primary_contact,
-    :attachments,
-    :children_count,
-    :legal_name,
-    :company_vendor,
-    :parent,
-    :trades,
-    :bidding_distribution,
     :bidding,
+    :bidding_distribution,
+    :children_count,
+    :company_vendor,
+    :legal_name,
+    :parent,
     :project_ids,
-    :standard_cost_codes
+    :standard_cost_codes,
+    :trades
   ]
 
   @type t :: %__MODULE__{
@@ -61,8 +61,11 @@ defmodule Procore.Model.RestV10VendorsGet200ResponseInner do
           :name => String.t() | nil,
           :abbreviated_name => String.t() | nil,
           :address => String.t() | nil,
+          :attachments => [Procore.Model.NormalViewAttachmentsInner.t()] | nil,
           :authorized_bidder => boolean() | nil,
+          :business_id => String.t() | nil,
           :business_phone => String.t() | nil,
+          :business_register => Procore.Model.NormalViewBusinessRegister.t() | nil,
           :city => String.t() | nil,
           :contact_count => integer() | nil,
           :company => String.t() | nil,
@@ -78,61 +81,54 @@ defmodule Procore.Model.RestV10VendorsGet200ResponseInner do
           :mobile_phone => String.t() | nil,
           :non_union_prevailing_wage => boolean() | nil,
           :notes => String.t() | nil,
+          :origin_code => String.t() | nil,
           :origin_data => String.t() | nil,
           :origin_id => String.t() | nil,
-          :origin_code => String.t() | nil,
           :prequalified => boolean() | nil,
+          :primary_contact => Procore.Model.NormalViewPrimaryContact.t() | nil,
           :state_code => String.t() | nil,
           :synced_to_erp => boolean() | nil,
           :trade_name => String.t() | nil,
           :union_member => boolean() | nil,
           :updated_at => DateTime.t() | nil,
+          :vendor_group => Procore.Model.NormalViewVendorGroup.t() | nil,
           :website => String.t() | nil,
           :zip => String.t() | nil,
-          :business_id => String.t() | nil,
-          :business_register => Procore.Model.NormalViewBusinessRegister.t() | nil,
-          :vendor_group => Procore.Model.NormalViewVendorGroup.t() | nil,
-          :primary_contact => Procore.Model.NormalViewPrimaryContact.t() | nil,
-          :attachments =>
-            [Procore.Model.RestV10WorkOrderContractsPost201ResponseAttachmentsInner.t()] | nil,
-          :children_count => integer() | nil,
-          :legal_name => String.t() | nil,
-          :company_vendor => boolean() | nil,
-          :parent => Procore.Model.ExtendedView2Parent.t() | nil,
-          :trades => [Procore.Model.Trade2.t()] | nil,
-          :bidding_distribution =>
-            [Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee.t()] | nil,
           :bidding => Procore.Model.ExtendedView2Bidding.t() | nil,
+          :bidding_distribution =>
+            [Procore.Model.RestV10VendorsGet200ResponseInnerAllOfBiddingDistributionInner.t()]
+            | nil,
+          :children_count => integer() | nil,
+          :company_vendor => boolean() | nil,
+          :legal_name => String.t() | nil,
+          :parent => Procore.Model.ExtendedView2Parent.t() | nil,
           :project_ids => [integer()] | nil,
-          :standard_cost_codes => [Procore.Model.StandardCostCode.t()] | nil
+          :standard_cost_codes => [Procore.Model.StandardCostCode.t()] | nil,
+          :trades => [Procore.Model.Trade2.t()] | nil
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:created_at, :datetime, nil)
-    |> Deserializer.deserialize(:updated_at, :datetime, nil)
+    |> Deserializer.deserialize(:attachments, :list, Procore.Model.NormalViewAttachmentsInner)
     |> Deserializer.deserialize(
       :business_register,
       :struct,
       Procore.Model.NormalViewBusinessRegister
     )
-    |> Deserializer.deserialize(:vendor_group, :struct, Procore.Model.NormalViewVendorGroup)
+    |> Deserializer.deserialize(:created_at, :datetime, nil)
     |> Deserializer.deserialize(:primary_contact, :struct, Procore.Model.NormalViewPrimaryContact)
-    |> Deserializer.deserialize(
-      :attachments,
-      :list,
-      Procore.Model.RestV10WorkOrderContractsPost201ResponseAttachmentsInner
-    )
-    |> Deserializer.deserialize(:parent, :struct, Procore.Model.ExtendedView2Parent)
-    |> Deserializer.deserialize(:trades, :list, Procore.Model.Trade2)
+    |> Deserializer.deserialize(:updated_at, :datetime, nil)
+    |> Deserializer.deserialize(:vendor_group, :struct, Procore.Model.NormalViewVendorGroup)
+    |> Deserializer.deserialize(:bidding, :struct, Procore.Model.ExtendedView2Bidding)
     |> Deserializer.deserialize(
       :bidding_distribution,
       :list,
-      Procore.Model.ArrayOfTaskItemsThatWereSentOutInnerAllOfAssignee
+      Procore.Model.RestV10VendorsGet200ResponseInnerAllOfBiddingDistributionInner
     )
-    |> Deserializer.deserialize(:bidding, :struct, Procore.Model.ExtendedView2Bidding)
+    |> Deserializer.deserialize(:parent, :struct, Procore.Model.ExtendedView2Parent)
     |> Deserializer.deserialize(:standard_cost_codes, :list, Procore.Model.StandardCostCode)
+    |> Deserializer.deserialize(:trades, :list, Procore.Model.Trade2)
   end
 end

@@ -8,6 +8,7 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdPdfTemplateConfigsGet200Respons
 
   @derive Jason.Encoder
   defstruct [
+    :id,
     :description,
     :template_name,
     :default_project,
@@ -15,6 +16,7 @@ defmodule Procore.Model.RestV10CompaniesCompanyIdPdfTemplateConfigsGet200Respons
   ]
 
   @type t :: %__MODULE__{
+          :id => integer() | nil,
           :description => String.t() | nil,
           :template_name => String.t() | nil,
           :default_project => boolean() | nil,

@@ -33,7 +33,8 @@ defmodule Procore.Model.CompanyUser do
     :default_permission_template_id,
     :company_permission_template_id,
     :work_classification_id,
-    :avatar
+    :avatar,
+    :bid_contact
   ]
 
   @type t :: %__MODULE__{
@@ -62,7 +63,8 @@ defmodule Procore.Model.CompanyUser do
           :default_permission_template_id => integer() | nil,
           :company_permission_template_id => integer() | nil,
           :work_classification_id => integer() | nil,
-          :avatar => String.t() | nil
+          :avatar => String.t() | nil,
+          :bid_contact => boolean() | nil
         }
 
   def decode(value) do

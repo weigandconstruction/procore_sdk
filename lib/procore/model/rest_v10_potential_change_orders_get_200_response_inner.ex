@@ -33,7 +33,8 @@ defmodule Procore.Model.RestV10PotentialChangeOrdersGet200ResponseInner do
     :change_order_request_acronym_number,
     :change_order_package_acronym_number,
     :change_order_tiers,
-    :currency_configuration
+    :currency_configuration,
+    :custom_fields
   ]
 
   @type t :: %__MODULE__{
@@ -64,6 +65,9 @@ defmodule Procore.Model.RestV10PotentialChangeOrdersGet200ResponseInner do
           :change_order_tiers => integer() | nil,
           :currency_configuration =>
             Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration.t()
+            | nil,
+          :custom_fields =>
+            Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields.t()
             | nil
         }
 
@@ -82,6 +86,11 @@ defmodule Procore.Model.RestV10PotentialChangeOrdersGet200ResponseInner do
       :currency_configuration,
       :struct,
       Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration
+    )
+    |> Deserializer.deserialize(
+      :custom_fields,
+      :struct,
+      Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields
     )
   end
 end

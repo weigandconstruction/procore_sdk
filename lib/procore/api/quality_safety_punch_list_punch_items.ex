@@ -297,7 +297,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID of the Punch Item
-  - `punch_item_body2` (PunchItemBody2): 
+  - `punch_item_body6` (PunchItemBody6): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -310,7 +310,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.PunchItemBody2.t(),
+          Procore.Model.PunchItemBody6.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -320,7 +320,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
         connection,
         procore_company_id,
         id,
-        punch_item_body2,
+        punch_item_body6,
         opts \\ []
       ) do
     optional_params = %{
@@ -332,7 +332,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       |> method(:patch)
       |> url("/rest/v1.0/punch_items/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, punch_item_body2)
+      |> add_param(:body, :body, punch_item_body6)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -406,7 +406,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `punch_item_body` (PunchItemBody): 
+  - `punch_item_body4` (PunchItemBody4): 
   - `opts` (keyword): Optional parameters
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
@@ -418,13 +418,13 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
   @spec rest_v10_punch_items_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.PunchItemBody.t(),
+          Procore.Model.PunchItemBody4.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.PunchItem3.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_punch_items_post(connection, procore_company_id, punch_item_body, opts \\ []) do
+  def rest_v10_punch_items_post(connection, procore_company_id, punch_item_body4, opts \\ []) do
     optional_params = %{
       :run_configurable_validations => :query
     }
@@ -434,7 +434,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       |> method(:post)
       |> url("/rest/v1.0/punch_items")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, punch_item_body)
+      |> add_param(:body, :body, punch_item_body4)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

@@ -8,22 +8,23 @@ defmodule Procore.Model.Body54 do
 
   @derive Jason.Encoder
   defstruct [
-    :subject,
-    :body,
-    :distribution_ids,
-    :cc_distribution_ids,
-    :bcc_distribution_ids
+    :project_id,
+    :attachments,
+    :inspection_item_failed,
+    :observation
   ]
 
   @type t :: %__MODULE__{
-          :subject => String.t() | nil,
-          :body => String.t() | nil,
-          :distribution_ids => [integer()] | nil,
-          :cc_distribution_ids => [integer()] | nil,
-          :bcc_distribution_ids => [integer()] | nil
+          :project_id => integer(),
+          :attachments => [String.t()] | nil,
+          :inspection_item_failed => integer() | nil,
+          :observation => Procore.Model.Observation.t()
         }
+
+  alias Procore.Deserializer
 
   def decode(value) do
     value
+    |> Deserializer.deserialize(:observation, :struct, Procore.Model.Observation)
   end
 end

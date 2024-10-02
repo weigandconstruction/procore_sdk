@@ -66,8 +66,7 @@ defmodule Procore.Model.Bid do
           :updated_at => DateTime.t() | nil,
           :due_date => DateTime.t() | nil,
           :bidder_comments => String.t() | nil,
-          :bid_requester =>
-            Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerBidRequester.t() | nil,
+          :bid_requester => Procore.Model.BidBidRequester.t() | nil,
           :deleted_at => DateTime.t() | nil,
           :bidder_notes => String.t() | nil,
           :attachments_count => integer() | nil,
@@ -82,10 +81,8 @@ defmodule Procore.Model.Bid do
           :contract_button_disabled_reason => String.t() | nil,
           :po_button_disabled_reason => String.t() | nil,
           :links => Procore.Model.BidLinks.t() | nil,
-          :vendor =>
-            Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerVendor.t() | nil,
-          :project =>
-            Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerProject.t() | nil,
+          :vendor => Procore.Model.BidVendor.t() | nil,
+          :project => Procore.Model.BidProject.t() | nil,
           :bid_items => [Procore.Model.BidBidItemsInner.t()] | nil,
           :cost_codes => [Procore.Model.TimecardEntryFullCostCode.t()] | nil,
           :attachments => [Procore.Model.BidAttachmentsInner.t()] | nil,
@@ -100,24 +97,12 @@ defmodule Procore.Model.Bid do
     |> Deserializer.deserialize(:created_at, :datetime, nil)
     |> Deserializer.deserialize(:updated_at, :datetime, nil)
     |> Deserializer.deserialize(:due_date, :datetime, nil)
-    |> Deserializer.deserialize(
-      :bid_requester,
-      :struct,
-      Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerBidRequester
-    )
+    |> Deserializer.deserialize(:bid_requester, :struct, Procore.Model.BidBidRequester)
     |> Deserializer.deserialize(:deleted_at, :datetime, nil)
     |> Deserializer.deserialize(:recipient_list, :list, Procore.Model.BidRecipientListInner)
     |> Deserializer.deserialize(:links, :struct, Procore.Model.BidLinks)
-    |> Deserializer.deserialize(
-      :vendor,
-      :struct,
-      Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerVendor
-    )
-    |> Deserializer.deserialize(
-      :project,
-      :struct,
-      Procore.Model.RestV10CompaniesCompanyIdBidsGet200ResponseInnerProject
-    )
+    |> Deserializer.deserialize(:vendor, :struct, Procore.Model.BidVendor)
+    |> Deserializer.deserialize(:project, :struct, Procore.Model.BidProject)
     |> Deserializer.deserialize(:bid_items, :list, Procore.Model.BidBidItemsInner)
     |> Deserializer.deserialize(:cost_codes, :list, Procore.Model.TimecardEntryFullCostCode)
     |> Deserializer.deserialize(:attachments, :list, Procore.Model.BidAttachmentsInner)

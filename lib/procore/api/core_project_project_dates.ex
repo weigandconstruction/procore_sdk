@@ -208,4 +208,53 @@ defmodule Procore.Api.CoreProjectProjectDates do
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end
+
+  @doc """
+  Creates or updates project date
+  Associates a project with a given project date or updates the date
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `project_id` (integer()): Unique identifier for the project.
+  - `opts` (keyword): Optional parameters
+    - `:body` (RestV10ProjectsProjectIdProjectDatesPostRequest): 
+
+  ### Returns
+
+  - `{:ok, nil}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_projects_project_id_project_dates_post(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          keyword()
+        ) :: {:ok, nil} | {:error, Tesla.Env.t()}
+  def rest_v10_projects_project_id_project_dates_post(
+        connection,
+        procore_company_id,
+        project_id,
+        opts \\ []
+      ) do
+    optional_params = %{
+      :body => :body
+    }
+
+    request =
+      %{}
+      |> method(:post)
+      |> url("/rest/v1.0/projects/#{project_id}/project_dates")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> add_optional_params(optional_params, opts)
+      |> ensure_body()
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {204, false}
+    ])
+  end
 end

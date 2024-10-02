@@ -29,7 +29,8 @@ defmodule Procore.Model.RestV10ChangeOrderPackagesGet200ResponseInner do
     :revision,
     :grand_total,
     :designated_reviewer,
-    :currency_configuration
+    :currency_configuration,
+    :custom_fields
   ]
 
   @type t :: %__MODULE__{
@@ -57,6 +58,9 @@ defmodule Procore.Model.RestV10ChangeOrderPackagesGet200ResponseInner do
             Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t() | nil,
           :currency_configuration =>
             Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration.t()
+            | nil,
+          :custom_fields =>
+            Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields.t()
             | nil
         }
 
@@ -81,6 +85,11 @@ defmodule Procore.Model.RestV10ChangeOrderPackagesGet200ResponseInner do
       :currency_configuration,
       :struct,
       Procore.Model.RestV10WorkOrderContractsGet200ResponseInnerCurrencyConfiguration
+    )
+    |> Deserializer.deserialize(
+      :custom_fields,
+      :struct,
+      Procore.Model.RestV10ProjectsProjectIdVisitorLogsGet200ResponseInnerCustomFields
     )
   end
 end

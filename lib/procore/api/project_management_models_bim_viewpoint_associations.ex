@@ -80,7 +80,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewpointAssociations do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `bim_viewpoint_id` (integer()): BIM Viewpoint ID
-  - `body119` (Body119): 
+  - `body123` (Body123): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -92,7 +92,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewpointAssociations do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body119.t(),
+          Procore.Model.Body123.t(),
           keyword()
         ) ::
           {:ok, nil}
@@ -102,7 +102,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewpointAssociations do
         connection,
         procore_company_id,
         bim_viewpoint_id,
-        body119,
+        body123,
         _opts \\ []
       ) do
     request =
@@ -110,7 +110,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewpointAssociations do
       |> method(:post)
       |> url("/rest/v1.0/bim_viewpoints/#{bim_viewpoint_id}/associations")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body119)
+      |> add_param(:body, :body, body123)
       |> Enum.into([])
 
     connection

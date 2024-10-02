@@ -624,6 +624,57 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
   end
 
   @doc """
+  Delete Timesheet
+  Delete Timesheet associated with the specific Project.
+
+  ### Parameters
+
+  - `connection` (Procore.Connection): Connection to server
+  - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
+  - `project_id` (integer()): Unique identifier for the project.
+  - `id` (integer()): ID
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, Procore.Model.Timesheet.t}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec rest_v10_projects_project_id_timesheets_id_delete(
+          Tesla.Env.client(),
+          integer(),
+          integer(),
+          integer(),
+          keyword()
+        ) ::
+          {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
+          | {:ok, Procore.Model.Timesheet.t()}
+          | {:error, Tesla.Env.t()}
+  def rest_v10_projects_project_id_timesheets_id_delete(
+        connection,
+        procore_company_id,
+        project_id,
+        id,
+        _opts \\ []
+      ) do
+    request =
+      %{}
+      |> method(:delete)
+      |> url("/rest/v1.0/projects/#{project_id}/timesheets/#{id}")
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, Procore.Model.Timesheet},
+      {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
+    ])
+  end
+
+  @doc """
   Show A Timesheet
   Return Timesheet detailed information.
 
@@ -1381,6 +1432,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       {200, Procore.Model.RestV11ProjectsProjectIdProjectTimecardEntriesPost200Response},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
+      {422, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
     ])
   end

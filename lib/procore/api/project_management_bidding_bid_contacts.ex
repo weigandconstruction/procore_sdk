@@ -31,7 +31,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidContacts do
 
   ### Returns
 
-  - `{:ok, [%CompanyUser5{}, ...]}` on success
+  - `{:ok, [%CompanyUser7{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_bid_contacts_get(
@@ -41,7 +41,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidContacts do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, [Procore.Model.CompanyUser5.t()]}
+          | {:ok, [Procore.Model.CompanyUser7.t()]}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_bid_contacts_get(
         connection,
@@ -72,7 +72,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidContacts do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.CompanyUser5},
+      {200, Procore.Model.CompanyUser7},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {:default, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}

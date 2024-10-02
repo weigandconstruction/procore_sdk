@@ -8,17 +8,17 @@ defmodule Procore.Model.Body45 do
 
   @derive Jason.Encoder
   defstruct [
-    :pdf_template_config
+    :change_order
   ]
 
   @type t :: %__MODULE__{
-          :pdf_template_config => Procore.Model.PdfTemplateConfig.t()
+          :change_order => Procore.Model.ChangeOrder.t()
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:pdf_template_config, :struct, Procore.Model.PdfTemplateConfig)
+    |> Deserializer.deserialize(:change_order, :struct, Procore.Model.ChangeOrder)
   end
 end

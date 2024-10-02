@@ -8,23 +8,17 @@ defmodule Procore.Model.Body96 do
 
   @derive Jason.Encoder
   defstruct [
-    :company_id,
-    :standard_cost_code_list
+    :updates
   ]
 
   @type t :: %__MODULE__{
-          :company_id => integer(),
-          :standard_cost_code_list => Procore.Model.StandardCostCodeList1.t()
+          :updates => [Procore.Model.DirectCostItem3.t()]
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(
-      :standard_cost_code_list,
-      :struct,
-      Procore.Model.StandardCostCodeList1
-    )
+    |> Deserializer.deserialize(:updates, :list, Procore.Model.DirectCostItem3)
   end
 end

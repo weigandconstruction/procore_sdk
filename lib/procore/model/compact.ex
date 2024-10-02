@@ -9,13 +9,11 @@ defmodule Procore.Model.Compact do
   @derive Jason.Encoder
   defstruct [
     :id,
-    :full_code,
     :name
   ]
 
   @type t :: %__MODULE__{
           :id => integer() | nil,
-          :full_code => String.t() | nil,
           :name => String.t() | nil
         }
 

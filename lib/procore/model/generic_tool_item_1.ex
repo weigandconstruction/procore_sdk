@@ -35,6 +35,7 @@ defmodule Procore.Model.GenericToolItem1 do
     :sub_job,
     :generic_tool,
     :attachments,
+    :document_management_document_revision_ids,
     :distribution_members,
     :assignees,
     :custom_fields
@@ -72,6 +73,7 @@ defmodule Procore.Model.GenericToolItem1 do
             | nil,
           :attachments =>
             [Procore.Model.RestV10WorkOrderContractsPost201ResponseAttachmentsInner.t()] | nil,
+          :document_management_document_revision_ids => [String.t()] | nil,
           :distribution_members => [Procore.Model.GenericToolItem1CreatedBy.t()] | nil,
           :assignees => [Procore.Model.GenericToolItem1CreatedBy.t()] | nil,
           :custom_fields =>

@@ -1011,6 +1011,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
     - `:"filters[status_id]"` ([integer()]): Array of Status IDs. A single Status ID is also accepted.
     - `:"filters[type]"` ([String.t]): Array of Submittal Types. A single Submittal Type is also accepted.
     - `:"filters[updated_at]"` (Date.t): Return item(s) last updated within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00`...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
+    - `:"filters[unpackaged]"` (boolean()): Parseable to boolean value, filters out unpackaged Submittals.
     - `:sort` (String.t): 
 
   ### Returns
@@ -1054,6 +1055,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
       :"filters[status_id]" => :query,
       :"filters[type]" => :query,
       :"filters[updated_at]" => :query,
+      :"filters[unpackaged]" => :query,
       :sort => :query
     }
 
@@ -1739,6 +1741,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
     - `:"filters[status_id]"` ([integer()]): Array of Status IDs. A single Status ID is also accepted.
     - `:"filters[type]"` ([String.t]): Array of Submittal Types. A single Submittal Type is also accepted.
     - `:"filters[updated_at]"` (Date.t): Return item(s) last updated within the specified ISO 8601 datetime range. Formats: `YYYY-MM-DD`...`YYYY-MM-DD` - Date `YYYY-MM-DDTHH:MM:SSZ`...`YYYY-MM-DDTHH:MM:SSZ` - DateTime with UTC Offset `YYYY-MM-DDTHH:MM:SS+XX:00`...`YYYY-MM-DDTHH:MM:SS+XX:00` - Datetime with Custom Offset
+    - `:"filters[unpackaged]"` (boolean()): Parseable to boolean value, filters out unpackaged Submittals.
     - `:sort` (String.t): 
 
   ### Returns
@@ -1781,6 +1784,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittals do
       :"filters[status_id]" => :query,
       :"filters[type]" => :query,
       :"filters[updated_at]" => :query,
+      :"filters[unpackaged]" => :query,
       :sort => :query
     }
 

@@ -75,6 +75,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
     - `:can_select_divisions` (boolean()): If true, will include WBS Codes with division segment items. Default is true.
+    - `:required_segments` ([String.t]): 
     - `:"filters[status][]"` ([String.t]): Filter results to only return codes with the included statuses. Options are 'active' or 'inactive'. Defaults to returning all results.
     - `:"filters[updated_at]"` (String.t): Filter results to only return codes that were updated within the range of the two specified ISO 8601 timestamps separated by the ... delimiter.
     - `:scope` (String.t): Filter results to only return codes that match the specified WBS scope.
@@ -107,6 +108,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       ) do
     optional_params = %{
       :can_select_divisions => :query,
+      :required_segments => :query,
       :"filters[status][]" => :query,
       :"filters[updated_at]" => :query,
       :scope => :query,

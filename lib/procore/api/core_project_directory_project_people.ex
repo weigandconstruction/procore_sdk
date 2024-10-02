@@ -32,6 +32,8 @@ defmodule Procore.Api.CoreProjectDirectoryProjectPeople do
     - `:"filters[job_title]"` (String.t): Returns only people who have the specified job title.
     - `:"filters[country_code]"` (String.t): Returns only people who have the specified country code.
     - `:"filters[state_code]"` (String.t): Returns only people who have the specified state code.
+    - `:"filters[trade_id]"` ([integer()]): Array of Trade IDs. Returns item(s) with the specified Trade IDs.
+    - `:"filters[permission_template_id]"` ([integer()]): Array of Permission Template IDs. Returns item(s) with the specified Permission Template IDs.
     - `:sort` (String.t): Return items with the specified sort
 
   ### Returns
@@ -68,6 +70,8 @@ defmodule Procore.Api.CoreProjectDirectoryProjectPeople do
       :"filters[job_title]" => :query,
       :"filters[country_code]" => :query,
       :"filters[state_code]" => :query,
+      :"filters[trade_id]" => :query,
+      :"filters[permission_template_id]" => :query,
       :sort => :query
     }
 

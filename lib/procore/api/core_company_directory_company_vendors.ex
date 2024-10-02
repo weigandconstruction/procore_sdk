@@ -19,7 +19,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_id` (integer()): Unique identifier for the company.
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view provides only the id and name. The extended view provides what is shown below. The normal view is the same as the extended view but excludes children_count, legal_name, parent, bidding, project_ids, standard_cost_codes, contract_signers_name, invoice_contacts_names, default_bid_invitees_names, and country_name. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is extended.
+    - `:view` (String.t): Specifies which view of the resource to return (which attributes should be present in the response). The default view is extended.
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
     - `:"filters[origin_id]"` (String.t): Origin ID. Returns item(s) with the specified Origin ID.
@@ -207,20 +207,24 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
   - `id` (integer()): ID of the vendor
   - `company_id` (integer()): Unique identifier for the company.
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view provides only the id and name. The extended view provides what is shown below. The normal view is the same as the extended view but excludes children_count, legal_name, parent, bidding, project_ids, standard_cost_codes, contract_signers_name, invoice_contacts_names, default_bid_invitees_names, and country_name. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is extended.
+    - `:view` (String.t): Specifies which view of the resource to return (which attributes should be present in the response). The default view is extended.
+    - `:page` (integer()): Page
+    - `:per_page` (integer()): Elements per page
 
   ### Returns
 
-  - `{:ok, Procore.Model.RestV10VendorsGet200ResponseInner.t}` on success
+  - `{:ok, Procore.Model.RestV10VendorsIdGet200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_vendors_id_get(Tesla.Env.client(), integer(), integer(), integer(), keyword()) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.RestV10VendorsGet200ResponseInner.t()}
+          | {:ok, Procore.Model.RestV10VendorsIdGet200Response.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_vendors_id_get(connection, procore_company_id, id, company_id, opts \\ []) do
     optional_params = %{
-      :view => :query
+      :view => :query,
+      :page => :query,
+      :per_page => :query
     }
 
     request =
@@ -235,7 +239,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.RestV10VendorsGet200ResponseInner},
+      {200, Procore.Model.RestV10VendorsIdGet200Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {404, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}
@@ -253,7 +257,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
   - `id` (integer()): ID of the vendor
   - `company_vendor_body` (CompanyVendorBody): 
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view provides only the id and name. The extended view provides what is shown below. The normal view is the same as the extended view but excludes children_count, legal_name, parent, bidding, project_ids, standard_cost_codes, contract_signers_name, invoice_contacts_names, default_bid_invitees_names, and country_name. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is extended.
+    - `:view` (String.t): Specifies which view of the resource to return (which attributes should be present in the response). The default view is extended.
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
   ### Returns
@@ -313,7 +317,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `company_vendor_body` (CompanyVendorBody): 
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view provides only the id and name. The extended view provides what is shown below. The normal view is the same as the extended view but excludes children_count, legal_name, parent, bidding, project_ids, standard_cost_codes, contract_signers_name, invoice_contacts_names, default_bid_invitees_names, and country_name. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is extended.
+    - `:view` (String.t): Specifies which view of the resource to return (which attributes should be present in the response). The default view is extended.
     - `:run_configurable_validations` (boolean()): If true, validations are run for the corresponding Configurable Field Set.
 
   ### Returns

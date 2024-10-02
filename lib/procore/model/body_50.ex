@@ -10,21 +10,23 @@ defmodule Procore.Model.Body50 do
   defstruct [
     :project_id,
     :attachments,
-    :inspection_item_failed,
-    :observation
+    :payment_application
   ]
 
   @type t :: %__MODULE__{
           :project_id => integer(),
           :attachments => [String.t()] | nil,
-          :inspection_item_failed => integer() | nil,
-          :observation => Procore.Model.Observation.t()
+          :payment_application => Procore.Model.PaymentApplicationOwnerInvoice.t() | nil
         }
 
   alias Procore.Deserializer
 
   def decode(value) do
     value
-    |> Deserializer.deserialize(:observation, :struct, Procore.Model.Observation)
+    |> Deserializer.deserialize(
+      :payment_application,
+      :struct,
+      Procore.Model.PaymentApplicationOwnerInvoice
+    )
   end
 end

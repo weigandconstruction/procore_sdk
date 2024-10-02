@@ -19,7 +19,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view and normal view provides what is shown below. The extended view is the same as the normal view but includes children_count, legal_name, parent, and bidding. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is normal.
+    - `:view` (String.t): The normal view provides what is shown below. The extended view is the same as the normal view but includes children_count, legal_name, parent, and bidding. The default view is normal.
     - `:page` (integer()): Page
     - `:per_page` (integer()): Elements per page
     - `:sort` (String.t): Return items with the specified sort
@@ -79,11 +79,11 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID of the vendor
   - `opts` (keyword): Optional parameters
-    - `:view` (String.t): The compact view and normal view provides what is shown below. The extended view is the same as the normal view but includes children_count, legal_name, parent, and bidding. The ERP view is the same as the normal view but it includes origin_custom_fields. The default view is normal.
+    - `:view` (String.t): The normal view provides what is shown below. The extended view is the same as the normal view but includes children_count, legal_name, parent, and bidding. The default view is normal.
 
   ### Returns
 
-  - `{:ok, Procore.Model.NormalView2.t}` on success
+  - `{:ok, Procore.Model.NormalView1.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
   @spec rest_v10_projects_project_id_vendors_inactive_id_patch(
@@ -94,7 +94,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
-          | {:ok, Procore.Model.NormalView2.t()}
+          | {:ok, Procore.Model.NormalView1.t()}
           | {:error, Tesla.Env.t()}
   def rest_v10_projects_project_id_vendors_inactive_id_patch(
         connection,
@@ -119,7 +119,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, Procore.Model.NormalView2},
+      {200, Procore.Model.NormalView1},
       {400, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {401, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response},
       {403, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response}

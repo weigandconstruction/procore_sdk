@@ -11,7 +11,7 @@ defmodule Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200Respon
     :approvers,
     :attachments_count,
     :ball_in_court,
-    :buffer_working_days,
+    :buffer_time,
     :created_at,
     :created_by,
     :current_revision,
@@ -50,7 +50,7 @@ defmodule Procore.Model.RestV11ProjectsProjectIdSubmittalsRecycleBinGet200Respon
           :attachments_count => integer() | nil,
           :ball_in_court =>
             [Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t()] | nil,
-          :buffer_working_days => integer() | nil,
+          :buffer_time => integer() | nil,
           :created_at => DateTime.t() | nil,
           :created_by =>
             Procore.Model.RestV10ProjectsProjectIdWorkLogsGet200ResponseInnerCreatedBy.t() | nil,

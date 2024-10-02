@@ -162,7 +162,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMFiles do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): BIM File ID
-  - `body137` (Body137): 
+  - `body141` (Body141): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -174,19 +174,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMFiles do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body137.t(),
+          Procore.Model.Body141.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BimFilesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_files_id_patch(connection, procore_company_id, id, body137, _opts \\ []) do
+  def rest_v10_bim_files_id_patch(connection, procore_company_id, id, body141, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/bim_files/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body137)
+      |> add_param(:body, :body, body141)
       |> Enum.into([])
 
     connection
@@ -207,7 +207,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMFiles do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body136` (Body136): 
+  - `body140` (Body140): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -218,19 +218,19 @@ defmodule Procore.Api.ProjectManagementModelsBIMFiles do
   @spec rest_v10_bim_files_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body136.t(),
+          Procore.Model.Body140.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.RestV10BimFilesGet200ResponseInner.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_bim_files_post(connection, procore_company_id, body136, _opts \\ []) do
+  def rest_v10_bim_files_post(connection, procore_company_id, body140, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_files")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body136)
+      |> add_param(:body, :body, body140)
       |> Enum.into([])
 
     connection

@@ -17,7 +17,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body95` (Body95): 
+  - `body99` (Body99): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -28,7 +28,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   @spec rest_v10_cost_codes_copy_from_standard_list_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body95.t(),
+          Procore.Model.Body99.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -40,7 +40,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   def rest_v10_cost_codes_copy_from_standard_list_post(
         connection,
         procore_company_id,
-        body95,
+        body99,
         _opts \\ []
       ) do
     request =
@@ -48,7 +48,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
       |> method(:post)
       |> url("/rest/v1.0/cost_codes/copy_from_standard_list")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body95)
+      |> add_param(:body, :body, body99)
       |> Enum.into([])
 
     connection
@@ -227,7 +227,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Unique identifier for the Cost Code
-  - `body94` (Body94): 
+  - `body98` (Body98): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -239,19 +239,19 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body94.t(),
+          Procore.Model.Body98.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.Extended.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_cost_codes_id_patch(connection, procore_company_id, id, body94, _opts \\ []) do
+  def rest_v10_cost_codes_id_patch(connection, procore_company_id, id, body98, _opts \\ []) do
     request =
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/cost_codes/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body94)
+      |> add_param(:body, :body, body98)
       |> Enum.into([])
 
     connection
@@ -273,7 +273,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body94` (Body94): 
+  - `body98` (Body98): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -284,19 +284,19 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   @spec rest_v10_cost_codes_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body94.t(),
+          Procore.Model.Body98.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.Extended.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_cost_codes_post(connection, procore_company_id, body94, _opts \\ []) do
+  def rest_v10_cost_codes_post(connection, procore_company_id, body98, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/cost_codes")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body94)
+      |> add_param(:body, :body, body98)
       |> Enum.into([])
 
     connection
@@ -483,7 +483,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): Unique identifier for the Standard Cost Code
-  - `body97` (Body97): 
+  - `body101` (Body101): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -495,7 +495,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body97.t(),
+          Procore.Model.Body101.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -505,7 +505,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
         connection,
         procore_company_id,
         id,
-        body97,
+        body101,
         _opts \\ []
       ) do
     request =
@@ -513,7 +513,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
       |> method(:patch)
       |> url("/rest/v1.0/standard_cost_code_lists/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body97)
+      |> add_param(:body, :body, body101)
       |> Enum.into([])
 
     connection
@@ -535,7 +535,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body96` (Body96): 
+  - `body100` (Body100): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -546,19 +546,19 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   @spec rest_v10_standard_cost_code_lists_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body96.t(),
+          Procore.Model.Body100.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.StandardCostCodeList2.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_standard_cost_code_lists_post(connection, procore_company_id, body96, _opts \\ []) do
+  def rest_v10_standard_cost_code_lists_post(connection, procore_company_id, body100, _opts \\ []) do
     request =
       %{}
       |> method(:post)
       |> url("/rest/v1.0/standard_cost_code_lists")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body96)
+      |> add_param(:body, :body, body100)
       |> Enum.into([])
 
     connection
@@ -761,7 +761,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID
-  - `body99` (Body99): 
+  - `body103` (Body103): 
   - `opts` (keyword): Optional parameters
     - `:view` (String.t): The 'default' view only returns id and standard_cost_code_list_id. The 'compact' view also includes origin_id. The 'extended' view includes the more complete list of attributes shown below. The 'extended' view is used when no value is passed in for this parameter.
 
@@ -774,7 +774,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body99.t(),
+          Procore.Model.Body103.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -784,7 +784,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
         connection,
         procore_company_id,
         id,
-        body99,
+        body103,
         opts \\ []
       ) do
     optional_params = %{
@@ -796,7 +796,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
       |> method(:patch)
       |> url("/rest/v1.0/standard_cost_codes/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body99)
+      |> add_param(:body, :body, body103)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -819,7 +819,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
 
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
-  - `body98` (Body98): 
+  - `body102` (Body102): 
   - `opts` (keyword): Optional parameters
     - `:view` (String.t): The 'default' view only returns id and standard_cost_code_list_id. The 'compact' view also includes origin_id. The 'extended' view includes the more complete list of attributes shown below. The 'extended' view is used when no value is passed in for this parameter.
 
@@ -831,13 +831,13 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
   @spec rest_v10_standard_cost_codes_post(
           Tesla.Env.client(),
           integer(),
-          Procore.Model.Body98.t(),
+          Procore.Model.Body102.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
           | {:ok, Procore.Model.StandardCostCode.t()}
           | {:error, Tesla.Env.t()}
-  def rest_v10_standard_cost_codes_post(connection, procore_company_id, body98, opts \\ []) do
+  def rest_v10_standard_cost_codes_post(connection, procore_company_id, body102, opts \\ []) do
     optional_params = %{
       :view => :query
     }
@@ -847,7 +847,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsCostCodes do
       |> method(:post)
       |> url("/rest/v1.0/standard_cost_codes")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body98)
+      |> add_param(:body, :body, body102)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

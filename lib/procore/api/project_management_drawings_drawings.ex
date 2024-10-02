@@ -77,7 +77,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `drawing_area_id` (integer()): ID of the drawing area
   - `id` (integer()): Drawing ID
-  - `body84` (Body84): 
+  - `body88` (Body88): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -90,7 +90,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body84.t(),
+          Procore.Model.Body88.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -103,7 +103,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
         procore_company_id,
         drawing_area_id,
         id,
-        body84,
+        body88,
         _opts \\ []
       ) do
     request =
@@ -111,7 +111,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       |> method(:patch)
       |> url("/rest/v1.0/drawing_areas/#{drawing_area_id}/drawings/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body84)
+      |> add_param(:body, :body, body88)
       |> Enum.into([])
 
     connection
@@ -259,6 +259,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
     - `:is_reviewed` (boolean()): Filter by `reviewed` status
     - `:query` (String.t): Filter by custom query
     - `:with_obsolete` (boolean()): Include obsolete drawing revisions. Obsolete drawing revisions are filtered by default.
+    - `:view` (String.t): Defines the type of view returned. Must be one of 'only_pdf_urls', 'only_ids', 'web_index', 'extended_coordinates', 'extended_files', 'extended_dpi' or 'android'.
 
   ### Returns
 
@@ -291,7 +292,8 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       :"filters[ids]" => :query,
       :is_reviewed => :query,
       :query => :query,
-      :with_obsolete => :query
+      :with_obsolete => :query,
+      :view => :query
     }
 
     request =
@@ -373,7 +375,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID of the Drawing Revision
-  - `body85` (Body85): 
+  - `body89` (Body89): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -386,7 +388,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body85.t(),
+          Procore.Model.Body89.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -399,7 +401,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
         procore_company_id,
         project_id,
         id,
-        body85,
+        body89,
         _opts \\ []
       ) do
     request =
@@ -407,7 +409,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_revisions/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body85)
+      |> add_param(:body, :body, body89)
       |> Enum.into([])
 
     connection
@@ -895,7 +897,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `drawing_area_id` (integer()): ID of the drawing area
   - `id` (integer()): Drawing ID
-  - `body84` (Body84): 
+  - `body88` (Body88): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -908,7 +910,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body84.t(),
+          Procore.Model.Body88.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -921,7 +923,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
         procore_company_id,
         drawing_area_id,
         id,
-        body84,
+        body88,
         _opts \\ []
       ) do
     request =
@@ -929,7 +931,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       |> method(:patch)
       |> url("/rest/v1.1/drawing_areas/#{drawing_area_id}/drawings/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body84)
+      |> add_param(:body, :body, body88)
       |> Enum.into([])
 
     connection
@@ -955,7 +957,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `drawing_area_id` (integer()): ID of the drawing area
-  - `body83` (Body83): 
+  - `body87` (Body87): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -967,7 +969,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body83.t(),
+          Procore.Model.Body87.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -979,7 +981,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
         connection,
         procore_company_id,
         drawing_area_id,
-        body83,
+        body87,
         _opts \\ []
       ) do
     request =
@@ -987,7 +989,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       |> method(:post)
       |> url("/rest/v1.1/drawing_areas/#{drawing_area_id}/drawings")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body83)
+      |> add_param(:body, :body, body87)
       |> Enum.into([])
 
     connection

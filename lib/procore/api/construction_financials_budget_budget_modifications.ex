@@ -182,7 +182,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
   - `id` (integer()): ID
-  - `body111` (Body111): 
+  - `body115` (Body115): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -195,7 +195,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body111.t(),
+          Procore.Model.Body115.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -207,7 +207,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
         procore_company_id,
         project_id,
         id,
-        body111,
+        body115,
         _opts \\ []
       ) do
     request =
@@ -215,7 +215,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/budget_modifications/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body111)
+      |> add_param(:body, :body, body115)
       |> Enum.into([])
 
     connection
@@ -239,7 +239,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
   - `connection` (Procore.Connection): Connection to server
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `project_id` (integer()): Unique identifier for the project.
-  - `body111` (Body111): 
+  - `body115` (Body115): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -251,7 +251,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
           Tesla.Env.client(),
           integer(),
           integer(),
-          Procore.Model.Body111.t(),
+          Procore.Model.Body115.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -262,7 +262,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
         connection,
         procore_company_id,
         project_id,
-        body111,
+        body115,
         _opts \\ []
       ) do
     request =
@@ -270,7 +270,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetModifications do
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/budget_modifications")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body111)
+      |> add_param(:body, :body, body115)
       |> Enum.into([])
 
     connection

@@ -19,7 +19,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationOwner
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `prime_contract_id` (integer()): Prime Contract ID
   - `id` (integer()): Payment Application (Owner Invoice) Line item ID
-  - `body49` (Body49): 
+  - `body53` (Body53): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -32,7 +32,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationOwner
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body49.t(),
+          Procore.Model.Body53.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -44,7 +44,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationOwner
         procore_company_id,
         prime_contract_id,
         id,
-        body49,
+        body53,
         _opts \\ []
       ) do
     request =
@@ -54,7 +54,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationOwner
         "/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_application_line_items/#{id}"
       )
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
-      |> add_param(:body, :body, body49)
+      |> add_param(:body, :body, body53)
       |> Enum.into([])
 
     connection

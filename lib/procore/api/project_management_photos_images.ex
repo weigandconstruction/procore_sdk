@@ -179,7 +179,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
   - `procore_company_id` (integer()): Unique company identifier associated with the Procore User Account.
   - `id` (integer()): ID of the image
   - `project_id` (integer()): Unique identifier for the project.
-  - `body75` (Body75): 
+  - `body79` (Body79): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -192,7 +192,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
           integer(),
           integer(),
           integer(),
-          Procore.Model.Body75.t(),
+          Procore.Model.Body79.t(),
           keyword()
         ) ::
           {:ok, Procore.Model.RestV10CompaniesCompanyIdWorkflowPermanentLogsGet401Response.t()}
@@ -203,7 +203,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
         procore_company_id,
         id,
         project_id,
-        body75,
+        body79,
         _opts \\ []
       ) do
     request =
@@ -212,7 +212,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
       |> url("/rest/v1.0/images/#{id}")
       |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
-      |> add_param(:body, :body, body75)
+      |> add_param(:body, :body, body79)
       |> Enum.into([])
 
     connection
