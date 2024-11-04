@@ -44,7 +44,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisionPlanBatch do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_model_revision_plans/batch")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body134)
       |> Enum.into([])
 

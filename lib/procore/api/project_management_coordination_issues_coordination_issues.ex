@@ -81,7 +81,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -133,7 +133,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/coordination_issues/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -193,7 +193,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -246,7 +246,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/coordination_issues/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body105)
       |> Enum.into([])
 
@@ -291,7 +291,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssues do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/coordination_issues")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body104)
       |> Enum.into([])
 

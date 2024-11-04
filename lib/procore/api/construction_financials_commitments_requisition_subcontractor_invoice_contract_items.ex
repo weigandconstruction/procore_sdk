@@ -57,7 +57,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
       %{}
       |> method(:get)
       |> url("/rest/v1.0/requisitions/#{requisition_id}/contract_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -118,7 +118,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
       %{}
       |> method(:get)
       |> url("/rest/v1.0/requisitions/#{requisition_id}/contract_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -181,7 +181,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/requisitions/#{requisition_id}/contract_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, body23)
       |> Enum.into([])

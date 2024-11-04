@@ -56,7 +56,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSetResponses do
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{response_set_id}/responses"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -113,7 +113,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSetResponses do
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{response_set_id}/responses/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -172,7 +172,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSetResponses do
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{response_set_id}/responses/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -228,7 +228,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSetResponses do
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{response_set_id}/responses/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -288,7 +288,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSetResponses do
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{response_set_id}/responses"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, checklist_response_body2)
       |> Enum.into([])
 

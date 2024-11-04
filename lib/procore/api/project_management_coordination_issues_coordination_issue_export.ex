@@ -77,7 +77,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueExport
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/export")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :export_format, export_format)
       |> add_optional_params(optional_params, opts)

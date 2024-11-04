@@ -67,7 +67,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -123,7 +123,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/vendors/#{id}/actions/add")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -176,7 +176,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/vendors/#{id}/actions/remove")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -232,7 +232,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/vendors/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -294,7 +294,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/vendors/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_vendor_body1)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -355,7 +355,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_vendor_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -426,7 +426,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -482,7 +482,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/vendors/#{id}/actions/add")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -535,7 +535,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/projects/#{project_id}/vendors/#{id}/actions/remove")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -591,7 +591,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/vendors/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -653,7 +653,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/vendors/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_vendor_body1)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -714,7 +714,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectVendors do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_vendor_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

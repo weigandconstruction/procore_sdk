@@ -39,7 +39,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMMintTokens do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_mint_tokens")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body135)
       |> Enum.into([])
 

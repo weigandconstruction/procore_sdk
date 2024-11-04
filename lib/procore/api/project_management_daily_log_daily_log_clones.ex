@@ -53,7 +53,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogClones do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/clones")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_daily_logs_clones_post_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

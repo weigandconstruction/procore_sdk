@@ -48,7 +48,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectPermissionTemplatesAssignments 
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/permission_template_assignments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

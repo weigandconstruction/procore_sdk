@@ -44,7 +44,7 @@ defmodule Procore.Api.QualitySafetyInspectionsPossibleInspectors do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/possible_inspectors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 

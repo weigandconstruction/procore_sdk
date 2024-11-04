@@ -44,7 +44,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudget do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/budget")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -97,7 +97,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudget do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/budget/lock")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -149,7 +149,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudget do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/budget/lock")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 

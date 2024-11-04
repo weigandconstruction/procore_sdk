@@ -54,7 +54,7 @@ defmodule Procore.Api.ProjectManagementScheduleCompanyScheduleResources do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/schedule/resources")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

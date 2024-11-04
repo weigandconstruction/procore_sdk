@@ -35,7 +35,7 @@ defmodule Procore.Api.CoreCompanyCompanyConfigurations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/company_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 

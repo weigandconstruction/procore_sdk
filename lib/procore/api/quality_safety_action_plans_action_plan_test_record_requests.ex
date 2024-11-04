@@ -59,7 +59,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       |> url(
         "/rest/v1.0/projects/#{project_id}/action_plans/plan_test_record_requests/bulk_create"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -139,7 +139,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_record_requests")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -192,7 +192,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_record_requests/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -246,7 +246,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_record_requests/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -299,7 +299,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_record_requests")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -381,7 +381,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       |> url(
         "/rest/v1.0/projects/#{project_id}/recycle_bin/action_plans/plan_test_record_requests"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -437,7 +437,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecordRequests do
       |> url(
         "/rest/v1.0/projects/#{project_id}/recycle_bin/action_plans/plan_test_record_requests/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

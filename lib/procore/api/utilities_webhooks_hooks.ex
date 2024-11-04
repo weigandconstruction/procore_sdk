@@ -54,7 +54,7 @@ defmodule Procore.Api.UtilitiesWebhooksHooks do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/webhooks/hooks")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
@@ -109,7 +109,7 @@ defmodule Procore.Api.UtilitiesWebhooksHooks do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/webhooks/hooks/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
@@ -161,7 +161,7 @@ defmodule Procore.Api.UtilitiesWebhooksHooks do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/webhooks/hooks/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_webhooks_hooks_id_patch_request)
       |> Enum.into([])
 
@@ -210,7 +210,7 @@ defmodule Procore.Api.UtilitiesWebhooksHooks do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/webhooks/hooks")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_webhooks_hooks_post_request)
       |> Enum.into([])
 

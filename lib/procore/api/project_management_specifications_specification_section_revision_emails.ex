@@ -52,7 +52,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSectionRevisio
       |> url(
         "/rest/v1.0/projects/#{project_id}/specification_section_revision_emails/#{id}/send_email"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

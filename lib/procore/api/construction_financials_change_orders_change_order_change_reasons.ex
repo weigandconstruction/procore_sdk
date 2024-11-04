@@ -51,7 +51,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersChangeOrderChangeReasons
       %{}
       |> method(:get)
       |> url("/rest/v1.0/change_order_change_reasons")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

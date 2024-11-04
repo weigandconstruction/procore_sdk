@@ -44,7 +44,7 @@ defmodule Procore.Api.CoreProjectFiltersProjectFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/filters")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -94,7 +94,7 @@ defmodule Procore.Api.CoreProjectFiltersProjectFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/filters/#{name}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

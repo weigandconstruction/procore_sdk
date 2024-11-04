@@ -55,7 +55,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentAttachments do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/#{incident_id}/attachments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:file, :attachment, attachment)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

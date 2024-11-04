@@ -51,7 +51,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/uoms")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -102,7 +102,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/uoms/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -153,7 +153,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/uoms/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -207,7 +207,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/uoms/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body7)
       |> Enum.into([])
 
@@ -261,7 +261,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/uoms")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body7)
       |> Enum.into([])
 
@@ -313,7 +313,7 @@ defmodule Procore.Api.ConstructionFinancialsUnitsOfMeasureUnitsOfMeasure do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/uoms/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body8)
       |> Enum.into([])
 

@@ -47,7 +47,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetManualForecastLineItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/manual_forecast_line_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -101,7 +101,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetManualForecastLineItems do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/manual_forecast_line_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -162,7 +162,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetManualForecastLineItems do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/manual_forecast_line_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -220,7 +220,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetManualForecastLineItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/manual_forecast_line_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

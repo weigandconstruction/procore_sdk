@@ -53,7 +53,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationOwner
       |> url(
         "/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_application_line_items/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body53)
       |> Enum.into([])
 

@@ -62,7 +62,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -114,7 +114,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -165,7 +165,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -219,7 +219,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body49)
       |> Enum.into([])
 
@@ -276,7 +276,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       |> url(
         "/rest/v1.0/companies/#{company_id}/pdf_template_configs/#{id}/update_default_project"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body49)
       |> Enum.into([])
 
@@ -328,7 +328,7 @@ defmodule Procore.Api.PDFsPDFTemplateConfigsPDFTemplateConfigs do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/pdf_template_configs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body49)
       |> Enum.into([])
 

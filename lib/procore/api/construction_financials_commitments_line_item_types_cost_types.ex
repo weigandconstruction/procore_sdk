@@ -56,7 +56,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/line_item_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
@@ -104,7 +104,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/line_item_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -150,7 +150,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/line_item_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body73)
       |> Enum.into([])
 
@@ -195,7 +195,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/line_item_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body73)
       |> Enum.into([])
 
@@ -245,7 +245,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsLineItemTypesCostTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/line_item_types/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, line_item_type_sync_body)
       |> Enum.into([])
 

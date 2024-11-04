@@ -51,7 +51,7 @@ defmodule Procore.Api.QualitySafetyObservationsProjectObservationTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/observation_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -101,7 +101,7 @@ defmodule Procore.Api.QualitySafetyObservationsProjectObservationTypes do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/observation_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -155,7 +155,7 @@ defmodule Procore.Api.QualitySafetyObservationsProjectObservationTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/observation_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_observation_type_create_body1)
       |> Enum.into([])
 
@@ -207,7 +207,7 @@ defmodule Procore.Api.QualitySafetyObservationsProjectObservationTypes do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/observation_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_observation_type_create_body)
       |> Enum.into([])
 

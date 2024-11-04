@@ -54,7 +54,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorInsurances do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/vendors/#{vendor_id}/insurances")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -109,7 +109,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorInsurances do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/vendors/#{vendor_id}/insurances/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -164,7 +164,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorInsurances do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/vendors/#{vendor_id}/insurances/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -221,7 +221,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorInsurances do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/vendors/#{vendor_id}/insurances/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body33)
       |> Enum.into([])
 
@@ -277,7 +277,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorInsurances do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/vendors/#{vendor_id}/insurances")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body33)
       |> Enum.into([])
 
@@ -333,7 +333,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendorInsurances do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/vendors/#{vendor_id}/insurances/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, insurance_sync_body)
       |> Enum.into([])
 

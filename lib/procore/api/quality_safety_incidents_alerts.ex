@@ -69,7 +69,7 @@ defmodule Procore.Api.QualitySafetyIncidentsAlerts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/alerts")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -119,7 +119,7 @@ defmodule Procore.Api.QualitySafetyIncidentsAlerts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/alerts/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

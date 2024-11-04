@@ -59,7 +59,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/csv_export")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -123,7 +123,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -176,7 +176,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -230,7 +230,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -282,7 +282,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/signatures/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -333,7 +333,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/signatures/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -384,7 +384,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/signatures")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, timesheets_signature_create_body)
       |> Enum.into([])
 
@@ -439,7 +439,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/change_history")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -492,7 +492,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/change_history")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, timesheet_change_history_body)
       |> Enum.into([])
 
@@ -544,7 +544,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_timesheets_delete_request)
       |> Enum.into([])
 
@@ -610,7 +610,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -661,7 +661,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -712,7 +712,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -768,7 +768,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -823,7 +823,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -878,7 +878,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -928,7 +928,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/potential_timesheet_creator_ids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -985,7 +985,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/potential_timesheet_creators")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1039,7 +1039,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/scoped_cost_code_ids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1099,7 +1099,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/scoped_cost_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1154,7 +1154,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/signatures")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1206,7 +1206,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/signatures/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1257,7 +1257,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/signatures/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1308,7 +1308,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/signatures")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, timesheets_signature_create_body)
       |> Enum.into([])
 
@@ -1362,7 +1362,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/timesheets/update_approval")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -1421,7 +1421,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/project_timecard_entries/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -1477,7 +1477,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/project_timecard_entries")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -1532,7 +1532,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/project_timesheet_timecard_entries/draft_create")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -1590,7 +1590,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/project_timesheet_timecard_entries/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -1642,7 +1642,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheets do
       |> url(
         "/rest/v1.1/projects/#{project_id}/project_timesheet_timecard_entries/recent_wbs_code_ids"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

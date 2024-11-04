@@ -57,7 +57,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/correspondences")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -116,7 +116,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
       |> url(
         "/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/correspondences/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -168,7 +168,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -223,7 +223,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body42)
       |> Enum.into([])
 
@@ -276,7 +276,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body42)
       |> Enum.into([])
 
@@ -339,7 +339,7 @@ defmodule Procore.Api.ProjectManagementBiddingProjectBidPackages do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/bid_packages")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

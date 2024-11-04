@@ -51,7 +51,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_areas")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -103,7 +103,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_areas")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body91)
       |> Enum.into([])
 
@@ -164,7 +164,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_areas")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -216,7 +216,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingAreas do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_areas")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body90)
       |> Enum.into([])
 

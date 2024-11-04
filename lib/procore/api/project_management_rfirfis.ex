@@ -74,7 +74,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -125,7 +125,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -183,7 +183,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rfi_update_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -236,7 +236,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/#{id}/recycle")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -287,7 +287,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/#{id}/retrieve")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -343,7 +343,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/#{id}.pdf")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -400,7 +400,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/rfis")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rfi_body2)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -457,7 +457,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/rfis")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rfi_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -516,7 +516,7 @@ defmodule Procore.Api.ProjectManagementRFIRFIs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/recycle_bin")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

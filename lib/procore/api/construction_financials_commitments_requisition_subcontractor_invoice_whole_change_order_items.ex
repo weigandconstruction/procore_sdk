@@ -53,7 +53,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/requisitions/#{requisition_id}/whole_change_order_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

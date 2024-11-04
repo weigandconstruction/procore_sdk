@@ -47,7 +47,7 @@ defmodule Procore.Api.ConstructionFinancialsInvoicingInvoicingAsyncJobs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/invoices/async_jobs/#{uuid}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

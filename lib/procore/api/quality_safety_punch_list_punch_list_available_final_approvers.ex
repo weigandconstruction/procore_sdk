@@ -54,7 +54,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchListAvailableFinalApprovers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/punch_list/available_final_approvers")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

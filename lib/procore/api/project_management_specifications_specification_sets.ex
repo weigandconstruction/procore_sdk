@@ -54,7 +54,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/specification_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -110,7 +110,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/specification_sets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -166,7 +166,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/specification_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_specification_sets_post_request)
       |> Enum.into([])
 

@@ -56,7 +56,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateItems do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/action_plans/plan_template_items/bulk_update")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -120,7 +120,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateItems do
       |> url(
         "/rest/v1.0/companies/#{company_id}/action_plans/plan_template_items/create_from_item"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -196,7 +196,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/recycle_bin/action_plans/plan_template_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -252,7 +252,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateItems do
       |> url(
         "/rest/v1.0/companies/#{company_id}/recycle_bin/action_plans/plan_template_items/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

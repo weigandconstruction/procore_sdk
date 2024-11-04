@@ -51,7 +51,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentCategory do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_categories")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -102,7 +102,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentCategory do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_categories/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -153,7 +153,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentCategory do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_categories/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -208,7 +208,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentCategory do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_categories/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -263,7 +263,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentCategory do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_categories")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

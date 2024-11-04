@@ -50,7 +50,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSectionDivisio
       %{}
       |> method(:get)
       |> url("/rest/v1.0/specification_section_divisions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -95,7 +95,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSectionDivisio
       %{}
       |> method(:post)
       |> url("/rest/v1.0/specification_section_divisions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

@@ -59,7 +59,7 @@ defmodule Procore.Api.ProjectManagementDailyLogCallLogs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/call_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -109,7 +109,7 @@ defmodule Procore.Api.ProjectManagementDailyLogCallLogs do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/call_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -159,7 +159,7 @@ defmodule Procore.Api.ProjectManagementDailyLogCallLogs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/call_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -211,7 +211,7 @@ defmodule Procore.Api.ProjectManagementDailyLogCallLogs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/call_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_call_logs_post_request)
       |> Enum.into([])
 
@@ -263,7 +263,7 @@ defmodule Procore.Api.ProjectManagementDailyLogCallLogs do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/call_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_call_logs_post_request)
       |> Enum.into([])
 

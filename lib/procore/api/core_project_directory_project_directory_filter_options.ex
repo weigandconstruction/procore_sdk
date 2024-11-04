@@ -47,7 +47,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectDirectoryFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/directory/filter_options/country_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -98,7 +98,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectDirectoryFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/directory/filter_options/job_titles")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -149,7 +149,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectDirectoryFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/directory/filter_options/permission_templates")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -204,7 +204,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectDirectoryFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/directory/filter_options/state_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :country_code, country_code)
       |> Enum.into([])
 
@@ -257,7 +257,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectDirectoryFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/directory/filter_options/trades")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

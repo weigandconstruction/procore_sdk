@@ -61,7 +61,7 @@ defmodule Procore.Api.CoreTasksTaskItemComments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/projects/#{project_id}/task_item_comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -117,7 +117,7 @@ defmodule Procore.Api.CoreTasksTaskItemComments do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/projects/#{project_id}/task_item_comments/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -176,7 +176,7 @@ defmodule Procore.Api.CoreTasksTaskItemComments do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/projects/#{project_id}/task_item_comments/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -237,7 +237,7 @@ defmodule Procore.Api.CoreTasksTaskItemComments do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/projects/#{project_id}/task_item_comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

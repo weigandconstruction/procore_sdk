@@ -70,7 +70,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_records")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -122,7 +122,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_records/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -176,7 +176,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_records/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -228,7 +228,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_test_records")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -310,7 +310,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/action_plans/plan_test_records")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -364,7 +364,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanTestRecords do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/action_plans/plan_test_records/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

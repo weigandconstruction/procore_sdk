@@ -47,7 +47,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructurePatterns do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/work_breakdown_structure/patterns")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -101,7 +101,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructurePatterns do
       |> url(
         "/rest/v1.0/companies/#{company_id}/work_breakdown_structure/patterns/update_segment_order"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, update_segment_order_body)
       |> Enum.into([])
 
@@ -153,7 +153,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructurePatterns do
       %{}
       |> method(:put)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/patterns/add_segment")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -209,7 +209,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructurePatterns do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/patterns")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -261,7 +261,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructurePatterns do
       %{}
       |> method(:put)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/patterns/remove_segment")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -319,7 +319,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructurePatterns do
       |> url(
         "/rest/v1.0/projects/#{project_id}/work_breakdown_structure/patterns/update_segment_order"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, update_segment_order_body)
       |> Enum.into([])
 

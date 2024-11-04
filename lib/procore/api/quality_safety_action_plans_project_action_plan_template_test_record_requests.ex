@@ -59,7 +59,7 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateTestRecor
       |> url(
         "/rest/v1.0/projects/#{project_id}/action_plans/plan_template_test_record_requests/bulk_create"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -139,7 +139,7 @@ defmodule Procore.Api.QualitySafetyActionPlansProjectActionPlanTemplateTestRecor
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_template_test_record_requests")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

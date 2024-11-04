@@ -59,7 +59,7 @@ defmodule Procore.Api.QualitySafetyIncidentsEnvironmentalTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/environmental_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

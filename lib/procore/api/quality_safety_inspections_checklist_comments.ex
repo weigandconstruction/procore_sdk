@@ -50,7 +50,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistComments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/lists/#{list_id}/comments/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -102,7 +102,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistComments do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/checklist/lists/#{list_id}/comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, checklist_comment_body)
       |> Enum.into([])
 
@@ -167,7 +167,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistComments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/list_item_comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -231,7 +231,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistComments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/checklist/list_item_comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

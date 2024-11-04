@@ -51,7 +51,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/category_configurable_field_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -108,7 +108,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/default_distribution")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -181,7 +181,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -234,7 +234,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -286,7 +286,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/observations/items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body56)
       |> Enum.into([])
 
@@ -338,7 +338,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/items/#{id}/pdf")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -394,7 +394,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/observations/items/#{id}/send_email")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, body58)
       |> Enum.into([])
@@ -454,7 +454,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/items/#{item_id}/response_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -512,7 +512,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/observations/items/#{item_id}/response_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, observation_item_response_log_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -562,7 +562,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/items/next_available_number")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -611,7 +611,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/observations/items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body54)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -661,7 +661,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/observations/items/send_unsent")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_observations_items_send_unsent_post_request)
       |> Enum.into([])
 
@@ -717,7 +717,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/potential_distribution_members")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -777,7 +777,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/observations/types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
@@ -831,7 +831,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/observations/items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -892,7 +892,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/observations/response_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -961,7 +961,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/observations/items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1013,7 +1013,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/observations/items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1064,7 +1064,7 @@ defmodule Procore.Api.QualitySafetyObservationsObservations do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/observations/items/#{id}/restore")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 

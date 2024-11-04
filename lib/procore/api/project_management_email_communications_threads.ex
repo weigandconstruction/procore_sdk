@@ -47,7 +47,7 @@ defmodule Procore.Api.ProjectManagementEmailCommunicationsThreads do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/communications/#{communication_id}/threads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -101,7 +101,7 @@ defmodule Procore.Api.ProjectManagementEmailCommunicationsThreads do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/communications/#{communication_id}/threads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 

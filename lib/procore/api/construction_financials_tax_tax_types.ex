@@ -41,7 +41,7 @@ defmodule Procore.Api.ConstructionFinancialsTaxTaxTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/tax_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -87,7 +87,7 @@ defmodule Procore.Api.ConstructionFinancialsTaxTaxTypes do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/tax_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -128,7 +128,7 @@ defmodule Procore.Api.ConstructionFinancialsTaxTaxTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/tax_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -183,7 +183,7 @@ defmodule Procore.Api.ConstructionFinancialsTaxTaxTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/tax_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, rest_v10_tax_types_id_patch_request)
       |> Enum.into([])
@@ -237,7 +237,7 @@ defmodule Procore.Api.ConstructionFinancialsTaxTaxTypes do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/tax_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, rest_v10_tax_types_post_request)
       |> Enum.into([])
@@ -282,7 +282,7 @@ defmodule Procore.Api.ConstructionFinancialsTaxTaxTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/tax_types/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body12)
       |> Enum.into([])
 

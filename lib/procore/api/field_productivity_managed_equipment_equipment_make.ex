@@ -53,7 +53,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentMake do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_makes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -104,7 +104,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentMake do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_makes/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -155,7 +155,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentMake do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_makes/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -210,7 +210,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentMake do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_makes/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -265,7 +265,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentMake do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_makes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

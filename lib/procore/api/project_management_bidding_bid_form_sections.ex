@@ -52,7 +52,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidFormSections do
       |> url(
         "/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bid_form_sections/#{bid_form_section_id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

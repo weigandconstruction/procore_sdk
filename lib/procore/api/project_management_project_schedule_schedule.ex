@@ -44,7 +44,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleSchedule do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/schedule")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -93,7 +93,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleSchedule do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/schedule")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body15)
       |> Enum.into([])
 

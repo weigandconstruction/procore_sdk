@@ -44,7 +44,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/affected_body_parts")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -91,7 +91,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/filing_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -138,7 +138,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/statuses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -185,7 +185,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentPickerOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/units_of_measure")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

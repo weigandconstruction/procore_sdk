@@ -49,7 +49,7 @@ defmodule Procore.Api.QualitySafetyInspectionsPotentialPointsOfContact do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/potential_points_of_contact")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

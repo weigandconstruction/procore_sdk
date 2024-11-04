@@ -55,7 +55,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/vendors/inactive")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -111,7 +111,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectInactiveVendors do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/vendors/inactive/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

@@ -61,7 +61,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/checklist/item/response_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -112,7 +112,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSets do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -164,7 +164,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSets do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -217,7 +217,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSets do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/checklist/item/response_sets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, checklist_item_response_set_body1)
       |> Enum.into([])
 
@@ -270,7 +270,7 @@ defmodule Procore.Api.QualitySafetyInspectionsItemResponseSets do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/checklist/item/response_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, checklist_item_response_set_body)
       |> Enum.into([])
 

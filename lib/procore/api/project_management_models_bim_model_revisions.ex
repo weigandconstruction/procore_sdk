@@ -53,7 +53,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/bim_model_revisions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -106,7 +106,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisions do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/bim_model_revisions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -164,7 +164,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/bim_model_revisions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -217,7 +217,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/bim_model_revisions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body131)
       |> Enum.into([])
 
@@ -262,7 +262,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModelRevisions do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_model_revisions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body130)
       |> Enum.into([])
 

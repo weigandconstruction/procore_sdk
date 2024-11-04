@@ -47,7 +47,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/filter_options/contributing_behaviors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -98,7 +98,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/filter_options/contributing_conditions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -149,7 +149,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/filter_options/hazards")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -200,7 +200,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/filter_options/locations")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -251,7 +251,7 @@ defmodule Procore.Api.QualitySafetyIncidentsIncidentFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/filter_options/statuses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

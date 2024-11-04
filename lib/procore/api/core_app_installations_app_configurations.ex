@@ -57,7 +57,7 @@ defmodule Procore.Api.CoreAppInstallationsAppConfigurations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/app_configurations")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -108,7 +108,7 @@ defmodule Procore.Api.CoreAppInstallationsAppConfigurations do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/app_configurations/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -159,7 +159,7 @@ defmodule Procore.Api.CoreAppInstallationsAppConfigurations do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/app_configurations/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -214,7 +214,7 @@ defmodule Procore.Api.CoreAppInstallationsAppConfigurations do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/app_configurations/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -275,7 +275,7 @@ defmodule Procore.Api.CoreAppInstallationsAppConfigurations do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/app_configurations")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_companies_company_id_app_configurations_post_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

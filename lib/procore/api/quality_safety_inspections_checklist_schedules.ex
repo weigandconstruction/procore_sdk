@@ -50,7 +50,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       |> url(
         "/rest/v1.0/projects/#{project_id}/checklist/schedules/calculate_first_inspection_created_at"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -109,7 +109,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       |> url(
         "/rest/v1.0/projects/#{project_id}/checklist/schedules/calculate_total_inspections_count"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -189,7 +189,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -241,7 +241,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -293,7 +293,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -350,7 +350,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -407,7 +407,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistSchedules do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

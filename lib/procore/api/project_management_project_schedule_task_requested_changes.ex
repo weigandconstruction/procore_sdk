@@ -58,7 +58,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleTaskRequestedChanges do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/requested_changes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -112,7 +112,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleTaskRequestedChanges do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/requested_changes/review")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -173,7 +173,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleTaskRequestedChanges do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/tasks/#{task_id}/requested_changes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

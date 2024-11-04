@@ -41,7 +41,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewpoints do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/bim_viewpoints/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -86,7 +86,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewpoints do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_viewpoints")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body121)
       |> Enum.into([])
 

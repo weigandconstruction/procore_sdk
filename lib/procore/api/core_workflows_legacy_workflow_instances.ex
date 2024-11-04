@@ -45,7 +45,7 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowInstances do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/workflow_instances")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -96,7 +96,7 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowInstances do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/workflow_instances/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 

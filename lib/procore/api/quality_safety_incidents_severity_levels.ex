@@ -61,7 +61,7 @@ defmodule Procore.Api.QualitySafetyIncidentsSeverityLevels do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/severity_levels")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -111,7 +111,7 @@ defmodule Procore.Api.QualitySafetyIncidentsSeverityLevels do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/severity_levels/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -165,7 +165,7 @@ defmodule Procore.Api.QualitySafetyIncidentsSeverityLevels do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/severity_levels/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

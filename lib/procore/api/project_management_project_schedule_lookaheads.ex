@@ -44,7 +44,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookaheads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -93,7 +93,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookaheads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -144,7 +144,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookaheads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -194,7 +194,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookaheads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_schedule_lookaheads_post_request)
       |> Enum.into([])
 
@@ -242,7 +242,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/lookaheads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -291,7 +291,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/lookaheads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -342,7 +342,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/lookaheads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -392,7 +392,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheads do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/lookaheads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v11_projects_project_id_schedule_lookaheads_post_request)
       |> Enum.into([])
 

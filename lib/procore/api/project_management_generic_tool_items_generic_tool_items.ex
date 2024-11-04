@@ -47,7 +47,7 @@ defmodule Procore.Api.ProjectManagementGenericToolItemsGenericToolItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/generic_tool_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 

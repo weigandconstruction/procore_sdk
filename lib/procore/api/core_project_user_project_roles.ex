@@ -54,7 +54,7 @@ defmodule Procore.Api.CoreProjectUserProjectRoles do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/user_project_roles/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

@@ -50,7 +50,7 @@ defmodule Procore.Api.CoreAppInstallationsInstallationRequests do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/installation_requests")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:query, :developer_app_id, developer_app_id)
       |> add_param(:query, :implicit, implicit)
@@ -95,7 +95,7 @@ defmodule Procore.Api.CoreAppInstallationsInstallationRequests do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/installation_requests")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body77)
       |> Enum.into([])
 

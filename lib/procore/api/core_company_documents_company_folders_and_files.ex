@@ -47,7 +47,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/file_versions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -102,7 +102,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/file_versions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :file_id, file_id)
       |> add_param(:form, :file_version, file_version)
       |> Enum.into([])
@@ -156,7 +156,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/files/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -213,7 +213,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/files/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -269,7 +269,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/files/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :file, file)
       |> Enum.into([])
 
@@ -326,7 +326,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/files/#{id}/send_email")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body29)
       |> Enum.into([])
 
@@ -378,7 +378,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/files")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :file, file)
       |> Enum.into([])
 
@@ -435,7 +435,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/folders")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -487,7 +487,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/folders/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -545,7 +545,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/folders/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -600,7 +600,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/folders/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_folders_post_request)
       |> Enum.into([])
 
@@ -653,7 +653,7 @@ defmodule Procore.Api.CoreCompanyDocumentsCompanyFoldersAndFiles do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/folders")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_folders_post_request)
       |> Enum.into([])
 

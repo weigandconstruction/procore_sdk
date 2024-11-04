@@ -52,7 +52,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsWorkOrderContractSubcontr
       |> url(
         "/rest/v1.0/work_order_contracts/#{work_order_contract_id}/subcontractor_schedule_of_values_status"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body2)
       |> Enum.into([])
 

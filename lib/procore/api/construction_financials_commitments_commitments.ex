@@ -41,7 +41,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsCommitments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/commitments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -88,7 +88,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsCommitments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/commitments/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 

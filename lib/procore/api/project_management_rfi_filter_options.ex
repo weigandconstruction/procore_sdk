@@ -47,7 +47,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/assigned_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -97,7 +97,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/ball_in_court_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -148,7 +148,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/cost_code_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -195,7 +195,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -245,7 +245,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/location_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -295,7 +295,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/prefix_stage_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -346,7 +346,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/priority")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -398,7 +398,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       |> url(
         "/rest/v1.0/projects/#{project_id}/rfis/filter_options/received_from_login_information_id"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -448,7 +448,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/responsible_contractor_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -498,7 +498,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/rfi_manager_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -549,7 +549,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/status")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -599,7 +599,7 @@ defmodule Procore.Api.ProjectManagementRFIFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/rfis/filter_options/sub_job_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

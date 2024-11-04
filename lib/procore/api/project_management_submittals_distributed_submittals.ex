@@ -53,7 +53,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsDistributedSubmittals do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/submittal_logs/#{id}/close_and_distribute")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

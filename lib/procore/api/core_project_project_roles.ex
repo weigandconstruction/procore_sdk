@@ -43,7 +43,7 @@ defmodule Procore.Api.CoreProjectProjectRoles do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/project_roles")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -98,7 +98,7 @@ defmodule Procore.Api.CoreProjectProjectRoles do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/project_roles/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -146,7 +146,7 @@ defmodule Procore.Api.CoreProjectProjectRoles do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/project_roles")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body36)
       |> Enum.into([])
 

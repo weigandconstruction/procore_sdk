@@ -56,7 +56,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersCommitmentChangeOrderBat
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/commitment_change_order_batches")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -108,7 +108,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersCommitmentChangeOrderBat
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/commitment_change_order_batches/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -161,7 +161,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersCommitmentChangeOrderBat
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/commitment_change_order_batches/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -221,7 +221,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersCommitmentChangeOrderBat
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/commitment_change_order_batches/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body48)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -281,7 +281,7 @@ defmodule Procore.Api.ConstructionFinancialsChangeOrdersCommitmentChangeOrderBat
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/commitment_change_order_batches")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body47)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

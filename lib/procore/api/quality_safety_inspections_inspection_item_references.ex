@@ -67,7 +67,7 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionItemReferences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/inspections/#{inspection_id}/item_references")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

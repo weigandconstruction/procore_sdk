@@ -60,7 +60,7 @@ defmodule Procore.Api.QualitySafetyActionPlansActionPlanApprovers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/action_plans/plan_approvers")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

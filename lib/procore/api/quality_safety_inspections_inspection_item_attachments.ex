@@ -52,7 +52,7 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionItemAttachments do
       |> url(
         "/rest/v1.0/projects/#{project_id}/inspections/#{inspection_id}/item_attachments/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

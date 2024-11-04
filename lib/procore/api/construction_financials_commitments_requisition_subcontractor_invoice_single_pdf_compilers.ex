@@ -58,7 +58,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsRequisitionSubcontractorI
       %{}
       |> method(:post)
       |> url("/rest/v1.0/requisitions/#{requisition_id}/single_pdf_compilers")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, body22)
       |> add_optional_params(optional_params, opts)

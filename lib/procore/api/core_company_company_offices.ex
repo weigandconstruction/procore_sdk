@@ -43,7 +43,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/offices")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -84,7 +84,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/offices/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -130,7 +130,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/offices/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -178,7 +178,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/offices/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body110)
       |> Enum.into([])
 
@@ -218,7 +218,7 @@ defmodule Procore.Api.CoreCompanyCompanyOffices do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/offices")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body110)
       |> Enum.into([])
 

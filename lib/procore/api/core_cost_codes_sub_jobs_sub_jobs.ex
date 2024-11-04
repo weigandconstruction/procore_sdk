@@ -41,7 +41,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/sub_jobs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -83,7 +83,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/sub_jobs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -118,7 +118,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/sub_jobs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -158,7 +158,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/sub_jobs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, sub_job_body)
       |> Enum.into([])
 
@@ -199,7 +199,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/sub_jobs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, sub_job_body)
       |> Enum.into([])
 
@@ -249,7 +249,7 @@ defmodule Procore.Api.CoreCostCodesSubJobsSubJobs do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/sub_jobs/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, sub_job_sync_body)
       |> Enum.into([])

@@ -39,7 +39,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/me")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -107,7 +107,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -159,7 +159,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -209,7 +209,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/users/#{id}/invite")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -268,7 +268,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -326,7 +326,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -380,7 +380,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
 
@@ -442,7 +442,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -483,7 +483,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -535,7 +535,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
@@ -594,7 +594,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
@@ -643,7 +643,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
@@ -688,7 +688,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/companies/#{company_id}/me")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -738,7 +738,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/companies/#{company_id}/users/bulk_add")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body_bulk_add)
       |> Enum.into([])
 
@@ -790,7 +790,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/companies/#{company_id}/users/bulk_remove")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body_bulk_remove)
       |> Enum.into([])
 
@@ -860,7 +860,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -912,7 +912,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -962,7 +962,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/companies/#{company_id}/users/#{id}/invite")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -1021,7 +1021,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1079,7 +1079,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1133,7 +1133,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/companies/#{company_id}/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
 
@@ -1195,7 +1195,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1236,7 +1236,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -1288,7 +1288,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
@@ -1347,7 +1347,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
@@ -1396,7 +1396,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
@@ -1441,7 +1441,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.2/companies/#{company_id}/me")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1491,7 +1491,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.2/companies/#{company_id}/users/bulk_add")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body_bulk_add)
       |> Enum.into([])
 
@@ -1543,7 +1543,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.2/companies/#{company_id}/users/bulk_remove")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body_bulk_remove)
       |> Enum.into([])
 
@@ -1613,7 +1613,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.2/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1665,7 +1665,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.2/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1715,7 +1715,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.2/companies/#{company_id}/users/#{id}/invite")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -1774,7 +1774,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.2/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1832,7 +1832,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.2/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1886,7 +1886,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.2/companies/#{company_id}/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
 
@@ -1948,7 +1948,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.2/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1989,7 +1989,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.2/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -2041,7 +2041,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.2/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
@@ -2100,7 +2100,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.2/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
@@ -2149,7 +2149,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.2/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
@@ -2194,7 +2194,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.3/companies/#{company_id}/me")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -2245,7 +2245,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.3/companies/#{company_id}/users/bulk_add")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body_bulk_add)
       |> Enum.into([])
 
@@ -2298,7 +2298,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.3/companies/#{company_id}/users/bulk_remove")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body_bulk_remove)
       |> Enum.into([])
 
@@ -2370,7 +2370,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.3/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -2422,7 +2422,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.3/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -2472,7 +2472,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.3/companies/#{company_id}/users/#{id}/invite")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -2531,7 +2531,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.3/companies/#{company_id}/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -2589,7 +2589,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.3/companies/#{company_id}/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_user_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -2643,7 +2643,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.3/companies/#{company_id}/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])
 
@@ -2705,7 +2705,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.3/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -2746,7 +2746,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.3/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -2798,7 +2798,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.3/users/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :user, user)
       |> add_optional_params(optional_params, opts)
@@ -2857,7 +2857,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:post)
       |> url("/rest/v1.3/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, company_user_body3)
       |> add_optional_params(optional_params, opts)
@@ -2906,7 +2906,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyUsers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.3/users/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:form, :updates, updates)
       |> Enum.into([])

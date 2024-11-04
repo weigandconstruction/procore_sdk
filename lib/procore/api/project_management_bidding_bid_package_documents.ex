@@ -50,7 +50,7 @@ defmodule Procore.Api.ProjectManagementBiddingBidPackageDocuments do
       |> url(
         "/rest/v1.0/companies/#{company_id}/planroom/bid_packages/#{bid_package_id}/documents"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

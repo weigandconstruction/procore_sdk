@@ -78,7 +78,7 @@ defmodule Procore.Api.AuthenticationOAuth20Authentication do
       %{}
       |> method(:post)
       |> url("/oauth/revoke")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, oauth_revoke_post_request)
       |> Enum.into([])
 

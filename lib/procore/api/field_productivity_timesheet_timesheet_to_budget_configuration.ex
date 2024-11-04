@@ -44,7 +44,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/timesheet_to_budget_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -92,7 +92,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/timesheet_to_budget_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -143,7 +143,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/timesheet_to_budget_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -199,7 +199,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetToBudgetConfiguration d
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/timesheet_to_budget_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

@@ -52,7 +52,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/assignee_company_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -111,7 +111,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/assignee_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -164,7 +164,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/coordination_issue_file_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -222,7 +222,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/created_by_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -275,7 +275,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/created_from")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -324,7 +324,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -381,7 +381,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/location_id")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -437,7 +437,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueFilter
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/filter_options/status")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

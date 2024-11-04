@@ -47,7 +47,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheadTasks do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookahead_tasks/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -100,7 +100,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheadTasks do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookahead_tasks/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -155,7 +155,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleLookaheadTasks do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/schedule/lookahead_tasks")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

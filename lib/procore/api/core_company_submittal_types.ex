@@ -44,7 +44,7 @@ defmodule Procore.Api.CoreCompanySubmittalTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/submittal_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

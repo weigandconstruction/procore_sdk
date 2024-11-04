@@ -77,7 +77,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueRecycl
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/recycle_bin")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -134,7 +134,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueRecycl
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issues/recycle_bin/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -187,7 +187,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueRecycl
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/coordination_issues/recycle_bin/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_coordination_issues_recycle_bin_id_patch_request)
       |> Enum.into([])
 

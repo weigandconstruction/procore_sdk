@@ -39,7 +39,7 @@ defmodule Procore.Api.CoreOpenItemsOpenItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/open_items/all")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -83,7 +83,7 @@ defmodule Procore.Api.CoreOpenItemsOpenItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/open_items/mine")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

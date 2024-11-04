@@ -47,7 +47,7 @@ defmodule Procore.Api.CoreCompanyConcierge do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/concierge")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_companies_company_id_concierge_patch_request)
       |> Enum.into([])
 

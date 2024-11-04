@@ -57,7 +57,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueActivi
       %{}
       |> method(:get)
       |> url("/rest/v1.0/coordination_issue_activities/feed")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

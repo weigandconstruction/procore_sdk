@@ -48,7 +48,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications/bulk_update")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, work_classification_bulk_body)
       |> Enum.into([])
 
@@ -105,7 +105,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -156,7 +156,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -207,7 +207,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -262,7 +262,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, work_classification_body)
       |> Enum.into([])
 
@@ -313,7 +313,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications/initial_setup")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -366,7 +366,7 @@ defmodule Procore.Api.FieldProductivityWorkClassificationWorkClassificationProje
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/work_classifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, work_classification_body)
       |> Enum.into([])
 

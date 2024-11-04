@@ -44,7 +44,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleIntegration do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/schedule_integration/download")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -91,7 +91,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleIntegration do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/schedule_integration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -144,7 +144,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleIntegration do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/schedule_integration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:form, :schedule_integration, schedule_integration)
       |> Enum.into([])
@@ -198,7 +198,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleIntegration do
       %{}
       |> method(:put)
       |> url("/rest/v1.0/schedule_integration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:form, :schedule_integration, schedule_integration)
       |> Enum.into([])

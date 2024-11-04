@@ -50,7 +50,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/crews")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -99,7 +99,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/crews/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, crew_body)
       |> Enum.into([])
 
@@ -148,7 +148,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/crews/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -202,7 +202,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/crews/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, crew_body)
       |> Enum.into([])
 
@@ -256,7 +256,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/crews/ids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -305,7 +305,7 @@ defmodule Procore.Api.ProjectManagementCrewsCrews do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/crews")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, crew_body)
       |> Enum.into([])
 

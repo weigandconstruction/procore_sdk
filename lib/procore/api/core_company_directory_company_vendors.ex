@@ -61,7 +61,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -119,7 +119,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/vendors/#{id}/business_register")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, business_register_body)
       |> Enum.into([])
@@ -179,7 +179,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/vendors/#{id}/business_register")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_param(:body, :body, business_register_body)
       |> Enum.into([])
@@ -231,7 +231,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/vendors/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -291,7 +291,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/vendors/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_vendor_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -344,7 +344,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_vendor_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -399,7 +399,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyVendors do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/vendors/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_vendor_sync_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

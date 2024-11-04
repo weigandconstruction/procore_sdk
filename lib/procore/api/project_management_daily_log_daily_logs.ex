@@ -57,7 +57,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/count")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

@@ -47,7 +47,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingConditions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/contributing_conditions/bulk_update")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -117,7 +117,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingConditions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/contributing_conditions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -167,7 +167,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingConditions do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/contributing_conditions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -220,7 +220,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingConditions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/contributing_conditions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -272,7 +272,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingConditions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/contributing_conditions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -330,7 +330,7 @@ defmodule Procore.Api.QualitySafetyIncidentsContributingConditions do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/contributing_conditions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

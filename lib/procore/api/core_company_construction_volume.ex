@@ -49,7 +49,7 @@ defmodule Procore.Api.CoreCompanyConstructionVolume do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/construction_volume/urgent_error")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

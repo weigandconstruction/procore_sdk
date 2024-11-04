@@ -50,7 +50,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogBulkUpdates do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/bulk_updates/bulk_update")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

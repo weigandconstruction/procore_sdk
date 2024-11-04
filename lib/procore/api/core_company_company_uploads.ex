@@ -55,7 +55,7 @@ defmodule Procore.Api.CoreCompanyCompanyUploads do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/uploads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -109,7 +109,7 @@ defmodule Procore.Api.CoreCompanyCompanyUploads do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/uploads/#{uuid}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -165,7 +165,7 @@ defmodule Procore.Api.CoreCompanyCompanyUploads do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/uploads/#{uuid}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -228,7 +228,7 @@ defmodule Procore.Api.CoreCompanyCompanyUploads do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/companies/#{company_id}/uploads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :response_filename, response_filename)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -282,7 +282,7 @@ defmodule Procore.Api.CoreCompanyCompanyUploads do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/companies/#{company_id}/uploads/#{uuid}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -338,7 +338,7 @@ defmodule Procore.Api.CoreCompanyCompanyUploads do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/companies/#{company_id}/uploads/#{uuid}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

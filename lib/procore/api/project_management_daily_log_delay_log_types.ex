@@ -54,7 +54,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDelayLogTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/delay_log_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -108,7 +108,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDelayLogTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/delay_log_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -164,7 +164,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDelayLogTypes do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/delay_log_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

@@ -59,7 +59,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       |> url(
         "/rest/v1.0/companies/#{company_id}/action_plans/plan_template_references/bulk_create"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -137,7 +137,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/action_plans/plan_template_references")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -190,7 +190,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/action_plans/plan_template_references/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -243,7 +243,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/action_plans/plan_template_references/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -296,7 +296,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/action_plans/plan_template_references")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :plan_template_reference, plan_template_reference)
       |> Enum.into([])
 
@@ -371,7 +371,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       |> url(
         "/rest/v1.0/companies/#{company_id}/recycle_bin/action_plans/plan_template_references"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -427,7 +427,7 @@ defmodule Procore.Api.QualitySafetyActionPlansCompanyActionPlanTemplateReference
       |> url(
         "/rest/v1.0/companies/#{company_id}/recycle_bin/action_plans/plan_template_references/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

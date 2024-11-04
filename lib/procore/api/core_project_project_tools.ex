@@ -57,7 +57,7 @@ defmodule Procore.Api.CoreProjectProjectTools do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/tools")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -109,7 +109,7 @@ defmodule Procore.Api.CoreProjectProjectTools do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/tools")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -154,7 +154,7 @@ defmodule Procore.Api.CoreProjectProjectTools do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/tools")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

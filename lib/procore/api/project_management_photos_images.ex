@@ -67,7 +67,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/images")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -113,7 +113,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/images/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -155,7 +155,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/images/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -210,7 +210,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/images/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, body79)
       |> Enum.into([])
@@ -272,7 +272,7 @@ defmodule Procore.Api.ProjectManagementPhotosImages do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/images")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:form, :image_name, image_name)
       |> add_param(:form, :image, image)

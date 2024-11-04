@@ -53,7 +53,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/drawing_areas/#{drawing_area_id}/drawings")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -110,7 +110,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/drawing_areas/#{drawing_area_id}/drawings/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body88)
       |> Enum.into([])
 
@@ -168,7 +168,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_revision_terms")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -224,7 +224,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       |> url(
         "/rest/v1.0/projects/#{project_id}/drawing_revisions/#{drawing_revision_id}/drawing_tiles"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -300,7 +300,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_revisions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -352,7 +352,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_revisions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -408,7 +408,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_revisions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body89)
       |> Enum.into([])
 
@@ -472,7 +472,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -524,7 +524,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_sets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -579,7 +579,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_sets/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_drawing_sets_id_patch_request)
       |> Enum.into([])
 
@@ -632,7 +632,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_sets")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_drawing_sets_post_request)
       |> Enum.into([])
 
@@ -689,7 +689,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_uploads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -741,7 +741,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_uploads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -812,7 +812,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_uploads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :drawing_set_id, drawing_set_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -873,7 +873,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/drawing_areas/#{drawing_area_id}/drawings")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -930,7 +930,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/drawing_areas/#{drawing_area_id}/drawings/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body88)
       |> Enum.into([])
 
@@ -988,7 +988,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/drawing_areas/#{drawing_area_id}/drawings")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body87)
       |> Enum.into([])
 
@@ -1046,7 +1046,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_revision_terms")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1105,7 +1105,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_uploads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1162,7 +1162,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_uploads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1220,7 +1220,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_uploads/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1277,7 +1277,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawings do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/drawing_uploads")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

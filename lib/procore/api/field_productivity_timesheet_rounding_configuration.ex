@@ -44,7 +44,7 @@ defmodule Procore.Api.FieldProductivityTimesheetRoundingConfiguration do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/rounding_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -92,7 +92,7 @@ defmodule Procore.Api.FieldProductivityTimesheetRoundingConfiguration do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/rounding_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -142,7 +142,7 @@ defmodule Procore.Api.FieldProductivityTimesheetRoundingConfiguration do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/rounding_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rounding_configuration_body)
       |> Enum.into([])
 
@@ -195,7 +195,7 @@ defmodule Procore.Api.FieldProductivityTimesheetRoundingConfiguration do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/rounding_configuration")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rounding_configuration_body)
       |> Enum.into([])
 

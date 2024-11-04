@@ -57,7 +57,7 @@ defmodule Procore.Api.QualitySafetyIncidentsFilingTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/injury_filing_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -107,7 +107,7 @@ defmodule Procore.Api.QualitySafetyIncidentsFilingTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/injury_filing_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -162,7 +162,7 @@ defmodule Procore.Api.QualitySafetyIncidentsFilingTypes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/incidents/injury_filing_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

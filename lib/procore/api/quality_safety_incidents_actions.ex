@@ -64,7 +64,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/actions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -120,7 +120,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/actions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -180,7 +180,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/actions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -242,7 +242,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/actions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_incidents_actions_id_patch_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -303,7 +303,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/incidents/actions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_incidents_actions_post_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -375,7 +375,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/incidents/actions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -432,7 +432,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/incidents/actions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -488,7 +488,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/incidents/actions/#{id}/restore")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -559,7 +559,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/recycle_bin/incidents/actions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -616,7 +616,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/recycle_bin/incidents/actions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -673,7 +673,7 @@ defmodule Procore.Api.QualitySafetyIncidentsActions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/recycle_bin/incidents/actions/#{id}/restore")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

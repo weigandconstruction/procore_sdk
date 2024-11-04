@@ -55,7 +55,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueProcor
       |> url(
         "/rest/v1.0/coordination_issues/#{coordination_issue_id}/procore_item_associations/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :item_type, item_type)
       |> Enum.into([])
@@ -111,7 +111,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueProcor
       %{}
       |> method(:post)
       |> url("/rest/v1.0/coordination_issues/#{coordination_issue_id}/procore_item_associations")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body108)
       |> Enum.into([])
 

@@ -56,7 +56,7 @@ defmodule Procore.Api.CoreProjectDocumentsProjectDocuments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/document_custom_tags")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -115,7 +115,7 @@ defmodule Procore.Api.CoreProjectDocumentsProjectDocuments do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/document_custom_tags/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :document_id, document_id)
       |> Enum.into([])
 
@@ -168,7 +168,7 @@ defmodule Procore.Api.CoreProjectDocumentsProjectDocuments do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/document_custom_tags")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body40)
       |> Enum.into([])
 

@@ -39,7 +39,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMLevelBatch do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_levels/batch")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body138)
       |> Enum.into([])
 

@@ -45,7 +45,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialNotificati
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_notifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -93,7 +93,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialNotificati
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_notifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -150,7 +150,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialNotificati
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_notifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, time_and_material_notification_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -210,7 +210,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialNotificati
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_notifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, time_and_material_notification_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

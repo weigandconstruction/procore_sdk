@@ -53,7 +53,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/punch_items/add_punch_item_attachments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :id, id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
@@ -126,7 +126,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/punch_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -182,7 +182,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/punch_items/#{id}/comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, punch_item_comment_body)
       |> Enum.into([])
@@ -229,7 +229,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/punch_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -275,7 +275,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/punch_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -331,7 +331,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/punch_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, punch_item_body6)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -384,7 +384,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/punch_items/#{id}/send_email")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body29)
       |> Enum.into([])
 
@@ -433,7 +433,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/punch_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, punch_item_body4)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -478,7 +478,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/punch_items/recycle_bin")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -529,7 +529,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/punch_items/send_all_unsent")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, body28)
       |> Enum.into([])
@@ -579,7 +579,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/punch_items/send_unsent")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v11_punch_items_send_unsent_post_request)
       |> Enum.into([])
 
@@ -636,7 +636,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/punch_list/default_distribution")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -694,7 +694,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/punch_items/add_punch_item_attachments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :id, id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
@@ -767,7 +767,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/punch_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -814,7 +814,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/punch_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -860,7 +860,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/punch_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -916,7 +916,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/punch_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, punch_item_body2)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -969,7 +969,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/punch_items/#{id}/send_email")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body29)
       |> Enum.into([])
 
@@ -1018,7 +1018,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/punch_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, punch_item_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1063,7 +1063,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/punch_items/recycle_bin")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -1114,7 +1114,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/punch_items/send_all_unsent")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, body28)
       |> Enum.into([])
@@ -1164,7 +1164,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/punch_items/send_unsent")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v11_punch_items_send_unsent_post_request)
       |> Enum.into([])
 

@@ -59,7 +59,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBillingPeriods do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/billing_periods")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -113,7 +113,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBillingPeriods do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/billing_periods/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -169,7 +169,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBillingPeriods do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/billing_periods/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -227,7 +227,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBillingPeriods do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/billing_periods/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body142)
       |> Enum.into([])
 
@@ -283,7 +283,7 @@ defmodule Procore.Api.ConstructionFinancialsCommitmentsBillingPeriods do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/billing_periods")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body142)
       |> Enum.into([])
 

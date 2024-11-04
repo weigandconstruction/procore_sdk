@@ -61,7 +61,7 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionUsers do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/checklist/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

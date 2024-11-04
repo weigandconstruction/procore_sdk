@@ -54,7 +54,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/submittal_responses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -110,7 +110,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/submittal_responses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -162,7 +162,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalResponses do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/submittal_responses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

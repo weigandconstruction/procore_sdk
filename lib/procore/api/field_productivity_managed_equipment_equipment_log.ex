@@ -52,7 +52,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -104,7 +104,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -157,7 +157,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/managed_equipment_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -215,7 +215,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/managed_equipment_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -267,7 +267,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/managed_equipment_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -319,7 +319,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/managed_equipment_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -375,7 +375,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/managed_equipment_logs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])
@@ -431,7 +431,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentEquipmentLog do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/managed_equipment_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

@@ -44,7 +44,7 @@ defmodule Procore.Api.ProjectManagementTimecardTimecards do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timecard_time_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -98,7 +98,7 @@ defmodule Procore.Api.ProjectManagementTimecardTimecards do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/timecard_time_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, timecard_time_type_body)
       |> Enum.into([])
 

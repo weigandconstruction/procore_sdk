@@ -59,7 +59,7 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowPermanentLogs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/workflow_permanent_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :query,
         :"filters[workflowed_object_type]",
@@ -133,7 +133,7 @@ defmodule Procore.Api.CoreWorkflowsLegacyWorkflowPermanentLogs do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/workflow_permanent_logs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :query,
         :"filters[workflowed_object_type]",

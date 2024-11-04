@@ -45,7 +45,7 @@ defmodule Procore.Api.ProjectManagementDailyLogWeatherConditions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/daily_logs/weather_conditions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

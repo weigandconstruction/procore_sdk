@@ -51,7 +51,7 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/project_regions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -103,7 +103,7 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/project_regions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -157,7 +157,7 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/project_regions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -212,7 +212,7 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/project_regions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body37)
       |> Enum.into([])
 
@@ -267,7 +267,7 @@ defmodule Procore.Api.CoreCompanyProjectRegions do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/project_regions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body37)
       |> Enum.into([])
 

@@ -47,7 +47,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/project_memberships/bulk_add")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, bulk_create_project_membership_body)
       |> Enum.into([])
 
@@ -103,7 +103,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/project_memberships")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -157,7 +157,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/project_memberships/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :party_id, party_id)
       |> Enum.into([])
 
@@ -209,7 +209,7 @@ defmodule Procore.Api.CoreProjectDirectoryProjectMemberships do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/project_memberships")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, project_membership_body)
       |> Enum.into([])
 

@@ -58,7 +58,7 @@ defmodule Procore.Api.ProjectManagementSubmittalsSubmittalApprovers do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/submittal_approvers/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :submittal_id, submittal_id)
       |> add_param(:body, :body, rest_v10_submittal_approvers_id_patch_request)

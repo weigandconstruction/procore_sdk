@@ -55,7 +55,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSectionRevisio
       %{}
       |> method(:get)
       |> url("/rest/v1.0/specification_section_revisions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :specification_section_division_id, specification_section_division_id)
       |> add_optional_params(optional_params, opts)
@@ -108,7 +108,7 @@ defmodule Procore.Api.ProjectManagementSpecificationsSpecificationSectionRevisio
       %{}
       |> method(:get)
       |> url("/rest/v1.0/specification_section_revisions/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 

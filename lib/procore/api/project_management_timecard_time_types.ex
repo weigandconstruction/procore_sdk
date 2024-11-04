@@ -41,7 +41,7 @@ defmodule Procore.Api.ProjectManagementTimecardTimeTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/timecard_time_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

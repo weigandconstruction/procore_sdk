@@ -75,7 +75,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetViewSnapshotDetailRows d
       %{}
       |> method(:get)
       |> url("/rest/v1.0/budget_view_snapshots/#{budget_view_snapshot_id}/detail_rows")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

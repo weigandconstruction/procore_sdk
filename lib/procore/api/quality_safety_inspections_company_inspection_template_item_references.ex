@@ -69,7 +69,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyInspectionTemplateItemRefer
       |> url(
         "/rest/v1.0/companies/#{company_id}/inspection_templates/#{inspection_template_id}/item_references"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -127,7 +127,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyInspectionTemplateItemRefer
       |> url(
         "/rest/v1.0/companies/#{company_id}/inspection_templates/#{inspection_template_id}/item_references/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -185,7 +185,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyInspectionTemplateItemRefer
       |> url(
         "/rest/v1.0/companies/#{company_id}/inspection_templates/#{inspection_template_id}/item_references/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -243,7 +243,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyInspectionTemplateItemRefer
       |> url(
         "/rest/v1.0/companies/#{company_id}/inspection_templates/#{inspection_template_id}/item_references"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:form, :template_reference, template_reference)
       |> Enum.into([])
 

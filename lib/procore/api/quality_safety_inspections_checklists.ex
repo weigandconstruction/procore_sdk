@@ -65,7 +65,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/lists")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -118,7 +118,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -165,7 +165,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -222,7 +222,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, checklist_body1)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -273,7 +273,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/checklist/lists")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, checklist_body)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -369,7 +369,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -465,7 +465,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/grouped_index")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -517,7 +517,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -570,7 +570,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -629,7 +629,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_checklist_lists_id_patch_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -687,7 +687,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists/#{id}/send_email")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body111)
       |> Enum.into([])
 
@@ -744,7 +744,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/lists")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_checklist_lists_post_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -841,7 +841,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/checklist/lists")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -937,7 +937,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/checklist/lists/grouped_index")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -988,7 +988,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1039,7 +1039,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/recycle_bin/checklist/lists/#{id}/restore")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
@@ -1093,7 +1093,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/projects/#{project_id}/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -1154,7 +1154,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/checklist/lists/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v11_projects_project_id_checklist_lists_id_patch_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1214,7 +1214,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/checklist/lists")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v11_projects_project_id_checklist_lists_post_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -1269,7 +1269,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklists do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/recycle_bin/checklist/lists/#{id}/restore")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 

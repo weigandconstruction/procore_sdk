@@ -44,7 +44,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchListFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/punch_list/assignees")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -91,7 +91,7 @@ defmodule Procore.Api.QualitySafetyPunchListPunchListFilterOptions do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/punch_list/vendors")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

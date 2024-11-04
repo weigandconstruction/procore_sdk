@@ -52,7 +52,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
       |> url(
         "/rest/v1.0/projects/#{project_id}/time_and_material_entries/signatures/bulk_destroy"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, time_and_material_signature_bulk_destroy)
       |> Enum.into([])
 
@@ -112,7 +112,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_entries/signatures")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -166,7 +166,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_entries/signatures/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -219,7 +219,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_entries/signatures/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -272,7 +272,7 @@ defmodule Procore.Api.FieldProductivityTimeAndMaterialsTimeAndMaterialSignature 
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/time_and_material_entries/signatures")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, time_and_material_signature_create_body)
       |> Enum.into([])
 

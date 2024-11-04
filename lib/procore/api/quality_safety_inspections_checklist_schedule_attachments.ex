@@ -54,7 +54,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleAttachments do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules/#{schedule_id}/attachments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -114,7 +114,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleAttachments do
       |> url(
         "/rest/v1.0/projects/#{project_id}/checklist/schedules/#{schedule_id}/attachments/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -172,7 +172,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistScheduleAttachments do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/checklist/schedules/#{schedule_id}/attachments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:file, :attachment, attachment)
       |> Enum.into([])
 

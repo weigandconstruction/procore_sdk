@@ -49,7 +49,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyChecklistTemplateSections d
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/list_templates/#{list_template_id}/sections"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -104,7 +104,7 @@ defmodule Procore.Api.QualitySafetyInspectionsCompanyChecklistTemplateSections d
       |> url(
         "/rest/v1.0/companies/#{company_id}/checklist/list_templates/#{list_template_id}/sections"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, company_checklist_section_create_body)
       |> Enum.into([])
 

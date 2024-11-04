@@ -41,7 +41,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       %{}
       |> method(:get)
       |> url("/rest/v1.0/payment_applications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -97,7 +97,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/payment_applications/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -150,7 +150,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       %{}
       |> method(:get)
       |> url("/rest/v1.0/payment_applications/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -213,7 +213,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       %{}
       |> method(:get)
       |> url("/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_applications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -272,7 +272,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_applications/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body51)
       |> Enum.into([])
 
@@ -327,7 +327,7 @@ defmodule Procore.Api.ConstructionFinancialsPrimeContractPaymentApplicationsOwne
       %{}
       |> method(:post)
       |> url("/rest/v1.0/prime_contracts/#{prime_contract_id}/payment_applications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body50)
       |> Enum.into([])
 

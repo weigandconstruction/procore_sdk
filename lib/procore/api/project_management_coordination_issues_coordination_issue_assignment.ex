@@ -48,7 +48,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueAssign
       %{}
       |> method(:post)
       |> url("/rest/v1.0/coordination_issues/#{coordination_issue_id}/assignments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

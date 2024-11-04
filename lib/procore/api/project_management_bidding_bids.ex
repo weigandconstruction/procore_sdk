@@ -51,7 +51,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/bids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -103,7 +103,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/bids/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -157,7 +157,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/bids/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_companies_company_id_bids_id_patch_request)
       |> Enum.into([])
 
@@ -219,7 +219,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -274,7 +274,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bids/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -331,7 +331,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bids/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -391,7 +391,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/bid_packages/#{bid_package_id}/bids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -447,7 +447,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/bids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -499,7 +499,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/bids/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -556,7 +556,7 @@ defmodule Procore.Api.ProjectManagementBiddingBids do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/bid_packages/#{bid_package_id}/bids/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

@@ -54,7 +54,7 @@ defmodule Procore.Api.ProjectManagementDocumentMarkupDocumentMarkup do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/document_markup_downloadable_pdfs/find_or_create")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

@@ -33,7 +33,7 @@ defmodule Procore.Api.AuthenticationUtilitiesMPZ do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/company_base_url")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

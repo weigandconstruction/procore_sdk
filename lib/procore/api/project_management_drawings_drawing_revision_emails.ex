@@ -50,7 +50,7 @@ defmodule Procore.Api.ProjectManagementDrawingsDrawingRevisionEmails do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/drawing_revision_emails/#{id}/send_email")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

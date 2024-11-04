@@ -52,7 +52,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
       |> url(
         "/rest/v1.0/companies/#{company_id}/managed_equipment_maintenance_logs/#{id}/attachments/#{attachment_id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -107,7 +107,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
       |> url(
         "/rest/v1.0/companies/#{company_id}/managed_equipment_maintenance_logs/#{id}/attachments/#{attachment_id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -162,7 +162,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
       |> url(
         "/rest/v1.0/companies/#{company_id}/managed_equipment_maintenance_logs/#{id}/attachments/bulk_destroy"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -222,7 +222,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
       |> url(
         "/rest/v1.0/companies/#{company_id}/managed_equipment_maintenance_logs/#{id}/attachments"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -277,7 +277,7 @@ defmodule Procore.Api.FieldProductivityManagedEquipmentCompanyManagedEquipmentMa
       |> url(
         "/rest/v1.0/companies/#{company_id}/managed_equipment_maintenance_logs/#{id}/attachments"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

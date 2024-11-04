@@ -41,7 +41,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/resources")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -88,7 +88,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/resources/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -129,7 +129,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/resources/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -175,7 +175,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/resources/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body17)
       |> Enum.into([])
 
@@ -220,7 +220,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/resources")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body17)
       |> Enum.into([])
 
@@ -279,7 +279,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/resources")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -331,7 +331,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/resources/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -383,7 +383,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/resources/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -437,7 +437,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/resources/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body17)
       |> Enum.into([])
 
@@ -490,7 +490,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleResources do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/schedule/resources")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body17)
       |> Enum.into([])
 

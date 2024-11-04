@@ -47,7 +47,7 @@ defmodule Procore.Api.ConstructionFinancialsBudgetBudgetDetailFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/budget_detail_filters")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :column_id, column_id)
       |> Enum.into([])

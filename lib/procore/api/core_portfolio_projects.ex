@@ -64,7 +64,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -123,7 +123,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{id}/filters/#{filter_name}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :tool, tool)
       |> add_param(:query, :tab, tab)
       |> Enum.into([])
@@ -174,7 +174,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{id}/filters")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :tool, tool)
       |> add_param(:query, :tab, tab)
       |> Enum.into([])
@@ -216,7 +216,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])
 
@@ -255,7 +255,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{id}/logo")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -301,7 +301,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{id}/logo")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body32)
       |> Enum.into([])
 
@@ -353,7 +353,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body31)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -400,7 +400,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body30)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -459,7 +459,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_sync_patch_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -551,7 +551,7 @@ defmodule Procore.Api.CorePortfolioProjects do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

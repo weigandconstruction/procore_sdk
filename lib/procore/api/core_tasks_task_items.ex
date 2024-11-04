@@ -59,7 +59,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/task_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -105,7 +105,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/task_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -145,7 +145,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/task_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -199,7 +199,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/task_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:form, :task_item, task_item)
       |> Enum.into([])
@@ -252,7 +252,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/task_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:body, :body, rest_v10_task_items_post_request)
       |> Enum.into([])
@@ -291,7 +291,7 @@ defmodule Procore.Api.CoreTasksTaskItems do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/task_items/send_unsent")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 

@@ -77,7 +77,7 @@ defmodule Procore.Api.CoreCompanyCompanySchedule do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/schedule/summary")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :after, after_var)
       |> add_param(:query, :before, before)
       |> add_optional_params(optional_params, opts)

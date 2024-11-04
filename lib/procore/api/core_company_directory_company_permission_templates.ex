@@ -52,7 +52,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyPermissionTemplates do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/permission_templates")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -106,7 +106,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyPermissionTemplates do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/permission_templates/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -160,7 +160,7 @@ defmodule Procore.Api.CoreCompanyDirectoryCompanyPermissionTemplates do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/permission_templates")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_companies_company_id_permission_templates_post_request)
       |> Enum.into([])
 

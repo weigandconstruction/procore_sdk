@@ -39,7 +39,7 @@ defmodule Procore.Api.ProjectManagementModelsNestedBIMViewFolders do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/nested_bim_view_folders")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body59)
       |> Enum.into([])
 

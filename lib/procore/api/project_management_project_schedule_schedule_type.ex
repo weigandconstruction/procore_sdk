@@ -34,7 +34,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleType do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/schedule_type")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -78,7 +78,7 @@ defmodule Procore.Api.ProjectManagementProjectScheduleScheduleType do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/schedule_type")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body16)
       |> Enum.into([])
 

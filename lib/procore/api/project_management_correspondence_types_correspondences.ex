@@ -51,7 +51,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools/#{generic_tool_id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_companies_company_id_generic_tools_post_request)
       |> Enum.into([])
 
@@ -114,7 +114,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools/#{generic_tool_id}/statuses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -170,7 +170,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools/#{generic_tool_id}/statuses/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -226,7 +226,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools/#{generic_tool_id}/statuses")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -290,7 +290,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -342,7 +342,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/generic_tools")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_companies_company_id_generic_tools_post_request)
       |> Enum.into([])
 
@@ -433,7 +433,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_type_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -495,7 +495,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_type_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -563,7 +563,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_types/defaults")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -622,7 +622,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_types/permissions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -682,7 +682,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/correspondence_types/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -741,7 +741,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/custom_tools/users")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -807,7 +807,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/available_read_users"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -871,7 +871,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/available_statuses"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -939,7 +939,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/change_histories"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1002,7 +1002,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1067,7 +1067,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/generic_tool_item_responses"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1130,7 +1130,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/generic_tool_item_responses/#{id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -1195,7 +1195,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/generic_tool_item_responses"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -1262,7 +1262,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1328,7 +1328,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -1395,7 +1395,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/update_and_send_response"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -1466,7 +1466,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items/#{generic_tool_item_id}/users_with_permission"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1557,7 +1557,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -1626,7 +1626,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -1695,7 +1695,7 @@ defmodule Procore.Api.ProjectManagementCorrespondenceTypesCorrespondences do
       |> url(
         "/rest/v1.0/projects/#{project_id}/generic_tools/#{generic_tool_id}/generic_tool_items"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

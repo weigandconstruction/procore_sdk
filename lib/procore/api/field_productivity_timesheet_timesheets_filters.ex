@@ -47,7 +47,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/approval_status")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -99,7 +99,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/billable")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -150,7 +150,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/cost_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -201,7 +201,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/created_by")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -252,7 +252,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/crews")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -303,7 +303,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/departments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -355,7 +355,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/employee_ids")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -407,7 +407,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/employees")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -458,7 +458,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/locations")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -509,7 +509,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/projects")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -560,7 +560,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/regions")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -611,7 +611,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/sub_job")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -662,7 +662,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/time_type")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -713,7 +713,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/wbs_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -764,7 +764,7 @@ defmodule Procore.Api.FieldProductivityTimesheetTimesheetsFilters do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/timesheets/filters/work_classifications")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

@@ -51,7 +51,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogHeaders do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/daily_log_headers")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -109,7 +109,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogHeaders do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/daily_log_headers/index")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -169,7 +169,7 @@ defmodule Procore.Api.ProjectManagementDailyLogDailyLogHeaders do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/daily_log_headers")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, rest_v10_projects_project_id_daily_log_headers_patch_request)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])

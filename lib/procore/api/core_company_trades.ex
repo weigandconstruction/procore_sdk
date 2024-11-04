@@ -57,7 +57,7 @@ defmodule Procore.Api.CoreCompanyTrades do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/trades")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -109,7 +109,7 @@ defmodule Procore.Api.CoreCompanyTrades do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/companies/#{company_id}/trades/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -161,7 +161,7 @@ defmodule Procore.Api.CoreCompanyTrades do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/companies/#{company_id}/trades")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

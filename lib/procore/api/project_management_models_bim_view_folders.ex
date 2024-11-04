@@ -47,7 +47,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewFolders do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/bim_view_folders")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -91,7 +91,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMViewFolders do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_view_folders")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body124)
       |> Enum.into([])
 

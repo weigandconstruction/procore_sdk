@@ -54,7 +54,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureSegmentItemLis
       |> url(
         "/rest/v1.0/companies/#{company_id}/work_breakdown_structure/segments/#{segment_id}/lists"
       )
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

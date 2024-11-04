@@ -34,7 +34,7 @@ defmodule Procore.Api.CoreLocalFilesLocalFiles do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/local_files/#{uuid}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection

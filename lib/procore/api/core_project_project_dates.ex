@@ -41,7 +41,7 @@ defmodule Procore.Api.CoreProjectProjectDates do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/project_dates")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -88,7 +88,7 @@ defmodule Procore.Api.CoreProjectProjectDates do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/project_dates/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -144,7 +144,7 @@ defmodule Procore.Api.CoreProjectProjectDates do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/project_dates")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -196,7 +196,7 @@ defmodule Procore.Api.CoreProjectProjectDates do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/project_dates/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -246,7 +246,7 @@ defmodule Procore.Api.CoreProjectProjectDates do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/project_dates")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> ensure_body()
       |> Enum.into([])

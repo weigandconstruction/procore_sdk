@@ -48,7 +48,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/wbs_codes/bulk_create")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, wbs_code_bulk_create)
       |> Enum.into([])
 
@@ -121,7 +121,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/wbs_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -181,7 +181,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/wbs_codes/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -241,7 +241,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/wbs_codes")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,
@@ -302,7 +302,7 @@ defmodule Procore.Api.ConstructionFinancialsWorkBreakdownStructureCodes do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/work_breakdown_structure/wbs_codes/update_all")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

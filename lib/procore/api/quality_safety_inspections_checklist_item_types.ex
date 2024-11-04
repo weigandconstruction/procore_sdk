@@ -54,7 +54,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/item_types")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :company_id, company_id)
       |> add_optional_params(optional_params, opts)
@@ -111,7 +111,7 @@ defmodule Procore.Api.QualitySafetyInspectionsChecklistItemTypes do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/checklist/item_types/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_param(:query, :company_id, company_id)
       |> Enum.into([])

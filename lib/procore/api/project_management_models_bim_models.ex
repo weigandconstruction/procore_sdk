@@ -53,7 +53,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModels do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/bim_models")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -99,7 +99,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModels do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/bim_models/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> Enum.into([])
 
@@ -145,7 +145,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModels do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/bim_models/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:query, :project_id, project_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
@@ -192,7 +192,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModels do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/bim_models/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body129)
       |> Enum.into([])
 
@@ -237,7 +237,7 @@ defmodule Procore.Api.ProjectManagementModelsBIMModels do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/bim_models")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body128)
       |> Enum.into([])
 

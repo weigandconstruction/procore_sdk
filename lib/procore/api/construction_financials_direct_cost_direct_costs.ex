@@ -67,7 +67,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -123,7 +123,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -179,7 +179,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -238,7 +238,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body94)
       |> Enum.into([])
 
@@ -297,7 +297,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{direct_cost_id}/line_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body94)
       |> Enum.into([])
 
@@ -370,7 +370,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -422,7 +422,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:delete)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -474,7 +474,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -528,7 +528,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body97)
       |> Enum.into([])
 
@@ -598,7 +598,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/line_items")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -650,7 +650,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/line_items/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, direct_cost_line_item_sync_body)
       |> Enum.into([])
 
@@ -703,7 +703,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body95)
       |> Enum.into([])
 
@@ -756,7 +756,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/direct_costs/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body96)
       |> Enum.into([])
 
@@ -827,7 +827,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -879,7 +879,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:delete)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -931,7 +931,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:get)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> Enum.into([])
 
     connection
@@ -985,7 +985,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:patch)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs/#{id}")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body93)
       |> Enum.into([])
 
@@ -1038,7 +1038,7 @@ defmodule Procore.Api.ConstructionFinancialsDirectCostDirectCosts do
       %{}
       |> method(:post)
       |> url("/rest/v1.1/projects/#{project_id}/direct_costs")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body92)
       |> Enum.into([])
 

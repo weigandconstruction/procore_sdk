@@ -52,7 +52,7 @@ defmodule Procore.Api.QualitySafetyObservationsProjectObservationTemplates do
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/projects/#{project_id}/observation_templates/bulk_update")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(
         :body,
         :body,

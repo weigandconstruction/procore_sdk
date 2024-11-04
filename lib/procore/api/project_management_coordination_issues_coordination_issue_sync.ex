@@ -44,7 +44,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
       %{}
       |> method(:post)
       |> url("/rest/v1.0/coordination_issues/bulk_delete")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body107)
       |> Enum.into([])
 
@@ -94,7 +94,7 @@ defmodule Procore.Api.ProjectManagementCoordinationIssuesCoordinationIssueSync d
       %{}
       |> method(:patch)
       |> url("/rest/v1.0/coordination_issues/sync")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> add_param(:body, :body, body106)
       |> Enum.into([])
 

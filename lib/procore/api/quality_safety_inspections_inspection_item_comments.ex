@@ -47,7 +47,7 @@ defmodule Procore.Api.QualitySafetyInspectionsInspectionItemComments do
       %{}
       |> method(:post)
       |> url("/rest/v1.0/projects/#{project_id}/inspections/#{inspection_id}/comments")
-      |> add_param(:headers, "Procore-Company-Id", procore_company_id)
+      |> add_param(:headers, :"Procore-Company-Id", procore_company_id)
       |> ensure_body()
       |> Enum.into([])
 
