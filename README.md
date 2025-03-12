@@ -10,7 +10,7 @@ The package can be installed by adding `procore_sdk` to your list of dependencie
 
 ```elixir
 def deps do
-  [{:procore_sdk, "~> 0.2"}]
+  [{:procore_sdk, "~> 0.3"}]
 end
 ```
 
