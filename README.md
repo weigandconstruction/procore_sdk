@@ -78,8 +78,9 @@ To generate a new version of this SDK:
 1. Generate the library with:
    ```bash
    # From the project root directory
-   docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v7.8.0 generate \
+   docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v7.12.0 generate \
        -i https://developers.procore.com/api/v1/resource_groups/full_oas?version=1 \
+       --skip-validate-spec \
        -g elixir \
        -o /local \
        -c /local/config.json
