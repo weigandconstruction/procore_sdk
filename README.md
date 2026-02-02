@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repo is archived. It is recommended that you use [https://github.com/weigandconstruction/portico](https://github.com/weigandconstruction/portico) to generate the Procore API from the Procore OpenAPI spec. This provides full API compatibility and other features like filtering on tags and automation.
+
 # Procore API Client for Elixir
 
 **This library is under active development is not suitable for production use.**
